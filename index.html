@@ -4,9 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Casa Bonita Oregón</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Casa Bonita Oregón S.A.C. – Instalaciones sanitarias y eléctricas en Lima.">
+<title>Casa Bonita Oregón S.A.C. | Gasfitería y electricidad en Lima</title>
+<meta name="description" content="Casa Bonita Oregón S.A.C.: gasfitería, instalaciones sanitarias y eléctricas a todo costo en Lima y Huarochirí. Redes de agua y desagüe, cisternas, tableros y pozo a tierra. Cotiza por WhatsApp al 922 732 329.">
+<link rel="canonical" href="https://casabonitaoregon.github.io/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Casa Bonita Oregón S.A.C. | Gasfitería y electricidad en Lima">
+<meta property="og:description" content="Instalaciones sanitarias y eléctricas a todo costo en Lima y Huarochirí. Cotiza por WhatsApp al 922 732 329.">
+<meta property="og:url" content="https://casabonitaoregon.github.io/">
+<meta property="og:locale" content="es_PE">
+<meta property="og:image" content="https://casabonitaoregon.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Plumber", "Electrician"], "name": "Casa Bonita Oregón S.A.C.", "alternateName": ["CBO", "Casa Bonita Oregon"], "url": "https://casabonitaoregon.github.io/", "telephone": "+51922732329", "taxID": "20614484153", "description": "Instalaciones sanitarias y eléctricas a todo costo para viviendas, edificios y constructoras en Lima.", "address": {"@type": "PostalAddress", "streetAddress": "Av. Prolongación Huiracocha Mz. PP9 Lote 11A", "addressLocality": "San Antonio, Huarochirí", "addressRegion": "Lima", "addressCountry": "PE"}, "areaServed": ["Lima Metropolitana", "Huarochirí"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,700;62..125,800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -15,7 +27,7 @@
 :root{
   --verde:#0d5c46; --verde-2:#14805f; --beige:#e9dcc3; --arena:#f6f1e7;
   --bg:#fbf9f4; --surface:#ffffff; --ink:#15231d; --muted:#5a6a62; --line:#dcd5c5;
-  --on-verde:#f6f1e7; --chip:#e7efe9;
+  --on-verde:#f6f1e7; --chip:#e7efe9; --on-btn:#f6f1e7; --wa:#1f9d55;
   --grad:linear-gradient(115deg,#0b4f3c 0%,#0d5c46 30%,#5f8f6f 62%,#c9c09c 84%,#e9dcc3 100%);
   --display:"Archivo","Arial Narrow",Arial,sans-serif;
   --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -23,11 +35,11 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0f1714; --surface:#16211c; --ink:#ebe5d8; --muted:#9fb0a6; --line:#2a3832;
-  --verde:#3fae86; --verde-2:#6cc9a3; --beige:#3a3427; --arena:#1b2621; --on-verde:#f6f1e7; --chip:#1f2e27;
+  --verde:#3fae86; --verde-2:#6cc9a3; --beige:#3a3427; --arena:#1b2621; --on-verde:#f6f1e7; --chip:#1f2e27; --on-btn:#06231a; --wa:#25b864;
   --grad:linear-gradient(115deg,#07372a 0%,#0b4a39 35%,#335b49 65%,#5d5640 88%,#6e6449 100%); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0f1714; --surface:#16211c; --ink:#ebe5d8; --muted:#9fb0a6; --line:#2a3832;
-  --verde:#3fae86; --verde-2:#6cc9a3; --beige:#3a3427; --arena:#1b2621; --on-verde:#f6f1e7; --chip:#1f2e27;
+  --verde:#3fae86; --verde-2:#6cc9a3; --beige:#3a3427; --arena:#1b2621; --on-verde:#f6f1e7; --chip:#1f2e27; --on-btn:#06231a; --wa:#25b864;
   --grad:linear-gradient(115deg,#07372a 0%,#0b4a39 35%,#335b49 65%,#5d5640 88%,#6e6449 100%); color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -49,15 +61,18 @@ a{color:inherit}
 .brand .logo{width:38px}
 .brand b{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:1.05rem;letter-spacing:.02em;color:var(--ink)}
 .brand small{display:block;font-size:.7rem;color:var(--muted);font-family:var(--mono);letter-spacing:.06em}
-nav{display:flex;gap:22px;align-items:center}
-nav a{text-decoration:none;font-weight:500;font-size:.94rem;color:var(--muted)}
-nav a:hover{color:var(--ink)}
+.top nav{display:flex;gap:22px;align-items:center}
+.top nav a{text-decoration:none;font-weight:500;font-size:.94rem;color:var(--muted)}
+.panel nav a{text-decoration:none}
+.top nav a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 20px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600;transition:transform .15s ease,background .15s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn-verde{background:var(--verde);color:var(--on-verde)}
-.btn-claro{background:var(--arena);color:#0d5c46}
+.btn-verde{background:var(--verde);color:var(--on-btn)}
+.btn-claro{background:#f6f1e7;color:#0d5c46}
+.top nav a.btn{color:var(--on-btn)}
 .btn-borde{background:transparent;color:var(--on-verde);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--on-verde) 70%,transparent)}
-@media (max-width:760px){nav a:not(.btn){display:none}}
+@media (max-width:760px){.top nav a:not(.btn){display:none}}
+@media (max-width:480px){.top .brand small{display:none}.top .brand b{font-size:.92rem}.top .brand .logo{width:30px}.top nav .btn{padding:9px 14px}}
 
 /* Hero degradado */
 .hero{background:var(--grad);color:var(--on-verde);position:relative;overflow:hidden}
@@ -158,20 +173,283 @@ textarea{min-height:96px;resize:vertical}
 .ok{font-size:.9rem;color:var(--verde);font-weight:600;min-height:1.2em}
 @media (max-width:860px){.contacto{grid-template-columns:1fr}.fila{grid-template-columns:1fr}}
 
-footer{border-top:1px solid var(--line);background:var(--arena)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-block:28px;font-size:.88rem;color:var(--muted);align-items:center}
+footer{border-top:1px solid var(--line);background:var(--arena);padding-bottom:84px}
+.pie-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;padding-block:32px;align-items:start}
+.pie-col{display:grid;gap:6px;min-width:0;font-size:.92rem}
+.pie-col small{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pie-col p{color:var(--ink)}
+.pie-col .tel{font-weight:600;font-variant-numeric:tabular-nums}
 footer .brand .logo{width:30px}
+@media (max-width:860px){.pie-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.pie-grid{grid-template-columns:1fr;gap:18px}}
+/* Botón de menú (tres rayas) y panel lateral */
+.left{display:flex;align-items:center;gap:12px}
+.menu-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none}
+.menu-btn:hover{border-color:var(--verde);color:var(--verde)}
+.menu-btn span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+.velo{position:fixed;inset:0;background:rgba(6,20,15,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.velo.abierto{opacity:1;pointer-events:auto}
+.panel{position:fixed;top:0;bottom:0;left:0;width:min(340px,88vw);z-index:50;background:var(--bg);border-right:1px solid var(--line);transform:translateX(-102%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;
+  padding-top:calc(16px + env(safe-area-inset-top,0px));padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:20px;overflow-y:auto}
+.panel.abierto{transform:none;box-shadow:12px 0 40px rgba(0,0,0,.18)}
+.panel-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.cerrar{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:1.3rem;cursor:pointer}
+.panel nav{display:grid;gap:2px;padding-block:14px}
+.panel nav a{display:flex;align-items:center;gap:12px;padding:12px 12px;border-radius:12px;color:var(--ink);font-weight:500;font-size:1rem}
+.panel nav a:hover,.panel nav a:focus-visible{background:var(--chip);color:var(--verde)}
+.panel nav a svg{color:var(--verde);flex:none}
+.panel-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:10px 12px 4px}
+.panel-pie{margin-top:auto;display:grid;gap:10px;padding-top:16px;border-top:1px solid var(--line)}
+.panel-pie .btn{justify-content:center}
+.btn-wa{background:var(--wa);color:#fff}
+.tema{display:flex;gap:6px;background:var(--chip);border-radius:999px;padding:4px}
+.tema button{flex:1;border:0;background:transparent;color:var(--muted);border-radius:999px;padding:8px 6px;font:inherit;font-size:.85rem;cursor:pointer}
+.tema button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.panel small.legal{color:var(--muted);font-size:.78rem;text-align:center}
+
+/* Tubería animada del hero */
+.flujo{position:absolute;left:0;right:0;bottom:22px;height:3px;background:repeating-linear-gradient(90deg,rgba(243,231,204,.55) 0 18px,transparent 18px 34px);background-size:34px 3px;animation:flujo 1.6s linear infinite;opacity:.7}
+@keyframes flujo{to{background-position:34px 0}}
+
+/* Pestañas: para quién */
+.tabs{display:inline-flex;gap:4px;background:var(--chip);border-radius:999px;padding:5px;margin-bottom:22px;flex-wrap:wrap}
+.tabs button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:600;padding:10px 18px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--verde);color:var(--on-btn)}
+.tabpanel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ventaja{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:8px;align-content:start;transition:transform .2s ease,border-color .2s ease}
+.ventaja:hover{transform:translateY(-3px);border-color:var(--verde-2)}
+.ventaja h3{font-size:1.2rem;font-weight:700}
+.ventaja p{color:var(--muted);font-size:.94rem}
+.ventaja .num{font-family:var(--mono);font-size:.78rem;color:var(--verde)}
+@media (max-width:860px){.tabpanel{grid-template-columns:1fr}}
+
+/* Zonas */
+.zonas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.92rem}
+.chips span.base{background:var(--verde);border-color:var(--verde);color:var(--on-btn)}
+@media (max-width:860px){.zonas{grid-template-columns:1fr}}
+
+/* Preguntas frecuentes */
+.faq{display:grid;gap:10px;max-width:860px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:1.3rem;color:var(--verde);transition:transform .2s ease;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 18px;color:var(--muted)}
+
+/* Ajustes para celular */
+@media (max-width:640px){
+  section{padding-block:56px}
+  .hero .wrap{padding-block:36px 52px;gap:20px}
+  .hero-logo{width:96px}
+  .hero h1{font-size:clamp(2.1rem,10vw,2.8rem)}
+  .hero p.lead{font-size:1rem}
+  .hero .ctas{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero .ctas .btn{justify-content:center;width:100%}
+  .specs .wrap{grid-template-columns:1fr 1fr;column-gap:16px}
+  .spec{padding:14px 0}
+  .spec b{font-size:.86rem}
+  .spec span{font-size:.8rem}
+  .sec-head{margin-bottom:24px}
+  .sec-head h2{font-size:1.85rem}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .tabs button{padding:10px 8px;font-size:.92rem}
+  .todo-costo{padding:20px;display:grid}
+  .todo-costo .btn{justify-content:center}
+  .obra{padding:24px;border-radius:18px}
+  .dato{padding:16px}
+  .dato b{font-size:1rem}
+  form{padding:20px}
+  form .btn{justify-content:center;width:100%}
+  .faq details{padding:0 16px}
+  .wa-flot{width:52px;height:52px}
+}
+
+/* Servicios interactivos */
+.servicios{align-items:start}
+.serv,section{scroll-margin-top:84px}
+.serv{padding:0;gap:0;overflow:hidden;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
+.serv:hover{border-color:var(--verde-2);transform:translateY(-2px);box-shadow:0 14px 30px rgba(13,92,70,.10)}
+.serv.abierto{border-color:var(--verde);box-shadow:0 18px 40px rgba(13,92,70,.14)}
+.serv-btn{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;width:100%;padding:28px 30px}
+.serv-btn:focus-visible{outline:3px solid var(--verde-2);outline-offset:-3px;border-radius:18px}
+.serv .ico{width:72px;height:72px;border-radius:20px;position:relative;overflow:visible;transition:transform .3s ease,background .3s ease}
+.serv-btn:hover .ico{transform:scale(1.06) rotate(-4deg)}
+.serv.abierto .ico{background:var(--verde);color:var(--on-btn)}
+.serv-tit{display:grid;gap:2px;min-width:0}
+.serv-tit h3{font-size:1.9rem}
+.serv-tit small{color:var(--muted);font-size:.92rem}
+.pista{font-style:normal;font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;color:var(--verde);margin-top:6px}
+.pista .ocultar{display:none}
+.serv.abierto .pista .ver{display:none}
+.serv.abierto .pista .ocultar{display:inline}
+.flecha{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--chip);color:var(--verde);transition:transform .35s ease,background .25s ease}
+.serv.abierto .flecha{transform:rotate(180deg);background:var(--verde);color:var(--on-btn)}
+.serv-cuerpo{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1)}
+.serv.abierto .serv-cuerpo{grid-template-rows:1fr}
+.serv-int{overflow:hidden;min-height:0;padding:0 30px}
+.serv.abierto .serv-int{padding-bottom:28px}
+.serv-int ul{border-top:1px solid var(--line);padding-top:6px}
+.serv li{opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
+.serv.abierto li{opacity:1;transform:none}
+.serv.abierto li:nth-child(1){transition-delay:.05s}.serv.abierto li:nth-child(2){transition-delay:.1s}.serv.abierto li:nth-child(3){transition-delay:.15s}
+.serv.abierto li:nth-child(4){transition-delay:.2s}.serv.abierto li:nth-child(5){transition-delay:.25s}.serv.abierto li:nth-child(6){transition-delay:.3s}.serv.abierto li:nth-child(7){transition-delay:.35s}
+.serv-cta{margin-top:16px;justify-content:center;width:100%}
+/* gota que cae y rayo que parpadea */
+.goteo{position:absolute;left:50%;top:62px;width:7px;height:9px;margin-left:-3.5px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--verde-2);opacity:0;animation:goteo 2.6s ease-in infinite}
+@keyframes goteo{0%,40%{opacity:0;transform:translateY(-6px) scale(.6)}50%{opacity:1;transform:translateY(0) scale(1)}85%{opacity:.9;transform:translateY(22px) scale(.9)}100%{opacity:0;transform:translateY(26px) scale(.4)}}
+.ico-rayo svg{animation:chispa 3.2s steps(1) infinite}
+@keyframes chispa{0%,86%,100%{filter:none;opacity:1}88%{opacity:.35}90%{opacity:1;filter:drop-shadow(0 0 6px #f2c94c)}92%{opacity:.5}94%{opacity:1;filter:drop-shadow(0 0 10px #f2c94c)}}
+.luz .ico-rayo{color:var(--verde)}
+.serv.luz.abierto .ico-rayo svg{filter:drop-shadow(0 0 8px #f2c94c)}
+@media (max-width:640px){
+  .serv{padding:0}
+  .serv-btn{padding:20px;gap:14px}
+  .serv .ico{width:58px;height:58px;border-radius:16px}
+  .serv-tit h3{font-size:1.5rem}
+  .serv-int{padding:0 20px}
+  .serv.abierto .serv-int{padding-bottom:20px}
+  .goteo{top:50px}
+}
+
+/* Pasos del proceso: resaltado al pasar o tocar */
+.paso{cursor:default;transition:transform .25s ease}
+.paso:hover{transform:translateY(-4px)}
+.paso:hover::before{background:var(--verde-2)}
+/* Entrada suave de la portada (parte visible) */
+.hero h1,.hero .lead,.hero .ctas{animation:sube .7s cubic-bezier(.2,.8,.2,1) both}
+.hero .lead{animation-delay:.08s}.hero .ctas{animation-delay:.16s}
+@keyframes sube{from{transform:translateY(14px)}to{transform:none}}
+
+/* Apertura con efecto: onda desde el toque, línea que "fluye" y servicios que giran al entrar */
+.serv{position:relative;isolation:isolate}
+.onda{position:absolute;border-radius:50%;pointer-events:none;z-index:-1;transform:translate(-50%,-50%) scale(0);opacity:.9;
+  width:40px;height:40px;animation:onda .9s cubic-bezier(.2,.7,.2,1) forwards}
+.agua .onda{background:radial-gradient(circle,color-mix(in srgb,var(--verde-2) 30%,transparent) 0%,color-mix(in srgb,var(--beige) 40%,transparent) 55%,transparent 70%)}
+.luz .onda{background:radial-gradient(circle,rgba(242,201,76,.35) 0%,color-mix(in srgb,var(--verde-2) 22%,transparent) 50%,transparent 70%)}
+@keyframes onda{to{transform:translate(-50%,-50%) scale(40);opacity:0}}
+.serv-int ul{position:relative;padding-left:0}
+.serv-int ul::before{content:"";position:absolute;left:3px;top:18px;width:3px;border-radius:3px;height:calc(100% - 36px);transform-origin:top;transform:scaleY(0);transition:transform .9s cubic-bezier(.2,.8,.2,1) .1s}
+.agua .serv-int ul::before{background:linear-gradient(180deg,var(--verde-2),var(--beige))}
+.luz .serv-int ul::before{background:linear-gradient(180deg,#f2c94c,var(--verde-2))}
+.serv.abierto .serv-int ul::before{transform:scaleY(1)}
+.serv-int{perspective:900px}
+.serv li{opacity:0;transform:translateX(-18px) rotateX(-55deg);transform-origin:top center;transition:opacity .45s ease,transform .55s cubic-bezier(.2,.9,.25,1.25)}
+.serv.abierto li{opacity:1;transform:none}
+.serv li::before{transition:transform .4s cubic-bezier(.3,1.6,.5,1),background .3s ease;transform:scale(0)}
+.serv.abierto li::before{transform:scale(1)}
+.serv.abierto li:nth-child(1),.serv.abierto li:nth-child(1)::before{transition-delay:.08s}
+.serv.abierto li:nth-child(2),.serv.abierto li:nth-child(2)::before{transition-delay:.16s}
+.serv.abierto li:nth-child(3),.serv.abierto li:nth-child(3)::before{transition-delay:.24s}
+.serv.abierto li:nth-child(4),.serv.abierto li:nth-child(4)::before{transition-delay:.32s}
+.serv.abierto li:nth-child(5),.serv.abierto li:nth-child(5)::before{transition-delay:.40s}
+.serv.abierto li:nth-child(6),.serv.abierto li:nth-child(6)::before{transition-delay:.48s}
+.serv.abierto li:nth-child(7),.serv.abierto li:nth-child(7)::before{transition-delay:.56s}
+.serv li:hover{background:var(--chip);border-radius:10px}
+.serv li:hover::before{background:var(--verde)}
+.serv-cta{opacity:0;transform:translateY(12px) scale(.96);transition:opacity .4s ease .6s,transform .5s cubic-bezier(.2,.9,.25,1.3) .6s}
+.serv.abierto .serv-cta{opacity:1;transform:none}
+.serv.abierto .ico{animation:salto .7s cubic-bezier(.3,1.6,.5,1)}
+@keyframes salto{0%{transform:scale(1)}35%{transform:scale(.85) rotate(-8deg)}70%{transform:scale(1.12) rotate(4deg)}100%{transform:scale(1)}}
+.serv.cerrando li{transition-delay:0s!important;transition-duration:.2s}
+
+/* Barra de progreso tipo tubería */
+.progreso{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;z-index:60;pointer-events:none;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--verde),var(--verde-2),var(--beige))}
+
+/* Casa interactiva */
+.casa{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:center}
+.casa-lienzo{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:14px;min-width:0}
+.casa-lienzo svg{display:block;width:100%;height:auto}
+.plano{position:relative}
+.casa-lienzo .s-muro{fill:var(--arena);stroke:var(--line);stroke-width:2}
+.casa-lienzo .s-techo{fill:var(--verde)}
+.casa-lienzo .s-suelo{fill:color-mix(in srgb,var(--beige) 70%,var(--surface))}
+.casa-lienzo .s-tierra{fill:color-mix(in srgb,var(--beige) 45%,var(--muted) 20%)}
+.casa-lienzo .s-losa{fill:var(--line)}
+.casa-lienzo .s-agua{fill:none;stroke:#2f8fbf;stroke-width:4;stroke-linecap:round;stroke-dasharray:10 8;animation:corre 1.4s linear infinite}
+.casa-lienzo .s-desague{fill:none;stroke:#8a6f4d;stroke-width:5;stroke-linecap:round}
+.casa-lienzo .s-luz{fill:none;stroke:#e0a82e;stroke-width:3;stroke-linecap:round;stroke-dasharray:4 6;animation:corre 1s linear infinite}
+.casa-lienzo .s-obj{fill:var(--surface);stroke:var(--muted);stroke-width:2}
+.casa-lienzo .s-tanque{fill:#cfe6f1;stroke:#2f8fbf;stroke-width:2}
+.casa-lienzo .s-txt{fill:var(--muted);font:600 13px var(--body)}
+@keyframes corre{to{stroke-dashoffset:-36}}
+.punto{position:absolute;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;background:var(--verde);color:var(--on-btn);font:700 .85rem var(--mono);display:grid;place-items:center;box-shadow:0 0 0 5px color-mix(in srgb,var(--verde) 25%,transparent);transition:transform .2s ease,background .2s ease}
+.punto::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--verde-2);animation:pulso 2.4s ease-out infinite}
+.punto:hover{transform:translate(-50%,-50%) scale(1.12)}
+.punto[aria-pressed="true"]{background:#e0a82e;color:#1d1a10;box-shadow:0 0 0 6px rgba(224,168,46,.3)}
+.punto[aria-pressed="true"]::after{border-color:#e0a82e}
+.casa-info{background:var(--grad);color:var(--on-verde);border-radius:22px;padding:28px;min-height:280px;display:grid;align-content:start;gap:12px}
+.casa-info .eyebrow{color:#f3e7cc}
+.casa-info h3{font-size:2rem;font-weight:800;font-stretch:80%}
+.casa-info p{color:color-mix(in srgb,var(--on-verde) 90%,transparent)}
+.casa-info ul{margin:0;padding-left:18px;display:grid;gap:4px;color:color-mix(in srgb,var(--on-verde) 92%,transparent)}
+.casa-info .esp{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.16);justify-self:start}
+.casa-info.cambia{animation:cambia .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes cambia{from{transform:translateY(10px) scale(.98)}to{transform:none}}
+.leyenda{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.82rem;color:var(--muted)}
+.leyenda i{display:inline-block;width:18px;height:4px;border-radius:2px;margin-right:6px;vertical-align:middle}
+@media (max-width:900px){.casa{grid-template-columns:1fr}.punto{width:30px;height:30px;font-size:.75rem}}
+
+/* Diagnóstico rápido */
+.diag{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:start}
+.problemas{display:grid;gap:8px}
+.problema{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);font-weight:600;transition:border-color .2s,transform .2s,background .2s}
+.problema:hover{transform:translateX(4px);border-color:var(--verde-2)}
+.problema:focus-visible{outline:3px solid var(--verde-2);outline-offset:2px}
+.problema[aria-pressed="true"]{background:var(--verde);color:var(--on-btn);border-color:var(--verde)}
+.problema .tipo{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-left:auto}
+.respuesta{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:14px}
+.respuesta h3{font-size:1.5rem;font-weight:800}
+.respuesta .bloque{display:grid;gap:4px}
+.respuesta .bloque small{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--verde)}
+.respuesta .bloque p{color:var(--muted)}
+.respuesta .aviso{font-size:.88rem;padding:12px 14px;border-radius:12px;background:var(--chip)}
+.respuesta.cambia{animation:cambia .4s cubic-bezier(.2,.8,.2,1)}
+@media (max-width:860px){.diag{grid-template-columns:1fr}}
+
+/* Cotizador por pasos */
+.wiz{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:16px;min-width:0}
+.wiz h3{font-size:1.5rem;font-weight:800}
+.wiz-barra{height:6px;border-radius:6px;background:var(--chip);overflow:hidden}
+.wiz-barra i{display:block;height:100%;width:33%;background:linear-gradient(90deg,var(--verde),var(--verde-2));border-radius:6px;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.wiz-paso{display:grid;gap:12px;animation:cambia .4s cubic-bezier(.2,.8,.2,1)}
+.wiz-paso > p{font-weight:600}
+.opciones{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opcion{all:unset;box-sizing:border-box;cursor:pointer;border:1.5px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:2px;transition:border-color .2s,background .2s,transform .15s}
+.opcion:hover{border-color:var(--verde-2);transform:translateY(-2px)}
+.opcion:focus-visible{outline:3px solid var(--verde-2);outline-offset:2px}
+.opcion[aria-pressed="true"]{border-color:var(--verde);background:var(--chip)}
+.opcion b{font-size:.98rem}
+.opcion span{font-size:.82rem;color:var(--muted)}
+.wiz-nav{display:flex;justify-content:space-between;gap:10px}
+.btn-sec{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.resumen{font-size:.88rem;color:var(--muted);background:var(--chip);border-radius:12px;padding:12px 14px}
+@media (max-width:480px){.opciones{grid-template-columns:1fr}.wiz{padding:20px}}
+
+/* WhatsApp flotante */
+.wa-flot{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25);text-decoration:none;transition:transform .2s ease}
+.wa-flot:hover{transform:scale(1.07)}
+.wa-flot::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:pulso 2.4s ease-out infinite}
+@keyframes pulso{from{transform:scale(1);opacity:.7}to{transform:scale(1.6);opacity:0}}
+.subir{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.subir.ver{opacity:1;pointer-events:auto}
 </style>
 </head>
 <body>
 
 
+<div class="progreso" id="progreso" aria-hidden="true"></div>
 <header class="top">
   <div class="wrap">
+    <div class="left">
+    <button class="menu-btn" type="button" id="abrir-menu" aria-label="Abrir menú" aria-controls="panel" aria-expanded="false"><span></span></button>
     <a class="brand" href="#inicio" aria-label="Casa Bonita Oregón, inicio">
       <span class="logo" aria-hidden="true"></span>
       <span><b>CASA BONITA OREGÓN</b><small>S.A.C. · RUC 20614484153</small></span>
     </a>
+    </div>
     <nav aria-label="Secciones">
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Cómo trabajamos</a>
@@ -180,6 +458,37 @@ footer .brand .logo{width:30px}
     </nav>
   </div>
 </header>
+
+<div class="velo" id="velo"></div>
+<aside class="panel" id="panel" aria-label="Menú" hidden>
+  <div class="panel-top">
+    <a class="brand" href="#inicio"><span class="logo" aria-hidden="true"></span><span><b>CASA BONITA OREGÓN</b><small>Gasfitería y electricidad</small></span></a>
+    <button class="cerrar" type="button" id="cerrar-menu" aria-label="Cerrar menú">×</button>
+  </div>
+  <nav aria-label="Menú principal">
+    <a href="#inicio"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a>
+    <p class="panel-sub">Servicios</p>
+    <a href="#serv-gas" data-abre="serv-gas"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 10.6A6 6 0 0 1 6 13.6C6 10.6 8.5 7.2 12 3z"/></svg>Gasfitería</a>
+    <a href="#serv-ele" data-abre="serv-ele"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z"/></svg>Electricidad</a>
+    <p class="panel-sub">La empresa</p>
+    <a href="#para-quien"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20c-.5-2.6-2-4.3-4-5"/></svg>Para constructoras y hogares</a>
+    <a href="#proceso"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h4v-4h4v-4h4V6h4"/></svg>Cómo trabajamos</a>
+    <a href="#seguridad"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Seguridad y documentos</a>
+    <a href="#recorrido"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Recorre una casa</a>
+    <a href="#diagnostico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Diagnóstico rápido</a>
+    <a href="#zonas"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Zonas de atención</a>
+    <a href="#preguntas"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 0 1 5 .9c0 1.7-2.5 2.2-2.5 3.6"/><path d="M12 17.2v.1"/></svg>Preguntas frecuentes</a>
+    <a href="#contacto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>Contacto y cotización</a>
+  </nav>
+  <div class="panel-pie">
+    <a class="btn btn-wa" href="https://wa.me/51922732329?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <div class="tema" role="group" aria-label="Tema de la página">
+      <button type="button" data-tema="claro" id="t-claro">☀ Claro</button>
+      <button type="button" data-tema="oscuro" id="t-oscuro">☾ Oscuro</button>
+    </div>
+    <small class="legal">Casa Bonita Oregón S.A.C. · RUC 20614484153</small>
+  </div>
+</aside>
 
 <main id="inicio">
   <div class="hero">
@@ -195,30 +504,47 @@ footer .brand .logo{width:30px}
       </div>
       <div class="hero-logo" aria-hidden="true"><span class="logo"></span></div>
     </div>
+    <div class="flujo" aria-hidden="true"></div>
   </div>
 
-  <div class="specs" aria-label="Datos técnicos">
+
+  <section id="para-quien" style="padding-bottom:0">
     <div class="wrap">
-      <div class="spec"><b>PPR · termofusión</b><span>Redes de agua fría y caliente</span></div>
-      <div class="spec"><b>PVC · desagüe</b><span>Desagüe, ventilación y sumideros</span></div>
-      <div class="spec"><b>220 V · tableros</b><span>Con termomagnéticos y diferencial</span></div>
-      <div class="spec"><b>SCTR · La Positiva</b><span>Salud y pensión para todo el equipo</span></div>
+      <div class="sec-head">
+        <p class="eyebrow">Para quién trabajamos</p>
+        <h2>Del edificio completo a la reparación de tu casa</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Tipo de cliente">
+        <button type="button" role="tab" id="tab-obra" aria-selected="true" aria-controls="pan-obra">Constructoras</button>
+        <button type="button" role="tab" id="tab-casa" aria-selected="false" aria-controls="pan-casa" tabindex="-1">Hogares y negocios</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="pan-obra" aria-labelledby="tab-obra">
+        <article class="ventaja"><span class="num">Subcontrato</span><h3>Gasfitería y electricidad en un solo contrato</h3><p>Coordinamos ambas especialidades por piso y por fase, sin cruces entre contratas.</p></article>
+        <article class="ventaja"><span class="num">Ingreso a obra</span><h3>Documentos SST listos</h3><p>PETS, Plan de SST, Plan de Contingencia, ATS, PETAR y SCTR vigente para presentar al área SSOMA.</p></article>
+        <article class="ventaja"><span class="num">Facturación</span><h3>Factura electrónica y detracción</h3><p>Emitimos factura y trabajamos con la detracción del 4 % para construcción.</p></article>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="pan-casa" aria-labelledby="tab-casa" hidden>
+        <article class="ventaja"><span class="num">Reparaciones</span><h3>Fugas, desatoros y averías</h3><p>Ubicamos la falla, reparamos y dejamos la instalación probada.</p></article>
+        <article class="ventaja"><span class="num">Ampliaciones</span><h3>Baños, cocinas y nuevos ambientes</h3><p>Nuevos puntos de agua, desagüe, tomacorrientes y circuitos con su tablero.</p></article>
+        <article class="ventaja"><span class="num">Equipos</span><h3>Termas, bombas y tableros</h3><p>Instalación de termas, electrobombas, tanques y tableros con diferencial.</p></article>
+      </div>
     </div>
-  </div>
-
+  </section>
   <section id="servicios">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Servicios</p>
         <h2>Dos especialidades, un solo equipo en obra</h2>
-        <p>Coordinamos agua, desagüe y electricidad en las mismas fases de la obra, para que las tuberías y los ductos queden listos antes de cada vaciado.</p>
+        <p>Coordinamos agua, desagüe y electricidad en las mismas fases de la obra, para que las tuberías y los ductos queden listos antes de cada vaciado. Toca una especialidad para ver todo lo que hacemos.</p>
       </div>
       <div class="servicios">
-        <article class="serv">
-          <header>
-            <span class="ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 4.2 6 7.6 6 10.6A6 6 0 0 1 6 13.6C6 10.6 8.5 7.2 12 3z" fill="none"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.5"/></svg></span>
-            <div><h3>Gasfitería</h3><small>Instalaciones sanitarias de agua y desagüe</small></div>
-          </header>
+        <article class="serv agua" id="serv-gas">
+          <button class="serv-btn" type="button" aria-expanded="false" aria-controls="lista-gas" id="btn-gas">
+            <span class="ico ico-gota" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 4.2 6 7.6 6 10.6A6 6 0 0 1 6 13.6C6 10.6 8.5 7.2 12 3z" fill="none"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.5"/></svg><i class="goteo"></i></span>
+            <span class="serv-tit"><h3>Gasfitería</h3><small>Instalaciones sanitarias de agua y desagüe</small><em class="pista">7 servicios · <span class="ver">Toca para ver todo</span><span class="ocultar">Toca para cerrar</span></em></span>
+            <span class="flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="serv-cuerpo" id="lista-gas"><div class="serv-int">
           <ul>
             <li><div><b>Redes de agua fría y caliente</b><span>Tubería PPR unida por termofusión, empotrada en losas y muros.</span></div></li>
             <li><div><b>Desagüe y ventilación</b><span>Tubería PVC con pendiente de diseño, montantes, sumideros y registros.</span></div></li>
@@ -228,12 +554,16 @@ footer .brand .logo{width:30px}
             <li><div><b>Aparatos sanitarios y acabados</b><span>Inodoros, lavatorios, duchas, griferías y termas.</span></div></li>
             <li><div><b>Mantenimiento</b><span>Reparación de fugas y desatoros.</span></div></li>
           </ul>
+          <a class="btn btn-verde serv-cta" href="#contacto">Cotizar gasfitería</a>
+          </div></div>
         </article>
-        <article class="serv">
-          <header>
-            <span class="ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z"/></svg></span>
-            <div><h3>Electricidad</h3><small>Instalaciones eléctricas en baja tensión</small></div>
-          </header>
+        <article class="serv luz" id="serv-ele">
+          <button class="serv-btn" type="button" aria-expanded="false" aria-controls="lista-ele" id="btn-ele">
+            <span class="ico ico-rayo" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z"/></svg></span>
+            <span class="serv-tit"><h3>Electricidad</h3><small>Instalaciones eléctricas en baja tensión</small><em class="pista">7 servicios · <span class="ver">Toca para ver todo</span><span class="ocultar">Toca para cerrar</span></em></span>
+            <span class="flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="serv-cuerpo" id="lista-ele"><div class="serv-int">
           <ul>
             <li><div><b>Canalización empotrada</b><span>Tuberías y cajas en losas y muros antes del vaciado o tarrajeo.</span></div></li>
             <li><div><b>Cableado de circuitos</b><span>Alumbrado, tomacorrientes y fuerza, con colores y calibres de plano.</span></div></li>
@@ -243,6 +573,8 @@ footer .brand .logo{width:30px}
             <li><div><b>Corrientes débiles</b><span>Data, TV e intercomunicador en ductos independientes.</span></div></li>
             <li><div><b>Pruebas y energización</b><span>Continuidad, aislamiento y puesta a tierra antes de entregar.</span></div></li>
           </ul>
+          <a class="btn btn-verde serv-cta" href="#contacto">Cotizar electricidad</a>
+          </div></div>
         </article>
       </div>
       <div class="todo-costo">
@@ -288,11 +620,9 @@ footer .brand .logo{width:30px}
         <div class="fh"><span>Ficha de la empresa</span><span>RUC 20614484153</span></div>
         <dl>
           <dt>Razón social</dt><dd>Casa Bonita Oregón S.A.C.</dd>
-          <dt>Gerente General</dt><dd>Jesús Donato Villar Bendezú</dd>
           <dt>Especialidades</dt><dd>Instalaciones sanitarias y eléctricas</dd>
           <dt>Seguro SCTR</dt><dd>La Positiva Seguros, salud y pensión</dd>
           <dt>Normativa</dt><dd>Ley 29783, D.S. 011-2019-TR y Norma G.050</dd>
-          <dt>Régimen</dt><dd>MYPE Tributario</dd>
         </dl>
       </div>
     </div>
@@ -315,7 +645,103 @@ footer .brand .logo{width:30px}
     </div>
   </section>
 
-  <section id="contacto" style="padding-top:0">
+
+  <section id="recorrido">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Recorre una casa</p>
+        <h2>Toca cada punto y mira qué instalamos ahí</h2>
+        <p>Así viaja el agua, el desagüe y la electricidad dentro de una vivienda. Cada punto es una parte que hacemos.</p>
+      </div>
+      <div class="casa">
+        <div class="casa-lienzo"><div class="plano">
+          <svg viewBox="0 0 600 440" role="img" aria-label="Corte de una casa de dos pisos con sus instalaciones de agua, desagüe y electricidad">
+            <rect class="s-tierra" x="0" y="340" width="600" height="100"/>
+            <rect class="s-suelo" x="0" y="330" width="600" height="12"/>
+            <polygon class="s-techo" points="80,110 300,40 520,110"/>
+            <rect class="s-muro" x="100" y="110" width="400" height="222"/>
+            <rect class="s-losa" x="100" y="216" width="400" height="8"/>
+            <rect class="s-tanque" x="380" y="66" width="62" height="40" rx="6"/>
+            <rect class="s-tanque" x="130" y="362" width="130" height="58" rx="6"/>
+            <text class="s-txt" x="142" y="412">Cisterna</text>
+            <text class="s-txt" x="383" y="60">Tanque</text>
+            <rect class="s-obj" x="150" y="160" width="34" height="48" rx="6"/>
+            <rect class="s-obj" x="206" y="176" width="40" height="32" rx="8"/>
+            <text class="s-txt" x="150" y="150">Baño</text>
+            <rect class="s-obj" x="330" y="280" width="110" height="44" rx="4"/>
+            <text class="s-txt" x="345" y="272">Cocina</text>
+            <rect class="s-obj" x="460" y="244" width="26" height="40" rx="3"/>
+            <text class="s-txt" x="440" y="236">Tablero</text>
+            <rect class="s-obj" x="540" y="352" width="22" height="70" rx="3"/>
+            <path class="s-agua" d="M195 362 V340 H410 V106"/>
+            <path class="s-agua" d="M410 130 V150 H245 V176"/>
+            <path class="s-agua" d="M410 230 V280"/>
+            <path class="s-desague" d="M225 208 V214 M167 208 V214 M167 214 H120 V420 M385 324 V332 H120"/>
+            <path class="s-luz" d="M473 284 V300 H560 V352 M473 244 V130 H300 M473 244 H520 V180 H300"/>
+            <text class="s-txt" x="520" y="436">Pozo a tierra</text>
+          </svg>
+          <button class="punto" type="button" style="left:37.5%;top:86.8%" data-punto="cisterna" aria-pressed="true" aria-label="Cisterna">1</button>
+          <button class="punto" type="button" style="left:68.5%;top:19.5%" data-punto="tanque" aria-pressed="false" aria-label="Tanque elevado">2</button>
+          <button class="punto" type="button" style="left:33.0%;top:41.8%" data-punto="bano" aria-pressed="false" aria-label="Baño">3</button>
+          <button class="punto" type="button" style="left:64.2%;top:68.6%" data-punto="cocina" aria-pressed="false" aria-label="Cocina">4</button>
+          <button class="punto" type="button" style="left:78.8%;top:60.0%" data-punto="tablero" aria-pressed="false" aria-label="Tablero eléctrico">5</button>
+          <button class="punto" type="button" style="left:91.8%;top:88.0%" data-punto="pozo" aria-pressed="false" aria-label="Pozo a tierra">6</button>
+          </div><div class="leyenda"><span><i style="background:#2f8fbf"></i>Agua</span><span><i style="background:#8a6f4d"></i>Desagüe</span><span><i style="background:#e0a82e"></i>Electricidad</span></div>
+        </div>
+        <div class="casa-info" id="casa-info" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diagnostico" class="proceso">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Diagnóstico rápido</p>
+        <h2>¿Qué problema tienes en casa?</h2>
+        <p>Elige el síntoma y te contamos la causa más común y cómo lo resolvemos.</p>
+      </div>
+      <div class="diag">
+        <div class="problemas" role="group" aria-label="Problemas comunes">
+          <button class="problema" type="button" data-p="fuga" aria-pressed="true">Mancha de humedad o fuga<span class="tipo">Agua</span></button>
+          <button class="problema" type="button" data-p="presion" aria-pressed="false">Poca presión en el caño o la ducha<span class="tipo">Agua</span></button>
+          <button class="problema" type="button" data-p="olor" aria-pressed="false">Mal olor o desagüe lento<span class="tipo">Desagüe</span></button>
+          <button class="problema" type="button" data-p="terma" aria-pressed="false">La terma no calienta<span class="tipo">Agua / luz</span></button>
+          <button class="problema" type="button" data-p="salta" aria-pressed="false">Se baja la llave del tablero<span class="tipo">Luz</span></button>
+          <button class="problema" type="button" data-p="corriente" aria-pressed="false">Siento corriente al tocar algo<span class="tipo">Luz</span></button>
+        </div>
+        <div class="respuesta" id="respuesta" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="zonas" style="padding-top:0">
+    <div class="wrap zonas">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Zonas de atención</p>
+        <h2>Trabajamos en Lima Metropolitana y Huarochirí</h2>
+        <p>Nuestra base está en San Antonio de Huarochirí, en Lima Este. Llegamos a obras en toda Lima; consúltanos por tu distrito.</p>
+      </div>
+      <div class="chips" aria-label="Algunos distritos">
+        <span class="base">San Antonio – Huarochirí</span><span>San Juan de Lurigancho</span><span>Ate</span><span>Santa Anita</span><span>La Molina</span><span>Chaclacayo</span><span>Lurigancho – Chosica</span><span>El Agustino</span><span>Barranco</span><span>Miraflores</span><span>Santiago de Surco</span><span>Cercado de Lima</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas" class="proceso">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Lo que nos preguntan antes de cotizar</h2>
+      </div>
+      <div class="faq">
+        <details><summary>¿Qué incluye el servicio a todo costo?</summary><p>Materiales, mano de obra, traslado a obra y pruebas. Te entregamos un presupuesto por fases para que sepas cuánto se paga en cada etapa.</p></details>
+        <details><summary>¿Emiten factura?</summary><p>Sí, emitimos factura electrónica. En obras de construcción aplicamos la detracción del 4 % según las normas de SUNAT.</p></details>
+        <details><summary>¿Hacen pruebas antes de entregar?</summary><p>Sí. Hacemos prueba hidráulica de las redes de agua, prueba de desagüe y pruebas eléctricas de continuidad, aislamiento y puesta a tierra.</p></details>
+        <details><summary>¿Atienden reparaciones pequeñas en casas?</summary><p>Sí. Atendemos fugas, desatoros, cambio de griferías, instalación de termas y problemas eléctricos. Escríbenos por WhatsApp con una foto del problema.</p></details>
+      </div>
+    </div>
+  </section>
+  <section id="contacto">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Contacto</p>
@@ -324,41 +750,48 @@ footer .brand .logo{width:30px}
       </div>
       <div class="contacto">
         <div class="datos">
-          <div class="dato"><div><small>Celular y WhatsApp</small><b id="tel">922 732 329</b></div><button class="copiar" type="button" data-copy="922732329" id="copy-tel">Copiar</button></div>
-          <div class="dato"><div><small>Atención</small><b>Jesús Villar, Gerente General</b></div></div>
-          <div class="dato"><div><small>Dirección</small><b>Av. Prolongación Huiracocha Mz. PP9 Lt. 11A, San Antonio – Huarochirí</b></div></div>
+          <div class="dato"><div><small>Número de referencia · WhatsApp</small><b id="tel">922 732 329</b></div><button class="copiar" type="button" data-copy="922732329" id="copy-tel">Copiar</button></div>
+          <div class="dato"><div><small>Atención</small><b>Lunes a sábado · Cotizaciones por WhatsApp</b></div></div>
+          <div class="dato"><div><small>Dirección</small><b>Av. Prolongación Huiracocha Mz. PP9 Lt. 11A, San Antonio – Huarochirí</b></div><a class="copiar" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Prolongaci%C3%B3n+Huiracocha+San+Antonio+Huarochir%C3%AD+Lima" target="_blank" rel="noopener" style="text-decoration:none">Cómo llegar ↗</a></div>
           <div class="dato"><div><small>RUC</small><b id="ruc">20614484153</b></div><button class="copiar" type="button" data-copy="20614484153" id="copy-ruc">Copiar</button></div>
         </div>
-        <form id="cot" novalidate>
-          <h3>Pide tu cotización</h3>
-          <div class="fila">
-            <label for="f-nombre">Nombre<input id="f-nombre" name="nombre" autocomplete="name" placeholder="Ej. Constructora Los Álamos" required></label>
-            <label for="f-distrito">Distrito de la obra<input id="f-distrito" name="distrito" placeholder="Ej. Barranco"></label>
-          </div>
-          <label for="f-servicio">Servicio
-            <select id="f-servicio" name="servicio">
-              <option>Gasfitería e instalaciones sanitarias</option>
-              <option>Instalaciones eléctricas</option>
-              <option>Gasfitería y electricidad</option>
-              <option>Mantenimiento o reparación</option>
-            </select>
-          </label>
-          <label for="f-detalle">Detalle de la obra<textarea id="f-detalle" name="detalle" placeholder="Ej. Edificio de 5 pisos, 10 departamentos, a todo costo"></textarea></label>
-          <button class="btn btn-verde" type="submit">Enviar por WhatsApp</button>
+        <div class="wiz" id="wiz">
+          <h3>Arma tu cotización</h3>
+          <div class="wiz-barra" aria-hidden="true"><i id="wiz-barra"></i></div>
+          <div id="wiz-cuerpo"></div>
           <p class="ok" id="ok" role="status"></p>
-          <p class="nota">Se abrirá WhatsApp con tu mensaje listo para enviar al 922 732 329. Si no se abre, escríbenos directamente a ese número.</p>
-        </form>
+          <p class="nota">Al terminar se abre WhatsApp con tu pedido listo para enviar al 922 732 329. Respondemos para coordinar la visita.</p>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <a class="brand" href="#inicio"><span class="logo" aria-hidden="true"></span><span><b>CASA BONITA OREGÓN S.A.C.</b><small>Gasfitería y electricidad</small></span></a>
-    <span>RUC 20614484153 · Lima, Perú</span>
+  <div class="wrap pie-grid">
+    <div class="pie-col">
+      <a class="brand" href="#inicio"><span class="logo" aria-hidden="true"></span><span><b>CASA BONITA OREGÓN S.A.C.</b><small>Gasfitería y electricidad</small></span></a>
+      <p>RUC 20614484153</p>
+    </div>
+    <div class="pie-col">
+      <small>Zona de atención</small>
+      <p>Lima Metropolitana y Huarochirí</p>
+    </div>
+    <div class="pie-col">
+      <small>Seguro del personal</small>
+      <p>SCTR salud y pensión · La Positiva</p>
+    </div>
+    <div class="pie-col">
+      <small>Número de referencia</small>
+      <p class="tel">922 732 329</p>
+    </div>
   </div>
 </footer>
+
+<a class="wa-flot" href="https://wa.me/51922732329?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al 922 732 329">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+<button class="subir" type="button" id="subir" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></button>
 
 <script>
 document.querySelectorAll(".copiar").forEach(b=>b.addEventListener("click",()=>{
@@ -367,15 +800,124 @@ document.querySelectorAll(".copiar").forEach(b=>b.addEventListener("click",()=>{
   const fallback=()=>{const el=b.parentElement.querySelector("b");const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Seleccionado";setTimeout(()=>b.textContent=orig,1600)};
   try{navigator.clipboard.writeText(v).then(done,fallback)}catch(e){fallback()}
 }));
-const f=document.getElementById("cot"),ok=document.getElementById("ok");
-f.addEventListener("submit",e=>{
-  e.preventDefault();
-  const n=f.nombre.value.trim();
-  if(!n){ok.textContent="Escribe tu nombre o el de tu empresa.";f.nombre.focus();return}
-  const txt=`Hola, soy ${n}. Quiero una cotización de ${f.servicio.value.toLowerCase()}`+(f.distrito.value.trim()?` para una obra en ${f.distrito.value.trim()}`:"")+"."+(f.detalle.value.trim()?` Detalle: ${f.detalle.value.trim()}`:"");
-  const a=document.createElement("a");a.href="https://wa.me/51922732329?text="+encodeURIComponent(txt);a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();
-  ok.textContent="Mensaje preparado. Revisa la pestaña de WhatsApp para enviarlo.";
-});
+/* Menú lateral */
+const panel=document.getElementById("panel"),velo=document.getElementById("velo"),abrir=document.getElementById("abrir-menu");
+function menu(on){
+  if(on){panel.hidden=false;requestAnimationFrame(()=>{panel.classList.add("abierto");velo.classList.add("abierto")});abrir.setAttribute("aria-expanded","true");setTimeout(()=>panel.querySelector("nav a").focus(),60)}
+  else{panel.classList.remove("abierto");velo.classList.remove("abierto");abrir.setAttribute("aria-expanded","false");setTimeout(()=>{if(!panel.classList.contains("abierto"))panel.hidden=true},320);abrir.focus()}
+}
+abrir.addEventListener("click",()=>menu(true));
+document.getElementById("cerrar-menu").addEventListener("click",()=>menu(false));
+velo.addEventListener("click",()=>menu(false));
+panel.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>menu(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&panel.classList.contains("abierto"))menu(false)});
+
+/* Tema claro / oscuro */
+const root=document.documentElement;
+function tema(t){
+  if(t==="claro")root.setAttribute("data-theme","light");else if(t==="oscuro")root.setAttribute("data-theme","dark");else root.removeAttribute("data-theme");
+  document.querySelectorAll(".tema button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.tema===t)));
+  try{localStorage.setItem("cbo-tema",t)}catch(e){}
+}
+let guardado="claro";try{guardado=localStorage.getItem("cbo-tema")||"claro"}catch(e){}
+tema(guardado);
+document.querySelectorAll(".tema button").forEach(b=>b.addEventListener("click",()=>tema(b.dataset.tema)));
+
+/* Pestañas */
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function activar(t){tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",String(on));x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on})}
+tabs.forEach((t,i)=>{t.addEventListener("click",()=>activar(t));t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=tabs[(i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length];activar(n);n.focus()}})});
+
+/* Volver arriba */
+const subir=document.getElementById("subir");
+addEventListener("scroll",()=>subir.classList.toggle("ver",scrollY>700),{passive:true});
+subir.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+/* Servicios desplegables */
+document.querySelectorAll(".serv-btn").forEach(b=>b.addEventListener("click",e=>{
+  const card=b.closest(".serv"),on=!card.classList.contains("abierto");
+  if(on&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
+    const r=card.getBoundingClientRect(),o=document.createElement("span");o.className="onda";
+    o.style.left=((e.clientX||r.left+60)-r.left)+"px";o.style.top=((e.clientY||r.top+60)-r.top)+"px";
+    card.appendChild(o);setTimeout(()=>o.remove(),950);
+  }
+  card.classList.toggle("cerrando",!on);
+  card.classList.toggle("abierto",on);b.setAttribute("aria-expanded",String(on));
+  if(on&&innerWidth<860)setTimeout(()=>card.scrollIntoView({behavior:"smooth",block:"start"}),120);
+}));
+/* Los enlaces del menú a Gasfitería / Electricidad abren su tarjeta */
+document.querySelectorAll('[data-abre]').forEach(a=>a.addEventListener("click",()=>{const c=document.getElementById(a.dataset.abre);if(c&&!c.classList.contains("abierto"))c.querySelector(".serv-btn").click()}));
+/* Barra de progreso */
+const prog=document.getElementById("progreso");
+addEventListener("scroll",()=>{const h=document.documentElement;prog.style.transform=`scaleX(${Math.min(1,scrollY/((h.scrollHeight-innerHeight)||1))})`},{passive:true});
+
+/* Casa interactiva */
+const PUNTOS={
+ cisterna:{esp:"Gasfitería",t:"Cisterna",d:"Guarda el agua que llega de la red pública y abastece a toda la casa.",l:["Tubería de ingreso, rebose, succión y limpieza","Electrobomba con su tablero de control","Ingreso seguro como espacio confinado"]},
+ tanque:{esp:"Gasfitería",t:"Tanque elevado o hidroneumático",d:"Da presión al agua para que llegue bien a todos los pisos.",l:["Montante de impulsión desde la cisterna","Flotador y válvulas de control","Opción de tanque hidroneumático"]},
+ bano:{esp:"Gasfitería",t:"Baño",d:"Puntos de agua fría, caliente y desagüe, dejados antes del vaciado de la losa.",l:["Agua en PPR por termofusión","Desagüe y ventilación en PVC","Inodoro, lavatorio, ducha y griferías"]},
+ cocina:{esp:"Gasfitería y electricidad",t:"Cocina",d:"Agua para el lavadero, desagüe y tomacorrientes para los equipos.",l:["Salidas de agua y desagüe del lavadero","Tomacorrientes para refrigeradora y equipos","Circuito independiente para la cocina"]},
+ tablero:{esp:"Electricidad",t:"Tablero eléctrico",d:"Reparte la energía en circuitos y protege a las personas.",l:["Interruptores termomagnéticos por circuito","Interruptor diferencial","Circuitos rotulados para cada ambiente"]},
+ pozo:{esp:"Electricidad",t:"Pozo a tierra",d:"Descarga a tierra las fugas de corriente para evitar choques eléctricos.",l:["Excavación y varilla de cobre","Tratamiento del terreno","Medición de la resistencia"]}
+};
+const info=document.getElementById("casa-info");
+function verPunto(k,btn){
+  const p=PUNTOS[k];
+  document.querySelectorAll(".punto").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
+  info.innerHTML=`<span class="esp">${p.esp}</span><h3>${p.t}</h3><p>${p.d}</p><ul>${p.l.map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn btn-claro" href="#contacto" style="justify-self:start;margin-top:6px">Cotizar ${p.t.toLowerCase()}</a>`;
+  info.classList.remove("cambia");void info.offsetWidth;info.classList.add("cambia");
+}
+document.querySelectorAll(".punto").forEach(b=>b.addEventListener("click",()=>verPunto(b.dataset.punto,b)));
+verPunto("cisterna",document.querySelector('.punto[data-punto="cisterna"]'));
+
+/* Diagnóstico */
+const DIAG={
+ fuga:{t:"Mancha de humedad o fuga",c:"Una unión de tubería empotrada que pierde agua, o una llave o grifería gastada.",h:"Ubicamos el punto con el medidor cerrado, abrimos lo mínimo, cambiamos el tramo o accesorio y hacemos prueba hidráulica antes de resanar.",a:"Mientras tanto, cierra la llave general si la mancha crece."},
+ presion:{t:"Poca presión en el caño o la ducha",c:"Aireadores sucios, tubería obstruida, válvula a medio abrir o falta de presión en el tanque o la bomba.",h:"Revisamos desde el tanque o la bomba hasta el punto, limpiamos y, si hace falta, instalamos un sistema de presión.",a:"Prueba limpiar el aireador del caño: a veces el sarro es la causa."},
+ olor:{t:"Mal olor o desagüe lento",c:"Trampa (sifón) seca o dañada, falta de ventilación o atoro en la tubería.",h:"Desatoramos, revisamos trampas y registros y corregimos la ventilación del desagüe.",a:"Si un sumidero no se usa, echa agua cada semana para que su trampa no se seque."},
+ terma:{t:"La terma no calienta",c:"Resistencia o termostato dañado, llave del circuito baja o conexión floja.",h:"Revisamos la parte eléctrica y la de agua de la terma, cambiamos la pieza dañada o instalamos una nueva.",a:"Desconecta la terma antes de revisarla y no la enciendas sin agua."},
+ salta:{t:"Se baja la llave del tablero",c:"Sobrecarga del circuito, un cortocircuito o un equipo con fuga de corriente.",h:"Medimos cada circuito, ubicamos el equipo o el tramo con falla y reorganizamos los circuitos si están sobrecargados.",a:"No la subas a la fuerza ni la amarres: te está protegiendo."},
+ corriente:{t:"Siento corriente al tocar algo",c:"Fuga de corriente a una parte metálica y falta de puesta a tierra o de interruptor diferencial.",h:"Ubicamos la fuga, instalamos o revisamos el pozo a tierra y colocamos un interruptor diferencial.",a:"Es peligroso: baja la llave de ese circuito y no toques el equipo hasta que se revise."}
+};
+const resp=document.getElementById("respuesta");
+function verDiag(k,btn){
+  const d=DIAG[k];
+  document.querySelectorAll(".problema").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
+  resp.innerHTML=`<h3>${d.t}</h3><div class="bloque"><small>Causa más común</small><p>${d.c}</p></div><div class="bloque"><small>Cómo lo resolvemos</small><p>${d.h}</p></div><p class="aviso">${d.a}</p><a class="btn btn-verde" style="justify-self:start" href="https://wa.me/51922732329?text=${encodeURIComponent("Hola, tengo este problema: "+d.t+". ¿Pueden revisarlo?")}" target="_blank" rel="noopener">Consultar por WhatsApp</a>`;
+  resp.classList.remove("cambia");void resp.offsetWidth;resp.classList.add("cambia");
+}
+document.querySelectorAll(".problema").forEach(b=>b.addEventListener("click",()=>verDiag(b.dataset.p,b)));
+verDiag("fuga",document.querySelector('.problema[data-p="fuga"]'));
+
+/* Cotizador por pasos */
+const W={paso:0,servicio:"",inmueble:"",tamano:"",cuando:""};
+const PASOS=[
+ {k:"servicio",q:"1. ¿Qué necesitas?",o:[["Gasfitería","Agua, desagüe, cisterna"],["Electricidad","Circuitos, tableros, pozo a tierra"],["Gasfitería y electricidad","Instalación completa"],["Reparación","Fugas, atoros, fallas eléctricas"]]},
+ {k:"inmueble",q:"2. ¿Dónde es el trabajo?",o:[["Casa","Vivienda unifamiliar"],["Edificio multifamiliar","Varios departamentos"],["Local o negocio","Tienda, oficina, restaurante"],["Obra de una constructora","Subcontrato en obra"]],k2:"tamano",q2:"¿De qué tamaño?",o2:[["1 a 2 pisos",""],["3 a 5 pisos",""],["6 pisos o más",""],["Solo un ambiente",""]]},
+ {k:"cuando",q:"3. ¿Para cuándo lo necesitas?",o:[["Urgente","Esta semana"],["Este mes",""],["En 1 a 3 meses","Estoy planificando"],["Solo quiero el precio",""]],final:true}
+];
+const cuerpo=document.getElementById("wiz-cuerpo"),barra=document.getElementById("wiz-barra"),okW=document.getElementById("ok");
+function ops(key,lista){return `<div class="opciones" role="group">${lista.map(([t,d])=>`<button type="button" class="opcion" data-k="${key}" data-v="${t}" aria-pressed="${W[key]===t}"><b>${t}</b>${d?`<span>${d}</span>`:""}</button>`).join("")}</div>`}
+function pinta(){
+  const P=PASOS[W.paso];barra.style.width=((W.paso+1)/PASOS.length*100)+"%";
+  let h=`<div class="wiz-paso"><p>${P.q}</p>${ops(P.k,P.o)}`;
+  if(P.k2)h+=`<p>${P.q2}</p>${ops(P.k2,P.o2)}`;
+  if(P.final)h+=`<label for="w-nombre">Tu nombre o empresa<input id="w-nombre" autocomplete="name" placeholder="Ej. Constructora Los Álamos"></label><label for="w-distrito">Distrito<input id="w-distrito" placeholder="Ej. San Juan de Lurigancho"></label><div class="resumen">${[W.servicio,W.inmueble,W.tamano].filter(Boolean).join(" · ")}</div>`;
+  h+=`<div class="wiz-nav">${W.paso?`<button type="button" class="btn btn-sec" id="w-atras">Atrás</button>`:"<span></span>"}<button type="button" class="btn btn-verde" id="w-sig">${P.final?"Enviar por WhatsApp":"Siguiente"}</button></div></div>`;
+  cuerpo.innerHTML=h;okW.textContent="";
+  cuerpo.querySelectorAll(".opcion").forEach(b=>b.addEventListener("click",()=>{W[b.dataset.k]=b.dataset.v;cuerpo.querySelectorAll(`.opcion[data-k="${b.dataset.k}"]`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));okW.textContent=""}));
+  const at=document.getElementById("w-atras");if(at)at.addEventListener("click",()=>{W.paso--;pinta()});
+  document.getElementById("w-sig").addEventListener("click",()=>{
+    if(!W[P.k]){okW.textContent="Elige una opción para continuar.";return}
+    if(P.k2&&!W[P.k2]){okW.textContent="Elige también el tamaño.";return}
+    if(!P.final){W.paso++;pinta();return}
+    const n=document.getElementById("w-nombre").value.trim(),d=document.getElementById("w-distrito").value.trim();
+    if(!n){okW.textContent="Escribe tu nombre o el de tu empresa.";document.getElementById("w-nombre").focus();return}
+    const txt=`Hola, soy ${n}. Quiero una cotización de ${W.servicio.toLowerCase()} para ${W.inmueble.toLowerCase()} (${W.tamano.toLowerCase()})${d?` en ${d}`:""}. Plazo: ${W.cuando.toLowerCase()}.`;
+    const a=document.createElement("a");a.href="https://wa.me/51922732329?text="+encodeURIComponent(txt);a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();
+    okW.textContent="Pedido preparado. Revisa la pestaña de WhatsApp para enviarlo.";
+  });
+}
+pinta();
 </script>
 
 </body>
