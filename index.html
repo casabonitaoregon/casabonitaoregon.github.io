@@ -46,7 +46,7 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
-.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1380px;margin:0 auto;padding-left:max(clamp(16px,4vw,64px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,64px),env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--display);font-stretch:85%;line-height:1.05;margin:0;text-wrap:balance}
 p{margin:0}
 a{color:inherit}
@@ -56,7 +56,8 @@ a{color:inherit}
 
 /* Cabecera */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px;max-width:none;padding-left:max(clamp(16px,2vw,32px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,2vw,32px),env(safe-area-inset-right,0px))}
+@media (max-width:640px){.top .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--verde)}
 .brand .logo{width:38px}
 .brand b{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:1.05rem;letter-spacing:.02em;color:var(--ink)}
@@ -427,6 +428,18 @@ footer .brand .logo{width:30px}
 .btn-sec{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
 .resumen{font-size:.88rem;color:var(--muted);background:var(--chip);border-radius:12px;padding:12px 14px}
 @media (max-width:480px){.opciones{grid-template-columns:1fr}.wiz{padding:20px}}
+
+/* Pantallas grandes */
+@media (min-width:1200px){
+  .hero .wrap{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);padding-block:96px 88px}
+  .hero h1{font-size:clamp(4rem,5.2vw,5.6rem)}
+  .hero p.lead{font-size:1.2rem}
+  .hero-logo{width:min(360px,80%)}
+  .sec-head{max-width:54em}
+  .sec-head h2{font-size:clamp(2.6rem,3.4vw,3.4rem)}
+  section{padding-block:104px}
+  .servicios,.contacto{gap:32px}
+}
 
 /* WhatsApp flotante */
 .wa-flot{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25);text-decoration:none;transition:transform .2s ease}
