@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Casa Bonita Oregón S.A.C. | Gasfitería y electricidad en Lima</title>
 <meta name="description" content="Casa Bonita Oregón S.A.C.: gasfitería, instalaciones sanitarias y eléctricas a todo costo en Lima y Huarochirí. Redes de agua y desagüe, cisternas, tableros y pozo a tierra. Cotiza por WhatsApp al 922 732 329.">
 <link rel="canonical" href="https://casabonitaoregon.github.io/">
@@ -17,921 +16,968 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#072a20">
 <link rel="icon" type="image/png" href="favicon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Plumber", "Electrician"], "name": "Casa Bonita Oregón S.A.C.", "alternateName": ["CBO", "Casa Bonita Oregon"], "url": "https://casabonitaoregon.github.io/", "telephone": "+51922732329", "taxID": "20614484153", "description": "Instalaciones sanitarias y eléctricas a todo costo para viviendas, edificios y constructoras en Lima.", "address": {"@type": "PostalAddress", "streetAddress": "Av. Prolongación Huiracocha Mz. PP9 Lote 11A", "addressLocality": "San Antonio, Huarochirí", "addressRegion": "Lima", "addressCountry": "PE"}, "areaServed": ["Lima Metropolitana", "Huarochirí"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,700;62..125,800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
 <style>
-/* Layout: banda degradada verde→beige como "tubería" que recorre la página; servicios en dos columnas (agua / luz), proceso en secuencia real, seguridad como ficha técnica, contacto con cotización por WhatsApp */
 :root{
-  --verde:#0d5c46; --verde-2:#14805f; --beige:#e9dcc3; --arena:#f6f1e7;
-  --bg:#fbf9f4; --surface:#ffffff; --ink:#15231d; --muted:#5a6a62; --line:#dcd5c5;
-  --on-verde:#f6f1e7; --chip:#e7efe9; --on-btn:#f6f1e7; --wa:#1f9d55;
-  --grad:linear-gradient(115deg,#0b4f3c 0%,#0d5c46 30%,#5f8f6f 62%,#c9c09c 84%,#e9dcc3 100%);
-  --display:"Archivo","Arial Narrow",Arial,sans-serif;
-  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --v9:#061f18; --v8:#0a3328; --v7:#0d5c46; --v6:#14805f; --v3:#9cc3b1;
+  --beige:#e9dcc3; --arena:#f4ede0; --arena-2:#e9dfcc;
+  --ink:#10241c; --ink-2:#3f544a;
+  --on-dark:#f4ede0; --on-dark-2:#b9c7bd;
+  --m:clamp(18px,3.4vw,56px);
+  --r:clamp(24px,3vw,44px);
+  --ease:cubic-bezier(.22,1,.36,1);
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f1714; --surface:#16211c; --ink:#ebe5d8; --muted:#9fb0a6; --line:#2a3832;
-  --verde:#3fae86; --verde-2:#6cc9a3; --beige:#3a3427; --arena:#1b2621; --on-verde:#f6f1e7; --chip:#1f2e27; --on-btn:#06231a; --wa:#25b864;
-  --grad:linear-gradient(115deg,#07372a 0%,#0b4a39 35%,#335b49 65%,#5d5640 88%,#6e6449 100%); color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0f1714; --surface:#16211c; --ink:#ebe5d8; --muted:#9fb0a6; --line:#2a3832;
-  --verde:#3fae86; --verde-2:#6cc9a3; --beige:#3a3427; --arena:#1b2621; --on-verde:#f6f1e7; --chip:#1f2e27; --on-btn:#06231a; --wa:#25b864;
-  --grad:linear-gradient(115deg,#07372a 0%,#0b4a39 35%,#335b49 65%,#5d5640 88%,#6e6449 100%); color-scheme:dark}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
-.wrap{max-width:1380px;margin:0 auto;padding-left:max(clamp(16px,4vw,64px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,64px),env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--display);font-stretch:85%;line-height:1.05;margin:0;text-wrap:balance}
-p{margin:0}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--verde-2);outline-offset:3px;border-radius:4px}
-.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--verde)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--v9);color:var(--on-dark);font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 100;font-size:clamp(16px,.95rem + .2vw,19px);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,ul,ol,figure,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--beige);outline-offset:3px}
+::selection{background:var(--beige);color:var(--v9)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1560px;margin:0 auto;padding:0 var(--m)}
+.xl{font-weight:800;font-variation-settings:"wdth" 118;text-transform:uppercase;letter-spacing:-.035em;line-height:.88}
+.t-display{font-size:clamp(2.6rem,.4rem + 8vw,10.5rem)}
+.hero-title .line>span{white-space:nowrap}
+.t-h2{font-size:clamp(2.4rem,1rem + 5.4vw,7rem)}
+.t-h3{font-size:clamp(1.5rem,1rem + 1.6vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.muted{color:var(--on-dark-2)}
+.line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.line>span{display:block}
 .logo{display:inline-block;background:currentColor;-webkit-mask:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAC/CAYAAADAW1ErAAAZnklEQVR4nO2de5RddXXHP3dm8pjJa5JMICEvCAEiQlCiPEQtPkCgoCIqVOK7tsrCWrHtsqva5eqqy9X3u0WwtYpotcqqKGh9A6JU8AFSJCgJkGTCI6HJhCSTzKt/fM/Pc+Y6c+fce56/c/ZnrbNm5s6dM+fe+/uevX9779/+NRZsPh/DaINVwAuBbwFPFnwttaen6AswvKEXeBnwu8AAcFehV2MAJmAjHhuBtwCvQxb4EWCswOsxAkzARisWAq9BVncj0AgeHy/qgozJmICNqZiP3OU3ABcCC5p+PxEcRsGYgI1mVgPvQuJdO81zGoTW2CgQE7DhWApsBt4GnAJ0FXs5RhxMwEYvSgtdCVyMhGx4ggm43qwD3oys7qo2/s7c55JgAq4nS4FLgDcCZyMrbHiICbhe9AHPB34LeCWKNhseYwKuDwPA+4BLgRMxN7gSmICrzwDwCuQuvxzoLvZyjDQxAVeb01EV1SuBRcVeipEFJuBqcjxwBXAZKoE0q1tRTMDVoht4CfBe4DxgVrGXY2SNCbg6nAa8Ca0YWp3x/7I66JJgAvaf5cBFwFtRRZVRI0zA/tINnAO8GzgfLf1Lyhg2X/YKE7CfnIBKIK9AAauk7AO+DKwBXpTC+YycMAH7xSLgAlS7/FKSf36HgQeAjwGfBT6ICdgrTMD+cA7wDuBVQH8K59sBfAL4NBIx2BJC7zABl5/VKEh1FcrpJmUI+D5wHXArMJzCOY2CMAGXlz7U1uYa4MWkYx1/CvwL8Clg/xS/t15XnmECLifPQ0Gqi9Ca3aQ8AdwMXItEPDLN8yy/6xkm4HKxHHg1ql8+KYXzDaP+zX8NfAUYTeGcRokwAZeDJaj08XLkNifN6Y4CP0CR5S8DWxOebyps7JQA+xDKwaXISqZRjPE4cCOa6z7c5t/GXSM8hs2XS4EJuBwsI7l4nwG+jYT7HeBQwvPNhO3MUAJMwOUgiRhGgAeBj6O87tMJztVOEMtyxiXABOw3e4HPANej6HJeQSoTb0kwAfvJIeBO4KMounyg2MsxisIE7B/bURXVdRS3P6/tjVQSTMDlIG70dx+qzLqF7INUrbCOliXB5jLlIK4gDgP3U6x4jRJhAvaLBjC76IvA3OfSYAIuB74VRYxjbnQpMAGXA9+KIiyIVRJMwOWgnfavZRCOtastCSbgclCWRnLmFnuGCdgwPMYEbBgeYwI2DI8xARuGx5iADcNjTMCG4TEmYMPwGBOwYXiMCdiIkrSQo4F6Wq9P4VqMGJiAjU6ZqqRzArgS+HvUHndOrldUQ0zARtrMBS4EPgf8B9pdoq/QK6ow1pHDSBtnmZegXSaeD3weuAntEnGkmMuqJmaBjU5oEH++vBJ4N/BJ4K+A07O6qDpiAjbyoAtYC1wN/DvwIeCUAq+nMpgLbeTNqcCz0dz4U2iP4m3419SgFJiAjSh5rQfuQnPjU4HXo03YbgJ25vT/K4MJ2CiSucA5wHNQ5PrfUMP6XQVek1fYHDhfkr7fVe1FNQ8J+AYU7LoYmF/oFXmCWeB8OBk4H7iZbPbqrQpzgZcDJwC3ozzy7WjnRWMKzAJnywrgrciqfAjlRqtAK08gjXn0WuCN6H37CJovWyO9KTALnA1HAa8BXgdsAhYhK5LX7oFFkqaLvxR4F7LKt6Jg1z3410c7M0zA6TIAvBh4A/AKJs/jqjh3zYNuYENw/BoS8VfQnsh1uCG2xAScDrOQm3cN8CJkgY302YRST1eiDc1vINmG5t5jAk5GL3A2ymX+OrCq2MtJjA99oWcDpwF/ht7zzwJfQ9uu1g4TcOesR5bgDcCJMZ7vgzh8Yg5wHnAW8G202flt1GyzcxNw+2wELgcuA44j/m6BXdQj6p/3jWoB8EpUEHI38I/AHcBQztdRCCbg+ByLoqHvBJ5L+2IcpfzvdxqBtriBpSHgJ8Aa9N4mZSlwAbrBfgH4THD+Su+lXPYBVQaOAi4B3oKCKL0dnmec8hfsxxVwq+WEcc+xF/hT4CBKFV2ARJiUY4CrkFX+Ilr9dB/lf+87wgQ8PYtR9dQVwLlAf8Lz+TAHTsMCx/VMulFu/PvAFpR+2wy8FOXNk9CNikF+B3ghqoD7T+CBhOctHSbgX2UhSgm9EwVJkg4mR4N6zIHj0iAcf7vRaqSvo/z51WiBQxrv/eloynMp8DHgy8BjVKQYxAQc0oMs7WbgJWhuliYNprdwZXHv8rTAU7nh+1H7nbuRJX47StMlvfE1UOrpz5GQv4R6dg0mPG/hmICVjngWEu6lwLqM/s8E07vRZRFwXFpNB9K4CTyKCjXuQFOYy1ATgKT10L3oxnAW6pr5aeCbwFN4WilXdwGvQwEUlxLKmukGSVlc67iD+HBK/2+muMAvUKDrRpRvfwvp9JzuQ0sWX4LKMq/B00KQOgq4ge7mF6BI5ZnEz+UmJekKnnaayXVCOzntPNmGKq9uR5/ZJcBJKZx3HgpyHYUJ2AsGUPndVWgHgTwHYtmDJmcBZ8R8bhfT30iyusGMIpf6DhSI+k3UBCBp6mmC8nhAbVMXAQ+gD3szGqgLUzrvEWAYVQPNNHAnmH6uW2SKaTZ6X96HVvwkJY+55G2oSONMVM56McnWWvuQ4puSqgt4CRLsG4FX0XkRRjOjaDnb51Gq42pmDrC0ikK3M+jTHGxHI0t2De0LYLprzsvT2IcWMdwJfJXw5lyVpgmxqKqAu1Ft7G+jQMWKFM+9A7V6uREVBryNeKLqjvm8mUjLwh0P/DGKvC9o82/HmN6byDuaewCVTd6GlnJeg/K+tejgUTUBz0Hljpejgbk6xXNvBb4B/CvwQ8IBHFeYaVnOXvQ6u2gtlub/557r1i6/HxWqdEKrljpFzScH0dLC76EtXd6DblKVpioC7kIpobejVjZxlvfFZQ9arnY9ioION/0+T6s6H/g9VLnUhdzV6N+2inI70fUi76TT+e4weh+mW+1TdEBoO/BPqALLBOwB69Ac9xI6WyU0HW6OdQOaZ2XZ+SGuu9eL+mwVxS7gb9GOCmVfd9tOcYyXRRzgt4D7UUro7agQvjul8w4DP0KrWG4Gnpjh+XmWHxbJL4C/QQvnfascmwkTcAFcCFxLeg3AR1HHw+vRMrQ9KZ03DmXOEU+gcsM/RO+PL1TtJjMlPgt4MWoEngY/Q1HlW4Efp3TOKvAMWiX0d8gr8QVvLWq7+CzgpFZrAngEpYQ+ATxEZx98VQfLBMqv/gEzTyOS/I+s8LY4ox18FnAStqPlZDchy9IcWTbEJlTp9DFq0mPKN3wWcCd32EHgu2ip2nfIX7g+WYUGWqH1AWAZ8A/4s362Va12pfBZwO24XweAbwH/jBL9Zk3isxh4L8qtfxi/5sKVx2cBx2UCJfb/AhVAGO0zBxXIrECbtE1V0FImamF9oR4CHgN+QDXEO4JqsYcJPRA3WCeavjbjls3NA1bS2Wd/NpoP/wnKkyfdm6g2QsuKOgh4gvSKPJKSdMDuRZ0WHyAs/oieM860Yj4qfHkPnbUPWh1cw1eAnR38vZEidRBwlRhH3SmSbhJ+LyqL/ABqhN4ucdY/F03Zry8VfCjhM0K6SMebmEC7F1yFOjS26wrXosrJB0zA9WUcLdJ4HypJbScyb+OmJPj8QdTCRcqBnwMfBD5CexVXeffEMqbABJwvZS273Av8JXBLzOf7+N5XEp8FXFeyugmMYgUu3mECTk6VrFE7r6VM/b1qiwnYiGKC8gwTsBHFBOwZdRFwldzcLGlHwCb2ElAHAVdJvK3auaZBHcZDpfD5A6ujBWi1RalRQ3wWcB3JendCuzl4hgk4OXUd9HV93aXCBJwvSQe9DxbYhJ0jJuD8qOOcvRVZB+RqgQk4P1pZz7gD2Qa8MQkTcHIaxFujW5auIEaF8Lkjxyjxmrtn7aodAB6l9QbeAIdI3kPK3E5jEj4LuCzew82oad5MwnLtcJKQtXjbceXtRlICfBZwWdhN8o6XZbkZxWWM6gjY65uRbwOnqpTF8sWdp1dp54OsU3OZ4ruAvX3jm4g7N+4m29fsrSVKiLfjyGcBe/umT0Fc4cwUKEtK3Pe0lSfQzudShhtGA4914O2FUy0B+0Y304+dMoiyNvgs4CpRpZtRO6myKr3uQjABl4OyDOQ0FvSX5bXExWuPoQ4C9iHK6NsgGqdafaHjFASVEp8FPE68ge+DOHy4xrj4OKZ8vOkAfhdyxLWsWd9dzwDODb53UWJ3jAfHGJob3sTUux/4JuBWZaxlEEO7kWVvLbDPAoZ4gyVrF/pMtHN9N5OF2GCylzAE3E1725eUlVb56DLcjGqzcMR3Accl6+IHN6Cb/090IM1qcQ7fBpwP1+vDNSbGx/lK2XBucpznTWedfPscWllZb91RH/Ft4JSRdgr7y+BeZk1cAae11/F01OG9ro2As/4wyxC4KQtx34tR4HCG11CLz6QOAs5avHHfw1pYBNp7P8pQ1+01dRBw1rh00Uy0Sm1UabDFfS1dZDv+qvSeTosJODlxB0o3FuBpphYiy5K6CLgM7msZrqFs2NrmhNRBwF1ka/niDsKs1/L6RpaBprjTGu+pg4CzjkiaKDujNiLLkjoI2ARWT2pxc6iDgGuTEzR+SW2sex0EXDWqcjPyup1rWTABG1VlLObzvL6JmICNoshy7MVdYOI9Pgu4LK5kO+9hWa65DDTIbjnrOK2Xb1YGnwVcJcrixpXlOtKgSq9lWkzAyamSVc1z0LtWQ1lQmwCZCThfkg6qKg1KS++lQB0EXLVBX6UVPCbghNSlJ1aWIs7b7YzufNATObqmOJxAXGGD+zoW+ToSOWcaLm3c92MMOJLC/6s1dRFw2YlrieYD7wf2Ar0o0jonONx+Rd2RI3reUcL2P+77I6grxhHgIHBO8NyJNq6pU4aBAxn/j8pTFwFnORhHMjx3M/OAKzP+H3mIF8K2u0YC6iDgtKOdPcj69QNHAadQrVhCXvPSxcDLgv/3NPIqhklnStJFdhHuUlEHAUNn3Q8bwd/NBwaCYyVwMrAeWAOsQiKuRQ/ilFkKfAh4MzAI7AQeArYE3z8N7EbufbtidDGByuOzgNuxFDO9zm7knvYDxwAnBcexwApgWfC7ecFRiyqfHFgSHJuCnw+jefEQEvAutJPFo0jcPwceA55hZmtdi8/IZwHHpbkTRjcS4zJgObAWWdYTgeOQVV2JAkNGvriA3BJ084xyBNgBPAg8DDyCxLwDeBJZ6/2ERRy1SFH5LOC4H9AEsABZ1NOA5yI3eBVy4/qBPmpyx06JInLrs4F1wTGBrPV+NHd+CtgGPADchQQ9u4BrzB2fBRx3EM0Gfj84jkEBqCIYpR7zsrwi2HODYxlwAvACFLDciwS9OIfrKByfBRyXBnB80RcRUIe0SZ5ptWa6COfVtaAOFqFMVKWxe6s6Zh9fi7f4bIF9q3FuNVCim4G7vLXbFDxa9jiKLJwrfxyNPD4anGeMqRe0u/W30VLL2ZHHZkWOnsjzXVVXtMprjOlvRmYUcsRnAft05xxDpYrTudDfBf4IpU8OolTKAeAQCtQcIix5dHnR5prmiaZjKgG7+mh3TFV+OQvFCeagOeb84Of5KIXWh24WQ9O8lgPBtc7CxJw5Pgu4bIwgobn85ZPAnuDnJ4HHUT5zKm4LjirweeAXKIi0NDiWB8fRKCPQi429VPD5TczbhR4nLPp/Bvg/JM5oBdG24DFnSaNubl34n+AAWfQe5KrPJSyUWQs8GwUXjyZM580LnleLFFAa+CxgN+fL8vyPI1E+jKzn46js70nC+t0hVBVk/CpuLu9ytk+haiqQe90LLELWegmqeluOcvRrUXroWGqSEuoEnwUM6cyDDyOL+jShQB8FtiLLuhVV+RyiHmmgvBgnnOsPNv2uB821V6AKuZNQldwaJPCjkPDnk7wO3ev2Oz4LuFPxTqBB8yjw4+D4OWFJ3l7k/hbxobrosFvL22ByxLgPWa1e5Gq6YNMcwuhxD7p2F11uXsTv3Ho3Zx9BHsSh4DgYfHXR7WiE3AXLssYFyYbQ1ORLhK/fzanXAKcCpwdfB6ih6+2zgONEOI+guepOJNCtqH72f5FbvAsN2KxoEEZ1+1AAZwFhFVEfsiQLkTVxv3ffu+ivE+rs4HDpHpcGii7gd6KNvj9RKxNNNY0wOT3lotzDyDM5iFxfZyn3IVEdiDzuouRO/Psiz492+0iKu7a96LO7E/gcev9WAxuQpV6HatmdO76Imce5WeACiLaMibIPWddtwE+A+9BdfBCJOcvrcVHXfuTmrSUcSAPB44sJxTmXUJg+pcUgFP1hQrHvQ9OQITTffQLYjm6eTwfHHiT6NBiLnPfe4LHZ6DNYhQS9EdXAr6eCi1R8FvAwsqC70QqVbYQrVXYRWou0SvvcvGwhipy6lUvHoIGxDIlzIWE01VnOKq4Xdu56q9pyZ83dcZAwer8L3VS3oxvuDiTuZ0jmFR0Jzr0LuBt9DgtRkOxotJDlBOBZaH59BI9jG40Fm88v+ho65ST0QWxBbvHhFM/dh8Q4QLi8cDW6i69D1nUJcm+tWCEZo8gt3o0E/TCKSbi8+WDw+32kW2e9FAl4DXA7Erx3+CzgNGggC9lPuFTN5Sddt41FSNBVtaRlwzXdG0autssO7EA36/tRLGMQWeqknS2jnTu9w2cXuhO6kau7FrnA65BYVxNa1gWFXZ0BYeBvFvosjkF9xyCc8+5E1vkxwlTfNmRF97b5/7wUrqPqAnbN51Yg9/cs4Ewk4H40PzKr6g/uBrwMeE7w2AiKeLsikTtQ8PJhwqq4Ipc4ZkrVBNyDIr6noyDFejRPPg4FMCoVgTQAWer+4DgBuAiJdicSseuldR9yv6dbhOElvgvYNaNbjQISZ6OWOaeiIIXvr8/ojIXB8azg5wNoDn0varlzH8pY7MHzMlgfg1jOym4CzgXOQPPYxdSwEsfoiEPIQj8AfA+tBNtCtnUCmeCLhVqERPpslJTfiAIbK4q8qJSIbnUSXb0UrZBqfsztaeT+1pU6RnOartqquTTTHS6qPotw1VB309HTdLjHZkXO6SO9aHq1HrgABcHuA+5BVXqu8OdQURcYlzILeCHK0Z0BnIfmtasprildHFzdsCtLHEX5aVfEMERYqHCAsCrpmeAYCn52JYxdwTmOMLkLR7QDhxPvBJNXaLnHojsaRgXsFtz3RH6OitQtA3QVYz1ourKAsPTT9dJ2xSuuNLSPsFzUlXu6yHLZRD8blWFuAF7L5FLNryJXe5CSBsLKJuABtMHW6cjSnoiKKBYWeVEBbjMwVzK4l3D3gD2ESwuHIt8fIKwrdgsGXOlhc3cN33A3BrfB2uzgq8uZu44e0RrwfiYvH4yWni4KnuNqvYsg2hRvE3AFSlfdg4o9foAqx0qzvrsMc+B+lNY5A7gQWdv5OV/DKBKm2zHPCXE/Eucgqut9ChUVPB58vx+JsTQfqEc48c9DIj6acBeMFcFjKwgt/qLguW5hyBzyteaHUXrqa0jMD6G8c6GWuUgB9wPnA69CUeN16APKmnEk1t0ovfAQilAOIrHuQ8GM/YRW8yAm0rxxQp1NaL37kXVcjgo8jkWpozXopp9HEHOcsAvLbcAXUXqqEC8qbwGvQGI9E+1M9zzSF61bKL4fCXEPEugTwddHkFvk1v4eIr0lb0Z+dCErvACJeiUS9HGEAnc16/1onKUt8DE0lr6PLPM9qB9YbhuX5yXg5cg1fi3K1Q6QnvszgqzmLsJC+C1IrDuQpd1LuosdjHLTjdzuxchorEQe3obgq6tz7yO9cTiMxt1XkVW+hxzc6ywFPBsFoy5C+dqNaB7TKRPIqrrd6raiu91WNCfdjazqAXK8Axre0EUYNXflmG6F2XoUh1mFRJ+kYm8c1WXfBXwb+FbwcyZkIeB+FEG+GM1vT+jwPIeQZX0KCfUh4KcoT/c4igCbUI2kNJC1Xobc71PQNM81AHDLRjvJ2BxE7vUXgK+j6Vuq07U0BbwCWdvL0KKBfuK7J+PIug4iod6PxOp6Ve2ns42eDaNdGoT57wEk6g1o8cQGFDBbRntWegQZof8GbkTjO5USzqQCbiALex6KKL+MeEGpCeTubkcidd00fobmsd6VtBmVZy4KjJ2IrLRbKOPaJvXFPM99yK2+Ffgh8iQ7JomAVwOvBt6BXkyrCqkRlFfdg17AncCPkHD3YpFgwz9cq55lKL5zBsquHB88PneGv38C6eBaNF/uqE9YJwI+FrgcFV08n+nvPIfRfNUt47ofLcDejsoGDaNKdKNsi+u3dTJyuU9GFnq66eQgCnb9F7LKbfUDa0fAy4GXAm8KvjaXu42gu8hWFEK/C22xsQMTrFE/5qI59AaUjTkb9XFbydS91J4CbgE+ibQTayFFHAHPR67ylSgdFHUNRlBk7W4k1gfQZH0H5hIbRpQFyBKfjIK8L0KCXtr0vF3AN4CPIhe7Ja0EvBh4ARLv61AOdxyZ/MdQ0vqHSLxbUMrHMIyZmYUCYqehefOphCWhbkr6MPBxtCvFg0yTMp1KwN3Bia8GXo+iyk+j+ew3Uf3nvVik2DDSYg4Kfp2LMjmbUFFJN5qSXgd8AtU/TKJZwMcDv4ECVAPIJXYR40eQ5TXX2DCyw+3ocQqyzi9Eke4fA9ejXPIvY0pOwEehwNQrUBL7HmRpHyTbvYMMw5ieBgp6OW2uQUK+AXnEBxsLNp+/EUXJxpCV3YJcZrO0hlEeFjJ5QcZO4JYeNDn+JgpOWamiYZSTIdRQ4CeoPvt4YMn/AxCddYVzABniAAAAAElFTkSuQmCC) center/contain no-repeat;mask:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAC/CAYAAADAW1ErAAAZnklEQVR4nO2de5RddXXHP3dm8pjJa5JMICEvCAEiQlCiPEQtPkCgoCIqVOK7tsrCWrHtsqva5eqqy9X3u0WwtYpotcqqKGh9A6JU8AFSJCgJkGTCI6HJhCSTzKt/fM/Pc+Y6c+fce56/c/ZnrbNm5s6dM+fe+/uevX9779/+NRZsPh/DaINVwAuBbwFPFnwttaen6AswvKEXeBnwu8AAcFehV2MAJmAjHhuBtwCvQxb4EWCswOsxAkzARisWAq9BVncj0AgeHy/qgozJmICNqZiP3OU3ABcCC5p+PxEcRsGYgI1mVgPvQuJdO81zGoTW2CgQE7DhWApsBt4GnAJ0FXs5RhxMwEYvSgtdCVyMhGx4ggm43qwD3oys7qo2/s7c55JgAq4nS4FLgDcCZyMrbHiICbhe9AHPB34LeCWKNhseYwKuDwPA+4BLgRMxN7gSmICrzwDwCuQuvxzoLvZyjDQxAVeb01EV1SuBRcVeipEFJuBqcjxwBXAZKoE0q1tRTMDVoht4CfBe4DxgVrGXY2SNCbg6nAa8Ca0YWp3x/7I66JJgAvaf5cBFwFtRRZVRI0zA/tINnAO8GzgfLf1Lyhg2X/YKE7CfnIBKIK9AAauk7AO+DKwBXpTC+YycMAH7xSLgAlS7/FKSf36HgQeAjwGfBT6ICdgrTMD+cA7wDuBVQH8K59sBfAL4NBIx2BJC7zABl5/VKEh1FcrpJmUI+D5wHXArMJzCOY2CMAGXlz7U1uYa4MWkYx1/CvwL8Clg/xS/t15XnmECLifPQ0Gqi9Ca3aQ8AdwMXItEPDLN8yy/6xkm4HKxHHg1ql8+KYXzDaP+zX8NfAUYTeGcRokwAZeDJaj08XLkNifN6Y4CP0CR5S8DWxOebyps7JQA+xDKwaXISqZRjPE4cCOa6z7c5t/GXSM8hs2XS4EJuBwsI7l4nwG+jYT7HeBQwvPNhO3MUAJMwOUgiRhGgAeBj6O87tMJztVOEMtyxiXABOw3e4HPANej6HJeQSoTb0kwAfvJIeBO4KMounyg2MsxisIE7B/bURXVdRS3P6/tjVQSTMDlIG70dx+qzLqF7INUrbCOliXB5jLlIK4gDgP3U6x4jRJhAvaLBjC76IvA3OfSYAIuB74VRYxjbnQpMAGXA9+KIiyIVRJMwOWgnfavZRCOtastCSbgclCWRnLmFnuGCdgwPMYEbBgeYwI2DI8xARuGx5iADcNjTMCG4TEmYMPwGBOwYXiMCdiIkrSQo4F6Wq9P4VqMGJiAjU6ZqqRzArgS+HvUHndOrldUQ0zARtrMBS4EPgf8B9pdoq/QK6ow1pHDSBtnmZegXSaeD3weuAntEnGkmMuqJmaBjU5oEH++vBJ4N/BJ4K+A07O6qDpiAjbyoAtYC1wN/DvwIeCUAq+nMpgLbeTNqcCz0dz4U2iP4m3419SgFJiAjSh5rQfuQnPjU4HXo03YbgJ25vT/K4MJ2CiSucA5wHNQ5PrfUMP6XQVek1fYHDhfkr7fVe1FNQ8J+AYU7LoYmF/oFXmCWeB8OBk4H7iZbPbqrQpzgZcDJwC3ozzy7WjnRWMKzAJnywrgrciqfAjlRqtAK08gjXn0WuCN6H37CJovWyO9KTALnA1HAa8BXgdsAhYhK5LX7oFFkqaLvxR4F7LKt6Jg1z3410c7M0zA6TIAvBh4A/AKJs/jqjh3zYNuYENw/BoS8VfQnsh1uCG2xAScDrOQm3cN8CJkgY302YRST1eiDc1vINmG5t5jAk5GL3A2ymX+OrCq2MtJjA99oWcDpwF/ht7zzwJfQ9uu1g4TcOesR5bgDcCJMZ7vgzh8Yg5wHnAW8G202flt1GyzcxNw+2wELgcuA44j/m6BXdQj6p/3jWoB8EpUEHI38I/AHcBQztdRCCbg+ByLoqHvBJ5L+2IcpfzvdxqBtriBpSHgJ8Aa9N4mZSlwAbrBfgH4THD+Su+lXPYBVQaOAi4B3oKCKL0dnmec8hfsxxVwq+WEcc+xF/hT4CBKFV2ARJiUY4CrkFX+Ilr9dB/lf+87wgQ8PYtR9dQVwLlAf8Lz+TAHTsMCx/VMulFu/PvAFpR+2wy8FOXNk9CNikF+B3ghqoD7T+CBhOctHSbgX2UhSgm9EwVJkg4mR4N6zIHj0iAcf7vRaqSvo/z51WiBQxrv/eloynMp8DHgy8BjVKQYxAQc0oMs7WbgJWhuliYNprdwZXHv8rTAU7nh+1H7nbuRJX47StMlvfE1UOrpz5GQv4R6dg0mPG/hmICVjngWEu6lwLqM/s8E07vRZRFwXFpNB9K4CTyKCjXuQFOYy1ATgKT10L3oxnAW6pr5aeCbwFN4WilXdwGvQwEUlxLKmukGSVlc67iD+HBK/2+muMAvUKDrRpRvfwvp9JzuQ0sWX4LKMq/B00KQOgq4ge7mF6BI5ZnEz+UmJekKnnaayXVCOzntPNmGKq9uR5/ZJcBJKZx3HgpyHYUJ2AsGUPndVWgHgTwHYtmDJmcBZ8R8bhfT30iyusGMIpf6DhSI+k3UBCBp6mmC8nhAbVMXAQ+gD3szGqgLUzrvEWAYVQPNNHAnmH6uW2SKaTZ6X96HVvwkJY+55G2oSONMVM56McnWWvuQ4puSqgt4CRLsG4FX0XkRRjOjaDnb51Gq42pmDrC0ikK3M+jTHGxHI0t2De0LYLprzsvT2IcWMdwJfJXw5lyVpgmxqKqAu1Ft7G+jQMWKFM+9A7V6uREVBryNeKLqjvm8mUjLwh0P/DGKvC9o82/HmN6byDuaewCVTd6GlnJeg/K+tejgUTUBz0Hljpejgbk6xXNvBb4B/CvwQ8IBHFeYaVnOXvQ6u2gtlub/557r1i6/HxWqdEKrljpFzScH0dLC76EtXd6DblKVpioC7kIpobejVjZxlvfFZQ9arnY9ioION/0+T6s6H/g9VLnUhdzV6N+2inI70fUi76TT+e4weh+mW+1TdEBoO/BPqALLBOwB69Ac9xI6WyU0HW6OdQOaZ2XZ+SGuu9eL+mwVxS7gb9GOCmVfd9tOcYyXRRzgt4D7UUro7agQvjul8w4DP0KrWG4Gnpjh+XmWHxbJL4C/QQvnfascmwkTcAFcCFxLeg3AR1HHw+vRMrQ9KZ03DmXOEU+gcsM/RO+PL1TtJjMlPgt4MWoEngY/Q1HlW4Efp3TOKvAMWiX0d8gr8QVvLWq7+CzgpFZrAngEpYQ+ATxEZx98VQfLBMqv/gEzTyOS/I+s8LY4ox18FnAStqPlZDchy9IcWTbEJlTp9DFq0mPKN3wWcCd32EHgu2ip2nfIX7g+WYUGWqH1AWAZ8A/4s362Va12pfBZwO24XweAbwH/jBL9Zk3isxh4L8qtfxi/5sKVx2cBx2UCJfb/AhVAGO0zBxXIrECbtE1V0FImamF9oR4CHgN+QDXEO4JqsYcJPRA3WCeavjbjls3NA1bS2Wd/NpoP/wnKkyfdm6g2QsuKOgh4gvSKPJKSdMDuRZ0WHyAs/oieM860Yj4qfHkPnbUPWh1cw1eAnR38vZEidRBwlRhH3SmSbhJ+LyqL/ABqhN4ucdY/F03Zry8VfCjhM0K6SMebmEC7F1yFOjS26wrXosrJB0zA9WUcLdJ4HypJbScyb+OmJPj8QdTCRcqBnwMfBD5CexVXeffEMqbABJwvZS273Av8JXBLzOf7+N5XEp8FXFeyugmMYgUu3mECTk6VrFE7r6VM/b1qiwnYiGKC8gwTsBHFBOwZdRFwldzcLGlHwCb2ElAHAVdJvK3auaZBHcZDpfD5A6ujBWi1RalRQ3wWcB3JendCuzl4hgk4OXUd9HV93aXCBJwvSQe9DxbYhJ0jJuD8qOOcvRVZB+RqgQk4P1pZz7gD2Qa8MQkTcHIaxFujW5auIEaF8Lkjxyjxmrtn7aodAB6l9QbeAIdI3kPK3E5jEj4LuCzew82oad5MwnLtcJKQtXjbceXtRlICfBZwWdhN8o6XZbkZxWWM6gjY65uRbwOnqpTF8sWdp1dp54OsU3OZ4ruAvX3jm4g7N+4m29fsrSVKiLfjyGcBe/umT0Fc4cwUKEtK3Pe0lSfQzudShhtGA4914O2FUy0B+0Y304+dMoiyNvgs4CpRpZtRO6myKr3uQjABl4OyDOQ0FvSX5bXExWuPoQ4C9iHK6NsgGqdafaHjFASVEp8FPE68ge+DOHy4xrj4OKZ8vOkAfhdyxLWsWd9dzwDODb53UWJ3jAfHGJob3sTUux/4JuBWZaxlEEO7kWVvLbDPAoZ4gyVrF/pMtHN9N5OF2GCylzAE3E1725eUlVb56DLcjGqzcMR3Accl6+IHN6Cb/090IM1qcQ7fBpwP1+vDNSbGx/lK2XBucpznTWedfPscWllZb91RH/Ft4JSRdgr7y+BeZk1cAae11/F01OG9ro2As/4wyxC4KQtx34tR4HCG11CLz6QOAs5avHHfw1pYBNp7P8pQ1+01dRBw1rh00Uy0Sm1UabDFfS1dZDv+qvSeTosJODlxB0o3FuBpphYiy5K6CLgM7msZrqFs2NrmhNRBwF1ka/niDsKs1/L6RpaBprjTGu+pg4CzjkiaKDujNiLLkjoI2ARWT2pxc6iDgGuTEzR+SW2sex0EXDWqcjPyup1rWTABG1VlLObzvL6JmICNoshy7MVdYOI9Pgu4LK5kO+9hWa65DDTIbjnrOK2Xb1YGnwVcJcrixpXlOtKgSq9lWkzAyamSVc1z0LtWQ1lQmwCZCThfkg6qKg1KS++lQB0EXLVBX6UVPCbghNSlJ1aWIs7b7YzufNATObqmOJxAXGGD+zoW+ToSOWcaLm3c92MMOJLC/6s1dRFw2YlrieYD7wf2Ar0o0jonONx+Rd2RI3reUcL2P+77I6grxhHgIHBO8NyJNq6pU4aBAxn/j8pTFwFnORhHMjx3M/OAKzP+H3mIF8K2u0YC6iDgtKOdPcj69QNHAadQrVhCXvPSxcDLgv/3NPIqhklnStJFdhHuUlEHAUNn3Q8bwd/NBwaCYyVwMrAeWAOsQiKuRQ/ilFkKfAh4MzAI7AQeArYE3z8N7EbufbtidDGByuOzgNuxFDO9zm7knvYDxwAnBcexwApgWfC7ecFRiyqfHFgSHJuCnw+jefEQEvAutJPFo0jcPwceA55hZmtdi8/IZwHHpbkTRjcS4zJgObAWWdYTgeOQVV2JAkNGvriA3BJ084xyBNgBPAg8DDyCxLwDeBJZ6/2ERRy1SFH5LOC4H9AEsABZ1NOA5yI3eBVy4/qBPmpyx06JInLrs4F1wTGBrPV+NHd+CtgGPADchQQ9u4BrzB2fBRx3EM0Gfj84jkEBqCIYpR7zsrwi2HODYxlwAvACFLDciwS9OIfrKByfBRyXBnB80RcRUIe0SZ5ptWa6COfVtaAOFqFMVKWxe6s6Zh9fi7f4bIF9q3FuNVCim4G7vLXbFDxa9jiKLJwrfxyNPD4anGeMqRe0u/W30VLL2ZHHZkWOnsjzXVVXtMprjOlvRmYUcsRnAft05xxDpYrTudDfBf4IpU8OolTKAeAQCtQcIix5dHnR5prmiaZjKgG7+mh3TFV+OQvFCeagOeb84Of5KIXWh24WQ9O8lgPBtc7CxJw5Pgu4bIwgobn85ZPAnuDnJ4HHUT5zKm4LjirweeAXKIi0NDiWB8fRKCPQi429VPD5TczbhR4nLPp/Bvg/JM5oBdG24DFnSaNubl34n+AAWfQe5KrPJSyUWQs8GwUXjyZM580LnleLFFAa+CxgN+fL8vyPI1E+jKzn46js70nC+t0hVBVk/CpuLu9ytk+haiqQe90LLELWegmqeluOcvRrUXroWGqSEuoEnwUM6cyDDyOL+jShQB8FtiLLuhVV+RyiHmmgvBgnnOsPNv2uB821V6AKuZNQldwaJPCjkPDnk7wO3ev2Oz4LuFPxTqBB8yjw4+D4OWFJ3l7k/hbxobrosFvL22ByxLgPWa1e5Gq6YNMcwuhxD7p2F11uXsTv3Ho3Zx9BHsSh4DgYfHXR7WiE3AXLssYFyYbQ1ORLhK/fzanXAKcCpwdfB6ih6+2zgONEOI+guepOJNCtqH72f5FbvAsN2KxoEEZ1+1AAZwFhFVEfsiQLkTVxv3ffu+ivE+rs4HDpHpcGii7gd6KNvj9RKxNNNY0wOT3lotzDyDM5iFxfZyn3IVEdiDzuouRO/Psiz492+0iKu7a96LO7E/gcev9WAxuQpV6HatmdO76Imce5WeACiLaMibIPWddtwE+A+9BdfBCJOcvrcVHXfuTmrSUcSAPB44sJxTmXUJg+pcUgFP1hQrHvQ9OQITTffQLYjm6eTwfHHiT6NBiLnPfe4LHZ6DNYhQS9EdXAr6eCi1R8FvAwsqC70QqVbYQrVXYRWou0SvvcvGwhipy6lUvHoIGxDIlzIWE01VnOKq4Xdu56q9pyZ83dcZAwer8L3VS3oxvuDiTuZ0jmFR0Jzr0LuBt9DgtRkOxotJDlBOBZaH59BI9jG40Fm88v+ho65ST0QWxBbvHhFM/dh8Q4QLi8cDW6i69D1nUJcm+tWCEZo8gt3o0E/TCKSbi8+WDw+32kW2e9FAl4DXA7Erx3+CzgNGggC9lPuFTN5Sddt41FSNBVtaRlwzXdG0autssO7EA36/tRLGMQWeqknS2jnTu9w2cXuhO6kau7FrnA65BYVxNa1gWFXZ0BYeBvFvosjkF9xyCc8+5E1vkxwlTfNmRF97b5/7wUrqPqAnbN51Yg9/cs4Ewk4H40PzKr6g/uBrwMeE7w2AiKeLsikTtQ8PJhwqq4Ipc4ZkrVBNyDIr6noyDFejRPPg4FMCoVgTQAWer+4DgBuAiJdicSseuldR9yv6dbhOElvgvYNaNbjQISZ6OWOaeiIIXvr8/ojIXB8azg5wNoDn0varlzH8pY7MHzMlgfg1jOym4CzgXOQPPYxdSwEsfoiEPIQj8AfA+tBNtCtnUCmeCLhVqERPpslJTfiAIbK4q8qJSIbnUSXb0UrZBqfsztaeT+1pU6RnOartqquTTTHS6qPotw1VB309HTdLjHZkXO6SO9aHq1HrgABcHuA+5BVXqu8OdQURcYlzILeCHK0Z0BnIfmtasprildHFzdsCtLHEX5aVfEMERYqHCAsCrpmeAYCn52JYxdwTmOMLkLR7QDhxPvBJNXaLnHojsaRgXsFtz3RH6OitQtA3QVYz1ourKAsPTT9dJ2xSuuNLSPsFzUlXu6yHLZRD8blWFuAF7L5FLNryJXe5CSBsLKJuABtMHW6cjSnoiKKBYWeVEBbjMwVzK4l3D3gD2ESwuHIt8fIKwrdgsGXOlhc3cN33A3BrfB2uzgq8uZu44e0RrwfiYvH4yWni4KnuNqvYsg2hRvE3AFSlfdg4o9foAqx0qzvrsMc+B+lNY5A7gQWdv5OV/DKBKm2zHPCXE/Eucgqut9ChUVPB58vx+JsTQfqEc48c9DIj6acBeMFcFjKwgt/qLguW5hyBzyteaHUXrqa0jMD6G8c6GWuUgB9wPnA69CUeN16APKmnEk1t0ovfAQilAOIrHuQ8GM/YRW8yAm0rxxQp1NaL37kXVcjgo8jkWpozXopp9HEHOcsAvLbcAXUXqqEC8qbwGvQGI9E+1M9zzSF61bKL4fCXEPEugTwddHkFvk1v4eIr0lb0Z+dCErvACJeiUS9HGEAnc16/1onKUt8DE0lr6PLPM9qB9YbhuX5yXg5cg1fi3K1Q6QnvszgqzmLsJC+C1IrDuQpd1LuosdjHLTjdzuxchorEQe3obgq6tz7yO9cTiMxt1XkVW+hxzc6ywFPBsFoy5C+dqNaB7TKRPIqrrd6raiu91WNCfdjazqAXK8Axre0EUYNXflmG6F2XoUh1mFRJ+kYm8c1WXfBXwb+FbwcyZkIeB+FEG+GM1vT+jwPIeQZX0KCfUh4KcoT/c4igCbUI2kNJC1Xobc71PQNM81AHDLRjvJ2BxE7vUXgK+j6Vuq07U0BbwCWdvL0KKBfuK7J+PIug4iod6PxOp6Ve2ns42eDaNdGoT57wEk6g1o8cQGFDBbRntWegQZof8GbkTjO5USzqQCbiALex6KKL+MeEGpCeTubkcidd00fobmsd6VtBmVZy4KjJ2IrLRbKOPaJvXFPM99yK2+Ffgh8iQ7JomAVwOvBt6BXkyrCqkRlFfdg17AncCPkHD3YpFgwz9cq55lKL5zBsquHB88PneGv38C6eBaNF/uqE9YJwI+FrgcFV08n+nvPIfRfNUt47ofLcDejsoGDaNKdKNsi+u3dTJyuU9GFnq66eQgCnb9F7LKbfUDa0fAy4GXAm8KvjaXu42gu8hWFEK/C22xsQMTrFE/5qI59AaUjTkb9XFbydS91J4CbgE+ibQTayFFHAHPR67ylSgdFHUNRlBk7W4k1gfQZH0H5hIbRpQFyBKfjIK8L0KCXtr0vF3AN4CPIhe7Ja0EvBh4ARLv61AOdxyZ/MdQ0vqHSLxbUMrHMIyZmYUCYqehefOphCWhbkr6MPBxtCvFg0yTMp1KwN3Bia8GXo+iyk+j+ew3Uf3nvVik2DDSYg4Kfp2LMjmbUFFJN5qSXgd8AtU/TKJZwMcDv4ECVAPIJXYR40eQ5TXX2DCyw+3ocQqyzi9Eke4fA9ejXPIvY0pOwEehwNQrUBL7HmRpHyTbvYMMw5ieBgp6OW2uQUK+AXnEBxsLNp+/EUXJxpCV3YJcZrO0hlEeFjJ5QcZO4JYeNDn+JgpOWamiYZSTIdRQ4CeoPvt4YMn/AxCddYVzABniAAAAAElFTkSuQmCC) center/contain no-repeat;aspect-ratio:240/191}
 
-/* Cabecera */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px;max-width:none;padding-left:max(clamp(16px,2vw,32px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,2vw,32px),env(safe-area-inset-right,0px))}
-@media (max-width:640px){.top .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--verde)}
-.brand .logo{width:38px}
-.brand b{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:1.05rem;letter-spacing:.02em;color:var(--ink)}
-.brand small{display:block;font-size:.7rem;color:var(--muted);font-family:var(--mono);letter-spacing:.06em}
-.top nav{display:flex;gap:22px;align-items:center}
-.top nav a{text-decoration:none;font-weight:500;font-size:.94rem;color:var(--muted)}
-.panel nav a{text-decoration:none}
-.top nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 20px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600;transition:transform .15s ease,background .15s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn-verde{background:var(--verde);color:var(--on-btn)}
-.btn-claro{background:#f6f1e7;color:#0d5c46}
-.top nav a.btn{color:var(--on-btn)}
-.btn-borde{background:transparent;color:var(--on-verde);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--on-verde) 70%,transparent)}
-@media (max-width:760px){.top nav a:not(.btn){display:none}}
-@media (max-width:480px){.top .brand small{display:none}.top .brand b{font-size:.92rem}.top .brand .logo{width:30px}.top nav .btn{padding:9px 14px}}
+/* Botones */
+.btn{position:relative;display:inline-flex;white-space:nowrap;align-items:center;gap:.7em;height:58px;padding:0 1.6em 0 1.8em;border-radius:999px;font-weight:700;font-size:1rem;overflow:hidden;isolation:isolate;transition:color .35s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--hover,var(--v7));transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn:hover::before{transform:none}
+.btn .flecha{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:currentColor;transition:transform .45s var(--ease)}
+.btn .flecha svg{color:var(--bg-btn)}
+.btn:hover .flecha{transform:rotate(-45deg)}
+.btn-beige{--bg-btn:var(--beige);background:var(--beige);color:var(--v9);--hover:var(--arena)}
+.btn-verde{--bg-btn:var(--v7);background:var(--v7);color:var(--arena);--hover:var(--v8)}
+.btn-borde{box-shadow:inset 0 0 0 1.5px currentColor;--hover:var(--on-dark)}
+.btn-borde:hover{color:var(--v9)}
+.btn-borde .flecha{display:none}
 
-/* Hero degradado */
-.hero{background:var(--grad);color:var(--on-verde);position:relative;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:center;padding-block:72px 64px}
-.hero h1{font-size:clamp(2.4rem,6.2vw,4.6rem);font-weight:800;font-stretch:78%;letter-spacing:-.01em}
-.hero h1 em{font-style:normal;color:#f3e7cc}
-.hero p.lead{margin-top:18px;font-size:1.12rem;max-width:34em;color:color-mix(in srgb,var(--on-verde) 88%,transparent)}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero .eyebrow{color:#f3e7cc}
-.hero-logo{justify-self:center;width:min(300px,70%);color:color-mix(in srgb,#ffffff 92%,transparent);filter:drop-shadow(0 18px 30px rgba(0,0,0,.18))}
-.hero-logo .logo{width:100%}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.18) 0 22px,transparent 22px 30px)}
-@media (max-width:800px){.hero .wrap{grid-template-columns:1fr;padding-block:48px}.hero-logo{order:-1;width:150px;justify-self:start}}
+/* Cargador */
+.loader{position:fixed;inset:0;z-index:100;display:none;background:var(--v8);color:var(--beige)}
+.js .loader{display:grid;place-items:center}
+.loader-in{display:grid;justify-items:center;gap:22px}
+.loader .logo{width:92px}
+.loader-name{font-weight:800;font-variation-settings:"wdth" 118;letter-spacing:.08em;font-size:15px}
+.loader-num{position:absolute;right:var(--m);bottom:var(--m);font-weight:800;font-variation-settings:"wdth" 118;font-size:clamp(4rem,12vw,10rem);line-height:.8;letter-spacing:-.04em}
+.loader-bar{position:absolute;left:0;bottom:0;height:4px;width:100%;background:var(--beige);transform-origin:left;transform:scaleX(0)}
 
-/* Ficha técnica */
-.specs{background:var(--arena);border-bottom:1px solid var(--line)}
-.specs .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
-.spec{padding:18px 18px;border-left:1px solid var(--line);display:grid;gap:2px}
-.spec:first-child{border-left:0;padding-left:0}
-.spec b{font-family:var(--mono);font-size:1.02rem;color:var(--verde);font-weight:500}
-.spec span{font-size:.86rem;color:var(--muted)}
-@media (max-width:800px){.specs .wrap{grid-template-columns:1fr 1fr}.spec{border-left:0;padding-left:0;border-top:1px solid var(--line)}.spec:nth-child(-n+2){border-top:0}}
+/* Ilustraciones */
+svg .a{stroke:#7cc4e4}svg .d{stroke:#d9b77a}svg .l{stroke:#f2c14e}svg .c{stroke:#e8866a}svg .e{stroke:rgba(244,237,224,.3)}
+.a,.d,.l,.c,.e{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.t{stroke-width:7}.t2{stroke-width:13}.t3{stroke-width:4}.t1{stroke-width:2}
+.flujo{stroke:#fff!important;stroke-opacity:.65;stroke-width:3;stroke-dasharray:3 24;animation:fluye 1.3s linear infinite}
+@keyframes fluye{to{stroke-dashoffset:-27}}
+.lbl{fill:#b9c7bd;font:600 14px Archivo,sans-serif}
+.big{fill:#e9dcc3;font:800 76px Archivo,sans-serif}
+.aguja{transform-box:view-box;transform-origin:200px 150px;animation:aguja 2.6s cubic-bezier(.45,0,.2,1) infinite alternate}
+@keyframes aguja{from{transform:rotate(-70deg)}to{transform:rotate(58deg)}}
+.gota{fill:#7cc4e4!important;stroke:none;transform-box:fill-box;animation:gota 1.4s ease-in infinite}
+@keyframes gota{0%{transform:translateY(-6px);opacity:0}25%{opacity:1}100%{transform:translateY(70px);opacity:0}}
+.ilus{background:var(--v8);border-radius:calc(var(--r) * .7);aspect-ratio:4/3;overflow:hidden;display:grid;place-items:center;padding:5%}
+.ilus svg{width:100%;height:100%;display:block}
+.hero{background:var(--v9)}
+.hero-media svg{position:absolute;right:0;top:0;width:min(82vw,1250px);height:100%}
+.hero-shade{background:linear-gradient(90deg,rgba(6,31,24,.94) 0%,rgba(6,31,24,.6) 42%,rgba(6,31,24,.05) 100%),linear-gradient(0deg,rgba(6,31,24,.9) 0%,rgba(6,31,24,0) 55%)!important}
+.p-tc .h-foto.ilus{padding:0;opacity:.45;border-radius:0}
+.p-tc .h-foto.ilus svg{width:140%;height:140%}
+.h-foto.ilus{border-radius:0;aspect-ratio:auto}
+.fotos-p{background:var(--v9)}
+.fotos-p>.ilus{position:absolute;inset:0;border-radius:0;aspect-ratio:auto;clip-path:inset(100% 0 0 0);transition:clip-path 1s var(--ease)}
+.fotos-p>.ilus.on,.fotos-p>.ilus.ya{clip-path:inset(0 0 0 0)}
+.det-in .ilus{aspect-ratio:16/10}
+.pie-foto svg{position:absolute;inset:0;width:100%;height:100%;opacity:.16}
+@media (prefers-reduced-motion:reduce){.flujo,.aguja,.gota{animation:none}}
 
-section{padding-block:80px}
-.sec-head{display:grid;gap:10px;max-width:46em;margin-bottom:36px}
-.sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800}
-.sec-head p{color:var(--muted);font-size:1.05rem}
+/* Cortinas */
+.loader{border-radius:0 0 0 0}
+.loader-capa{position:fixed;inset:0;z-index:99;display:none;background:var(--beige)}
+.js .loader-capa{display:block}
+.barrido{position:fixed;inset:0;z-index:96;pointer-events:none;display:none}
+.barrido i{position:absolute;inset:0 -2px;display:block;transform:translateX(-101%)}
+.barrido i:first-child{background:var(--beige)}
+.barrido i:last-child{background:var(--v7)}
+.barrido b{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-variation-settings:"wdth" 118;text-transform:uppercase;font-size:clamp(2rem,6vw,5rem);letter-spacing:-.03em;color:var(--beige);opacity:0}
+.ch{display:inline-block;will-change:transform}
+.w{display:inline-block;white-space:nowrap}
+/* Pie con foto */
+.pie-foto{position:absolute;inset:0;z-index:-1;overflow:hidden}
 
-/* Servicios */
-.servicios{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.serv{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;display:grid;gap:18px;align-content:start;min-width:0}
-.serv header{display:flex;align-items:center;gap:14px}
-.serv .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--chip);color:var(--verde);flex:none}
-.serv h3{font-size:1.75rem;font-weight:800}
-.serv header small{display:block;color:var(--muted);font-size:.9rem}
-.serv ul{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.serv li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px dashed var(--line)}
-.serv li:first-child{border-top:0}
-.serv li::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--verde-2);margin-top:9px}
-.serv li b{font-weight:600}
-.serv li span{display:block;color:var(--muted);font-size:.92rem}
-.tag{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--chip);color:var(--verde)}
-.todo-costo{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;border-radius:18px;background:var(--grad);color:var(--on-verde)}
-.todo-costo p{max-width:42em}
-.todo-costo b{font-family:var(--display);font-stretch:85%;font-size:1.35rem;display:block}
-@media (max-width:860px){.servicios{grid-template-columns:1fr}}
+.pie-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--v8) 0%,rgba(10,51,40,.55) 35%,var(--v8) 92%)}
+footer{isolation:isolate}
 
-/* Proceso */
-.proceso{background:var(--arena)}
-.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:p;position:relative}
-.pasos::before{content:"";position:absolute;top:22px;left:22px;right:22px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--verde),var(--beige))}
-.paso{position:relative;padding-right:18px;display:grid;gap:8px;align-content:start;counter-increment:p}
-.paso::before{content:counter(p,decimal-leading-zero);position:relative;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--verde);color:var(--on-verde);font-family:var(--mono);font-size:.9rem;box-shadow:0 0 0 6px var(--arena)}
-.paso h3{font-size:1.2rem;font-weight:700;margin-top:8px}
-.paso p{color:var(--muted);font-size:.93rem}
-@media (max-width:900px){.pasos{grid-template-columns:1fr;gap:22px}.pasos::before{top:22px;bottom:22px;left:22px;right:auto;width:4px;height:auto;background:linear-gradient(180deg,var(--verde),var(--beige))}.paso{grid-template-columns:48px minmax(0,1fr);column-gap:18px;padding-right:0}.paso::before{grid-row:span 2}.paso h3{margin-top:10px}}
+/* Cursor */
+.cursor{position:fixed;left:0;top:0;z-index:90;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--beige);mix-blend-mode:difference;pointer-events:none;opacity:0;transition:width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),opacity .3s}
+.cursor.grande{width:64px;height:64px;margin:-32px 0 0 -32px}
+@media (hover:hover) and (pointer:fine){.js .cursor{opacity:1}}
+
+/* Navegación */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:transform .5s var(--ease),background-color .4s}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px}
+.nav.solida{background:rgba(6,31,24,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.nav.oculta{transform:translateY(-100%)}
+.marca{display:flex;align-items:center;gap:12px;font-weight:800;font-variation-settings:"wdth" 112;font-size:15px;letter-spacing:.04em;color:var(--beige)}
+.marca .logo{width:42px}
+.nav-links{display:flex;gap:6px}
+.nav-links a{position:relative;padding:10px 14px;font-size:15px;font-weight:500;color:var(--on-dark)}
+.nav-links a::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:2px;background:var(--beige);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav .btn{height:46px;font-size:15px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;background:var(--beige);position:relative}
+.menu-btn i{position:absolute;left:14px;right:14px;height:2px;background:var(--v9);transition:transform .4s var(--ease)}
+.menu-btn i:first-child{top:19px}.menu-btn i:last-child{top:27px}
+.menu-abierto .menu-btn i:first-child{transform:translateY(4px) rotate(45deg)}
+.menu-abierto .menu-btn i:last-child{transform:translateY(-4px) rotate(-45deg)}
+.panel{position:fixed;inset:0;z-index:45;background:var(--v8);display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--m) 40px;clip-path:circle(0% at calc(100% - 44px) 42px);transition:clip-path .8s var(--ease);visibility:hidden}
+.menu-abierto .panel{clip-path:circle(150% at calc(100% - 44px) 42px);visibility:visible}
+.panel a{display:block;font-size:clamp(2.4rem,12vw,4rem);font-weight:800;font-variation-settings:"wdth" 118;text-transform:uppercase;letter-spacing:-.03em;line-height:1.05;color:var(--beige)}
+.panel p{margin-top:28px;color:var(--on-dark-2)}
+
+/* Portada */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;color:var(--arena)}
+.hero-media{position:absolute;inset:-8% 0 0;will-change:transform}
+.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,31,24,.55) 0%,rgba(6,31,24,.25) 35%,rgba(6,31,24,.92) 100%)}
+.hero-content{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(28px,6vh,72px)}
+.hero-title{color:var(--arena)}
+.hero-title .line:nth-child(2)>span{color:var(--beige);padding-left:.9em}
+.hero-foot{margin-top:clamp(24px,4vh,48px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 48px}
+.hero-foot p{max-width:42ch;font-size:clamp(1rem,.9rem + .3vw,1.2rem)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-tags{position:absolute;top:110px;right:var(--m);display:grid;gap:4px;text-align:right;font-size:14px;color:var(--on-dark-2)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;width:1.5px;height:56px;background:rgba(244,237,224,.25);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;inset:0;background:var(--beige);animation:cae 1.8s var(--ease) infinite}
+@keyframes cae{0%{transform:translateY(-100%)}60%,100%{transform:translateY(100%)}}
+
+/* Cinta */
+.cinta{position:relative;z-index:2;background:var(--beige);color:var(--v9);padding:22px 0;overflow:hidden;white-space:nowrap}
+.cinta-track{display:inline-flex;align-items:center;gap:40px;padding-right:40px;font-weight:800;font-variation-settings:"wdth" 118;text-transform:uppercase;font-size:clamp(1.6rem,1rem + 2.4vw,3.4rem);letter-spacing:-.02em;will-change:transform}
+.cinta-track svg{flex:none;width:.8em;height:.8em;color:var(--v7)}
+
+/* Secciones que se apilan */
+.capa{position:relative;z-index:2;border-radius:var(--r) var(--r) 0 0;margin-top:calc(var(--r) * -1)}
+.claro{background:var(--arena);color:var(--ink)}
+.claro .muted{color:var(--ink-2)}
+.oscuro{background:var(--v9);color:var(--on-dark)}
+.medio{background:var(--v8);color:var(--on-dark)}
+.pad{padding:clamp(100px,13vw,200px) 0}
+
+/* Manifiesto */
+.manifiesto p.grande{font-size:clamp(1.9rem,1rem + 3.4vw,4.6rem);font-weight:700;letter-spacing:-.03em;line-height:1.06;max-width:22ch}
+.palabra{display:inline-block;opacity:.16;transition:opacity .2s}
+.publico{margin-top:clamp(80px,10vw,160px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px)}
+.tarjeta-p{display:grid;gap:28px;align-content:start}
+.revela{overflow:hidden;border-radius:calc(var(--r) * .7)}
+.revela img{width:100%;aspect-ratio:4/3;object-fit:cover;transform:scale(1.25)}
+.js .revela{clip-path:inset(18% 10% 18% 10% round calc(var(--r) * .7))}
+.tarjeta-p h3{margin-bottom:6px}
+.lista-check li{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:16px 0;border-top:1px solid rgba(16,36,28,.14)}
+.lista-check li:last-child{border-bottom:1px solid rgba(16,36,28,.14)}
+.lista-check b{display:block;font-weight:700}
+.lista-check span{color:var(--ink-2)}
+.ico{width:28px;height:28px;border-radius:50%;background:var(--v7);color:var(--arena);display:grid;place-items:center;margin-top:2px}
+.ico svg{width:14px;height:14px}
+
+/* Servicios horizontales */
+.servicios{overflow:hidden}
+.h-track{display:flex;gap:clamp(18px,2vw,32px);padding:clamp(110px,14vh,150px) var(--m) clamp(60px,9vh,100px);width:max-content}
+.h-panel{flex:none;width:min(84vw,1180px);height:min(76vh,760px);border-radius:var(--r);overflow:hidden;position:relative;display:grid;grid-template-columns:1.05fr 1fr}
+.h-intro{width:min(70vw,880px);display:flex;flex-direction:column;justify-content:space-between;background:none}
+.h-intro .num{font-size:clamp(5rem,3rem + 8vw,12rem);color:var(--beige)}
+.h-foto{position:relative;overflow:hidden}
+.h-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.15)}
+.h-txt{padding:clamp(28px,3.4vw,56px);display:flex;flex-direction:column;gap:22px;overflow:auto}
+.h-txt ul{display:grid;gap:9px}
+.h-txt li{display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:15px;line-height:1.35}
+.h-txt li b{display:block;font-size:16px}
+.h-txt li span{opacity:.75}
+.h-txt li::before{content:"";width:9px;height:9px;margin-top:7px;border-radius:50%;background:currentColor;opacity:.7}
+.p-gas{background:var(--beige);color:var(--v9)}
+.p-ele{background:var(--v7);color:var(--arena)}
+.p-tc{background:var(--v8);color:var(--arena);grid-template-columns:1fr}
+.p-tc .h-foto{position:absolute;inset:0}
+.p-tc .h-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,31,24,.92),rgba(6,31,24,.2) 70%)}
+.p-tc .h-txt{position:relative;justify-content:flex-end;max-width:780px;overflow:visible}
+
+/* Proceso fijado */
+.proceso-pin{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(24px,5vw,90px);padding:110px var(--m) 60px;max-width:1560px;margin:0 auto}
+.pasos{display:grid;gap:4px;margin-top:36px}
+.paso{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline;padding:14px 0;opacity:.32;transition:opacity .5s var(--ease)}
+.paso .n{font-weight:800;font-variation-settings:"wdth" 118;font-size:15px;color:var(--beige)}
+.paso h3{font-size:clamp(1.4rem,1rem + 1.4vw,2.3rem);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.paso p{grid-column:2;max-height:0;overflow:hidden;color:var(--on-dark-2);transition:max-height .6s var(--ease),margin .6s var(--ease)}
+.paso.activo{opacity:1}
+.paso.activo p{max-height:8em;margin-top:8px}
+.barra-p{height:3px;background:rgba(244,237,224,.15);border-radius:3px;margin-top:28px;overflow:hidden}
+.barra-p i{display:block;height:100%;width:100%;background:var(--beige);transform-origin:left;transform:scaleX(.2)}
+.fotos-p{position:relative;height:min(74vh,760px);border-radius:var(--r);overflow:hidden}
+.fotos-p img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(100% 0 0 0);transition:clip-path 1s var(--ease)}
+.fotos-p img.on{clip-path:inset(0 0 0 0)}
+.fotos-p img.ya{clip-path:inset(0 0 0 0)}
 
 /* Seguridad */
-.seg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
-.ficha{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.ficha .fh{background:var(--verde);color:var(--on-verde);padding:14px 22px;font-family:var(--mono);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.ficha dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr)}
-.ficha dt,.ficha dd{margin:0;padding:14px 22px;border-top:1px solid var(--line)}
-.ficha dt{font-weight:600;font-size:.92rem;white-space:nowrap}
-.ficha dd{color:var(--muted);font-size:.92rem}
-.ficha dl > :nth-child(-n+2){border-top:0}
-.docs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
-.doc{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:var(--chip)}
-.doc svg{flex:none;color:var(--verde);margin-top:2px}
-.doc b{display:block;font-size:.95rem}
-.doc span{font-size:.85rem;color:var(--muted)}
-@media (max-width:860px){.seg{grid-template-columns:1fr}.docs{grid-template-columns:1fr}.ficha dl{grid-template-columns:1fr}.ficha dt{padding-bottom:0;border-top:1px solid var(--line)}.ficha dd{border-top:0;padding-top:4px}}
+.seg-top{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.docs{margin-top:clamp(56px,7vw,100px);display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.doc{background:var(--arena-2);border-radius:calc(var(--r) * .7);padding:28px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;transition:background-color .4s var(--ease),color .4s var(--ease),transform .4s var(--ease)}
+.doc:hover{background:var(--v7);color:var(--arena);transform:translateY(-6px)}
+.doc:hover p{color:var(--on-dark-2)}
+.doc .sello{width:46px;height:46px;border-radius:50%;background:var(--v7);color:var(--arena);display:grid;place-items:center;transition:background-color .4s}
+.doc:hover .sello{background:var(--beige);color:var(--v9)}
+.doc h3{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.doc p{color:var(--ink-2);margin-top:6px;transition:color .4s}
+.ficha{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ficha>div{background:var(--v8);color:var(--arena);border-radius:calc(var(--r) * .7);padding:clamp(24px,3vw,44px)}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin-top:18px}
+.ficha dt{color:var(--on-dark-2)}
+.ficha .obra p{color:var(--on-dark-2);margin-top:12px;max-width:52ch}
 
-/* Obra */
-.obra{background:var(--grad);color:var(--on-verde);border-radius:22px;padding:40px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:end}
-.obra h3{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;font-stretch:80%}
-.obra p{margin-top:12px;max-width:38em;color:color-mix(in srgb,var(--on-verde) 88%,transparent)}
-.obra .eyebrow{color:#f3e7cc}
-.obra ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-family:var(--mono);font-size:.85rem}
-.obra li{padding:8px 14px;border-radius:10px;background:rgba(9,62,47,.82);color:#f6f1e7;white-space:nowrap}
-@media (max-width:760px){.obra{grid-template-columns:1fr;padding:28px}.obra li{white-space:normal}}
+/* Recorrido */
+.filas{margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(244,237,224,.18)}
+.fila{border-bottom:1px solid rgba(244,237,224,.18)}
+.fila>button{width:100%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;padding:clamp(18px,2.4vw,30px) 0;text-align:left}
+.fila .nom{font-size:clamp(2rem,1rem + 4vw,5.4rem);font-weight:800;font-variation-settings:"wdth" 118;text-transform:uppercase;letter-spacing:-.035em;line-height:.95;transition:transform .5s var(--ease),color .4s}
+.fila .esp{font-size:14px;color:var(--on-dark-2);text-align:right}
+.fila>button:hover .nom{transform:translateX(.25em);color:var(--beige)}
+.fila .det{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.fila .det>div{overflow:hidden}
+.fila.abierta .det{grid-template-rows:1fr}
+.det-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,64px);padding:0 0 32px}
+.det-in img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:calc(var(--r) * .6)}
+.det-in ul{display:grid;gap:10px;margin-top:16px}
+.det-in li::before{content:"— ";color:var(--beige)}
+.det-in .btn{margin-top:24px}
+.flota{position:fixed;left:0;top:0;z-index:30;width:min(28vw,380px);aspect-ratio:4/5;border-radius:calc(var(--r) * .6);overflow:hidden;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.6)}
+.flota img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .25s}
+.flota img.on{opacity:1}
+
+/* Diagnóstico */
+.diag-grid{margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(20px,3vw,48px);align-items:start}
+.sintomas{display:flex;flex-wrap:wrap;gap:10px}
+.sintoma{height:54px;padding:0 22px;border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(16,36,28,.25);font-weight:600;font-size:16px;transition:background-color .35s var(--ease),color .35s,box-shadow .35s,transform .2s}
+.sintoma:hover{box-shadow:inset 0 0 0 1.5px var(--v7)}
+.sintoma:active{transform:scale(.96)}
+.sintoma[aria-pressed="true"]{background:var(--v7);color:var(--arena);box-shadow:none}
+.respuesta{background:var(--v8);color:var(--arena);border-radius:var(--r);padding:clamp(28px,3.4vw,52px);display:grid;gap:22px;min-height:100%}
+.respuesta h3{font-size:clamp(1.6rem,1rem + 1.6vw,2.6rem);font-weight:800;font-variation-settings:"wdth" 112;letter-spacing:-.03em;line-height:1}
+.respuesta small{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--v3);margin-bottom:6px;font-weight:700}
+.respuesta .aviso{padding:16px 18px;border-radius:16px;background:rgba(233,220,195,.12);color:var(--beige)}
+
+/* Preguntas */
+.faq{margin-top:clamp(48px,6vw,80px);display:grid;gap:10px;max-width:1100px}
+.q{background:var(--v8);border-radius:22px;overflow:hidden;transition:background-color .4s}
+.q.abierta{background:var(--v7)}
+.q>button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 28px;text-align:left;font-size:clamp(1.15rem,1rem + .6vw,1.5rem);font-weight:600}
+.mas{flex:none;position:relative;width:40px;height:40px;border-radius:50%;background:var(--beige);transition:transform .5s var(--ease)}
+.mas::before,.mas::after{content:"";position:absolute;left:12px;right:12px;top:19px;height:2px;background:var(--v9)}
+.mas::after{transform:rotate(90deg);transition:transform .5s var(--ease)}
+.q.abierta .mas{transform:rotate(180deg)}
+.q.abierta .mas::after{transform:rotate(0)}
+.q .r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.q .r>div{overflow:hidden}
+.q.abierta .r{grid-template-rows:1fr}
+.q .r p{padding:0 28px 26px;max-width:70ch;color:var(--on-dark-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 28px 28px}
+.chips span{padding:8px 14px;border-radius:999px;background:rgba(233,220,195,.14);font-size:14px}
 
 /* Contacto */
-.contacto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
-.datos{display:grid;gap:14px}
-.dato{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.dato small{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.dato b{font-size:1.15rem;font-weight:600;font-variant-numeric:tabular-nums}
-.copiar{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:.85rem;cursor:pointer}
-.copiar:hover{border-color:var(--verde);color:var(--verde)}
-form{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:14px}
-form h3{font-size:1.5rem;font-weight:800}
-label{display:grid;gap:6px;font-size:.85rem;font-weight:600}
-input,select,textarea{font:inherit;font-size:16px;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:11px 13px;width:100%;min-width:0}
-textarea{min-height:96px;resize:vertical}
-.fila{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.nota{font-size:.84rem;color:var(--muted)}
-.ok{font-size:.9rem;color:var(--verde);font-weight:600;min-height:1.2em}
-@media (max-width:860px){.contacto{grid-template-columns:1fr}.fila{grid-template-columns:1fr}}
-
-footer{border-top:1px solid var(--line);background:var(--arena);padding-bottom:84px}
-.pie-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;padding-block:32px;align-items:start}
-.pie-col{display:grid;gap:6px;min-width:0;font-size:.92rem}
-.pie-col small{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.pie-col p{color:var(--ink)}
-.pie-col .tel{font-weight:600;font-variant-numeric:tabular-nums}
-footer .brand .logo{width:30px}
-@media (max-width:860px){.pie-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){.pie-grid{grid-template-columns:1fr;gap:18px}}
-/* Botón de menú (tres rayas) y panel lateral */
-.left{display:flex;align-items:center;gap:12px}
-.menu-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none}
-.menu-btn:hover{border-color:var(--verde);color:var(--verde)}
-.menu-btn span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
-.velo{position:fixed;inset:0;background:rgba(6,20,15,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s ease}
-.velo.abierto{opacity:1;pointer-events:auto}
-.panel{position:fixed;top:0;bottom:0;left:0;width:min(340px,88vw);z-index:50;background:var(--bg);border-right:1px solid var(--line);transform:translateX(-102%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;
-  padding-top:calc(16px + env(safe-area-inset-top,0px));padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:20px;overflow-y:auto}
-.panel.abierto{transform:none;box-shadow:12px 0 40px rgba(0,0,0,.18)}
-.panel-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.cerrar{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:1.3rem;cursor:pointer}
-.panel nav{display:grid;gap:2px;padding-block:14px}
-.panel nav a{display:flex;align-items:center;gap:12px;padding:12px 12px;border-radius:12px;color:var(--ink);font-weight:500;font-size:1rem}
-.panel nav a:hover,.panel nav a:focus-visible{background:var(--chip);color:var(--verde)}
-.panel nav a svg{color:var(--verde);flex:none}
-.panel-sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:10px 12px 4px}
-.panel-pie{margin-top:auto;display:grid;gap:10px;padding-top:16px;border-top:1px solid var(--line)}
-.panel-pie .btn{justify-content:center}
-.btn-wa{background:var(--wa);color:#fff}
-.tema{display:flex;gap:6px;background:var(--chip);border-radius:999px;padding:4px}
-.tema button{flex:1;border:0;background:transparent;color:var(--muted);border-radius:999px;padding:8px 6px;font:inherit;font-size:.85rem;cursor:pointer}
-.tema button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.panel small.legal{color:var(--muted);font-size:.78rem;text-align:center}
-
-/* Tubería animada del hero */
-.flujo{position:absolute;left:0;right:0;bottom:22px;height:3px;background:repeating-linear-gradient(90deg,rgba(243,231,204,.55) 0 18px,transparent 18px 34px);background-size:34px 3px;animation:flujo 1.6s linear infinite;opacity:.7}
-@keyframes flujo{to{background-position:34px 0}}
-
-/* Pestañas: para quién */
-.tabs{display:inline-flex;gap:4px;background:var(--chip);border-radius:999px;padding:5px;margin-bottom:22px;flex-wrap:wrap}
-.tabs button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:600;padding:10px 18px;border-radius:999px;cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--verde);color:var(--on-btn)}
-.tabpanel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.ventaja{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:8px;align-content:start;transition:transform .2s ease,border-color .2s ease}
-.ventaja:hover{transform:translateY(-3px);border-color:var(--verde-2)}
-.ventaja h3{font-size:1.2rem;font-weight:700}
-.ventaja p{color:var(--muted);font-size:.94rem}
-.ventaja .num{font-family:var(--mono);font-size:.78rem;color:var(--verde)}
-@media (max-width:860px){.tabpanel{grid-template-columns:1fr}}
-
-/* Zonas */
-.zonas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.92rem}
-.chips span.base{background:var(--verde);border-color:var(--verde);color:var(--on-btn)}
-@media (max-width:860px){.zonas{grid-template-columns:1fr}}
-
-/* Preguntas frecuentes */
-.faq{display:grid;gap:10px;max-width:860px}
-.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 20px}
-.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--mono);font-size:1.3rem;color:var(--verde);transition:transform .2s ease;flex:none}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{padding:0 0 18px;color:var(--muted)}
-
-/* Ajustes para celular */
-@media (max-width:640px){
-  section{padding-block:56px}
-  .hero .wrap{padding-block:36px 52px;gap:20px}
-  .hero-logo{width:96px}
-  .hero h1{font-size:clamp(2.1rem,10vw,2.8rem)}
-  .hero p.lead{font-size:1rem}
-  .hero .ctas{display:grid;grid-template-columns:1fr;gap:10px}
-  .hero .ctas .btn{justify-content:center;width:100%}
-  .specs .wrap{grid-template-columns:1fr 1fr;column-gap:16px}
-  .spec{padding:14px 0}
-  .spec b{font-size:.86rem}
-  .spec span{font-size:.8rem}
-  .sec-head{margin-bottom:24px}
-  .sec-head h2{font-size:1.85rem}
-  .tabs{display:grid;grid-template-columns:1fr 1fr;width:100%}
-  .tabs button{padding:10px 8px;font-size:.92rem}
-  .todo-costo{padding:20px;display:grid}
-  .todo-costo .btn{justify-content:center}
-  .obra{padding:24px;border-radius:18px}
-  .dato{padding:16px}
-  .dato b{font-size:1rem}
-  form{padding:20px}
-  form .btn{justify-content:center;width:100%}
-  .faq details{padding:0 16px}
-  .wa-flot{width:52px;height:52px}
-}
-
-/* Servicios interactivos */
-.servicios{align-items:start}
-.serv,section{scroll-margin-top:84px}
-.serv{padding:0;gap:0;overflow:hidden;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
-.serv:hover{border-color:var(--verde-2);transform:translateY(-2px);box-shadow:0 14px 30px rgba(13,92,70,.10)}
-.serv.abierto{border-color:var(--verde);box-shadow:0 18px 40px rgba(13,92,70,.14)}
-.serv-btn{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;width:100%;padding:28px 30px}
-.serv-btn:focus-visible{outline:3px solid var(--verde-2);outline-offset:-3px;border-radius:18px}
-.serv .ico{width:72px;height:72px;border-radius:20px;position:relative;overflow:visible;transition:transform .3s ease,background .3s ease}
-.serv-btn:hover .ico{transform:scale(1.06) rotate(-4deg)}
-.serv.abierto .ico{background:var(--verde);color:var(--on-btn)}
-.serv-tit{display:grid;gap:2px;min-width:0}
-.serv-tit h3{font-size:1.9rem}
-.serv-tit small{color:var(--muted);font-size:.92rem}
-.pista{font-style:normal;font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;color:var(--verde);margin-top:6px}
-.pista .ocultar{display:none}
-.serv.abierto .pista .ver{display:none}
-.serv.abierto .pista .ocultar{display:inline}
-.flecha{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--chip);color:var(--verde);transition:transform .35s ease,background .25s ease}
-.serv.abierto .flecha{transform:rotate(180deg);background:var(--verde);color:var(--on-btn)}
-.serv-cuerpo{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1)}
-.serv.abierto .serv-cuerpo{grid-template-rows:1fr}
-.serv-int{overflow:hidden;min-height:0;padding:0 30px}
-.serv.abierto .serv-int{padding-bottom:28px}
-.serv-int ul{border-top:1px solid var(--line);padding-top:6px}
-.serv li{opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
-.serv.abierto li{opacity:1;transform:none}
-.serv.abierto li:nth-child(1){transition-delay:.05s}.serv.abierto li:nth-child(2){transition-delay:.1s}.serv.abierto li:nth-child(3){transition-delay:.15s}
-.serv.abierto li:nth-child(4){transition-delay:.2s}.serv.abierto li:nth-child(5){transition-delay:.25s}.serv.abierto li:nth-child(6){transition-delay:.3s}.serv.abierto li:nth-child(7){transition-delay:.35s}
-.serv-cta{margin-top:16px;justify-content:center;width:100%}
-/* gota que cae y rayo que parpadea */
-.goteo{position:absolute;left:50%;top:62px;width:7px;height:9px;margin-left:-3.5px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--verde-2);opacity:0;animation:goteo 2.6s ease-in infinite}
-@keyframes goteo{0%,40%{opacity:0;transform:translateY(-6px) scale(.6)}50%{opacity:1;transform:translateY(0) scale(1)}85%{opacity:.9;transform:translateY(22px) scale(.9)}100%{opacity:0;transform:translateY(26px) scale(.4)}}
-.ico-rayo svg{animation:chispa 3.2s steps(1) infinite}
-@keyframes chispa{0%,86%,100%{filter:none;opacity:1}88%{opacity:.35}90%{opacity:1;filter:drop-shadow(0 0 6px #f2c94c)}92%{opacity:.5}94%{opacity:1;filter:drop-shadow(0 0 10px #f2c94c)}}
-.luz .ico-rayo{color:var(--verde)}
-.serv.luz.abierto .ico-rayo svg{filter:drop-shadow(0 0 8px #f2c94c)}
-@media (max-width:640px){
-  .serv{padding:0}
-  .serv-btn{padding:20px;gap:14px}
-  .serv .ico{width:58px;height:58px;border-radius:16px}
-  .serv-tit h3{font-size:1.5rem}
-  .serv-int{padding:0 20px}
-  .serv.abierto .serv-int{padding-bottom:20px}
-  .goteo{top:50px}
-}
-
-/* Pasos del proceso: resaltado al pasar o tocar */
-.paso{cursor:default;transition:transform .25s ease}
-.paso:hover{transform:translateY(-4px)}
-.paso:hover::before{background:var(--verde-2)}
-/* Entrada suave de la portada (parte visible) */
-.hero h1,.hero .lead,.hero .ctas{animation:sube .7s cubic-bezier(.2,.8,.2,1) both}
-.hero .lead{animation-delay:.08s}.hero .ctas{animation-delay:.16s}
-@keyframes sube{from{transform:translateY(14px)}to{transform:none}}
-
-/* Apertura con efecto: onda desde el toque, línea que "fluye" y servicios que giran al entrar */
-.serv{position:relative;isolation:isolate}
-.onda{position:absolute;border-radius:50%;pointer-events:none;z-index:-1;transform:translate(-50%,-50%) scale(0);opacity:.9;
-  width:40px;height:40px;animation:onda .9s cubic-bezier(.2,.7,.2,1) forwards}
-.agua .onda{background:radial-gradient(circle,color-mix(in srgb,var(--verde-2) 30%,transparent) 0%,color-mix(in srgb,var(--beige) 40%,transparent) 55%,transparent 70%)}
-.luz .onda{background:radial-gradient(circle,rgba(242,201,76,.35) 0%,color-mix(in srgb,var(--verde-2) 22%,transparent) 50%,transparent 70%)}
-@keyframes onda{to{transform:translate(-50%,-50%) scale(40);opacity:0}}
-.serv-int ul{position:relative;padding-left:0}
-.serv-int ul::before{content:"";position:absolute;left:3px;top:18px;width:3px;border-radius:3px;height:calc(100% - 36px);transform-origin:top;transform:scaleY(0);transition:transform .9s cubic-bezier(.2,.8,.2,1) .1s}
-.agua .serv-int ul::before{background:linear-gradient(180deg,var(--verde-2),var(--beige))}
-.luz .serv-int ul::before{background:linear-gradient(180deg,#f2c94c,var(--verde-2))}
-.serv.abierto .serv-int ul::before{transform:scaleY(1)}
-.serv-int{perspective:900px}
-.serv li{opacity:0;transform:translateX(-18px) rotateX(-55deg);transform-origin:top center;transition:opacity .45s ease,transform .55s cubic-bezier(.2,.9,.25,1.25)}
-.serv.abierto li{opacity:1;transform:none}
-.serv li::before{transition:transform .4s cubic-bezier(.3,1.6,.5,1),background .3s ease;transform:scale(0)}
-.serv.abierto li::before{transform:scale(1)}
-.serv.abierto li:nth-child(1),.serv.abierto li:nth-child(1)::before{transition-delay:.08s}
-.serv.abierto li:nth-child(2),.serv.abierto li:nth-child(2)::before{transition-delay:.16s}
-.serv.abierto li:nth-child(3),.serv.abierto li:nth-child(3)::before{transition-delay:.24s}
-.serv.abierto li:nth-child(4),.serv.abierto li:nth-child(4)::before{transition-delay:.32s}
-.serv.abierto li:nth-child(5),.serv.abierto li:nth-child(5)::before{transition-delay:.40s}
-.serv.abierto li:nth-child(6),.serv.abierto li:nth-child(6)::before{transition-delay:.48s}
-.serv.abierto li:nth-child(7),.serv.abierto li:nth-child(7)::before{transition-delay:.56s}
-.serv li:hover{background:var(--chip);border-radius:10px}
-.serv li:hover::before{background:var(--verde)}
-.serv-cta{opacity:0;transform:translateY(12px) scale(.96);transition:opacity .4s ease .6s,transform .5s cubic-bezier(.2,.9,.25,1.3) .6s}
-.serv.abierto .serv-cta{opacity:1;transform:none}
-.serv.abierto .ico{animation:salto .7s cubic-bezier(.3,1.6,.5,1)}
-@keyframes salto{0%{transform:scale(1)}35%{transform:scale(.85) rotate(-8deg)}70%{transform:scale(1.12) rotate(4deg)}100%{transform:scale(1)}}
-.serv.cerrando li{transition-delay:0s!important;transition-duration:.2s}
-
-/* Barra de progreso tipo tubería */
-.progreso{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;width:100%;z-index:60;pointer-events:none;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--verde),var(--verde-2),var(--beige))}
-
-/* Casa interactiva */
-.casa{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:center}
-.casa-lienzo{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:14px;min-width:0}
-.casa-lienzo svg{display:block;width:100%;height:auto}
-.plano{position:relative}
-.casa-lienzo .s-muro{fill:var(--arena);stroke:var(--line);stroke-width:2}
-.casa-lienzo .s-techo{fill:var(--verde)}
-.casa-lienzo .s-suelo{fill:color-mix(in srgb,var(--beige) 70%,var(--surface))}
-.casa-lienzo .s-tierra{fill:color-mix(in srgb,var(--beige) 45%,var(--muted) 20%)}
-.casa-lienzo .s-losa{fill:var(--line)}
-.casa-lienzo .s-agua{fill:none;stroke:#2f8fbf;stroke-width:4;stroke-linecap:round;stroke-dasharray:10 8;animation:corre 1.4s linear infinite}
-.casa-lienzo .s-desague{fill:none;stroke:#8a6f4d;stroke-width:5;stroke-linecap:round}
-.casa-lienzo .s-luz{fill:none;stroke:#e0a82e;stroke-width:3;stroke-linecap:round;stroke-dasharray:4 6;animation:corre 1s linear infinite}
-.casa-lienzo .s-obj{fill:var(--surface);stroke:var(--muted);stroke-width:2}
-.casa-lienzo .s-tanque{fill:#cfe6f1;stroke:#2f8fbf;stroke-width:2}
-.casa-lienzo .s-txt{fill:var(--muted);font:600 13px var(--body)}
-@keyframes corre{to{stroke-dashoffset:-36}}
-.punto{position:absolute;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;background:var(--verde);color:var(--on-btn);font:700 .85rem var(--mono);display:grid;place-items:center;box-shadow:0 0 0 5px color-mix(in srgb,var(--verde) 25%,transparent);transition:transform .2s ease,background .2s ease}
-.punto::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--verde-2);animation:pulso 2.4s ease-out infinite}
-.punto:hover{transform:translate(-50%,-50%) scale(1.12)}
-.punto[aria-pressed="true"]{background:#e0a82e;color:#1d1a10;box-shadow:0 0 0 6px rgba(224,168,46,.3)}
-.punto[aria-pressed="true"]::after{border-color:#e0a82e}
-.casa-info{background:var(--grad);color:var(--on-verde);border-radius:22px;padding:28px;min-height:280px;display:grid;align-content:start;gap:12px}
-.casa-info .eyebrow{color:#f3e7cc}
-.casa-info h3{font-size:2rem;font-weight:800;font-stretch:80%}
-.casa-info p{color:color-mix(in srgb,var(--on-verde) 90%,transparent)}
-.casa-info ul{margin:0;padding-left:18px;display:grid;gap:4px;color:color-mix(in srgb,var(--on-verde) 92%,transparent)}
-.casa-info .esp{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.16);justify-self:start}
-.casa-info.cambia{animation:cambia .45s cubic-bezier(.2,.8,.2,1)}
-@keyframes cambia{from{transform:translateY(10px) scale(.98)}to{transform:none}}
-.leyenda{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.82rem;color:var(--muted)}
-.leyenda i{display:inline-block;width:18px;height:4px;border-radius:2px;margin-right:6px;vertical-align:middle}
-@media (max-width:900px){.casa{grid-template-columns:1fr}.punto{width:30px;height:30px;font-size:.75rem}}
-
-/* Diagnóstico rápido */
-.diag{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:start}
-.problemas{display:grid;gap:8px}
-.problema{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);font-weight:600;transition:border-color .2s,transform .2s,background .2s}
-.problema:hover{transform:translateX(4px);border-color:var(--verde-2)}
-.problema:focus-visible{outline:3px solid var(--verde-2);outline-offset:2px}
-.problema[aria-pressed="true"]{background:var(--verde);color:var(--on-btn);border-color:var(--verde)}
-.problema .tipo{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-left:auto}
-.respuesta{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:14px}
-.respuesta h3{font-size:1.5rem;font-weight:800}
-.respuesta .bloque{display:grid;gap:4px}
-.respuesta .bloque small{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--verde)}
-.respuesta .bloque p{color:var(--muted)}
-.respuesta .aviso{font-size:.88rem;padding:12px 14px;border-radius:12px;background:var(--chip)}
-.respuesta.cambia{animation:cambia .4s cubic-bezier(.2,.8,.2,1)}
-@media (max-width:860px){.diag{grid-template-columns:1fr}}
-
-/* Cotizador por pasos */
-.wiz{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:16px;min-width:0}
-.wiz h3{font-size:1.5rem;font-weight:800}
-.wiz-barra{height:6px;border-radius:6px;background:var(--chip);overflow:hidden}
-.wiz-barra i{display:block;height:100%;width:33%;background:linear-gradient(90deg,var(--verde),var(--verde-2));border-radius:6px;transition:width .45s cubic-bezier(.2,.8,.2,1)}
-.wiz-paso{display:grid;gap:12px;animation:cambia .4s cubic-bezier(.2,.8,.2,1)}
-.wiz-paso > p{font-weight:600}
+.contacto-grid{margin-top:clamp(48px,6vw,90px);display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(20px,3vw,48px);align-items:start}
+.datos{display:grid;gap:12px}
+.dato{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;border-radius:20px;background:var(--arena-2)}
+.dato small{display:block;font-size:13px;color:var(--ink-2)}
+.dato b{font-size:1.1rem}
+.copiar{flex:none;height:42px;padding:0 18px;border-radius:999px;background:var(--v7);color:var(--arena);font-size:14px;font-weight:700;display:inline-flex;align-items:center;transition:background-color .3s,transform .2s}
+.copiar:hover{background:var(--v8)}
+.copiar:active{transform:scale(.95)}
+.wiz{background:var(--v8);color:var(--arena);border-radius:var(--r);padding:clamp(26px,3.2vw,48px);display:grid;gap:20px}
+.wiz h3{font-size:clamp(1.6rem,1rem + 1.4vw,2.4rem);font-weight:800;font-variation-settings:"wdth" 112;letter-spacing:-.03em;line-height:1}
+.avance{height:4px;border-radius:4px;background:rgba(244,237,224,.15);overflow:hidden}
+.avance i{display:block;height:100%;background:var(--beige);transition:width .6s var(--ease)}
+.wiz-paso{display:grid;gap:12px}
+.wiz-paso>p{font-weight:700}
 .opciones{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.opcion{all:unset;box-sizing:border-box;cursor:pointer;border:1.5px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:2px;transition:border-color .2s,background .2s,transform .15s}
-.opcion:hover{border-color:var(--verde-2);transform:translateY(-2px)}
-.opcion:focus-visible{outline:3px solid var(--verde-2);outline-offset:2px}
-.opcion[aria-pressed="true"]{border-color:var(--verde);background:var(--chip)}
-.opcion b{font-size:.98rem}
-.opcion span{font-size:.82rem;color:var(--muted)}
-.wiz-nav{display:flex;justify-content:space-between;gap:10px}
-.btn-sec{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
-.resumen{font-size:.88rem;color:var(--muted);background:var(--chip);border-radius:12px;padding:12px 14px}
-@media (max-width:480px){.opciones{grid-template-columns:1fr}.wiz{padding:20px}}
+.opcion{min-height:74px;padding:14px 16px;border-radius:18px;background:rgba(244,237,224,.07);box-shadow:inset 0 0 0 1.5px rgba(244,237,224,.14);text-align:left;transition:background-color .3s,box-shadow .3s,transform .2s}
+.opcion:hover{box-shadow:inset 0 0 0 1.5px var(--beige)}
+.opcion:active{transform:scale(.97)}
+.opcion b{display:block}
+.opcion span{display:block;font-size:14px;color:var(--on-dark-2)}
+.opcion[aria-pressed="true"]{background:var(--beige);color:var(--v9);box-shadow:none}
+.opcion[aria-pressed="true"] span{color:var(--ink-2)}
+.wiz label{display:grid;gap:6px;font-size:14px;color:var(--on-dark-2)}
+.wiz input{height:56px;border:0;border-radius:16px;background:rgba(244,237,224,.08);box-shadow:inset 0 0 0 1.5px rgba(244,237,224,.16);color:var(--arena);padding:0 18px;font:inherit}
+.wiz input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--beige)}
+.wiz-nav{display:flex;justify-content:space-between;gap:12px}
+.ok{min-height:1.4em;color:var(--beige);font-weight:600}
+.nota{font-size:14px;color:var(--on-dark-2)}
 
-/* Pantallas grandes */
-@media (min-width:1200px){
-  .hero .wrap{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);padding-block:96px 88px}
-  .hero h1{font-size:clamp(4rem,5.2vw,5.6rem)}
-  .hero p.lead{font-size:1.2rem}
-  .hero-logo{width:min(360px,80%)}
-  .sec-head{max-width:54em}
-  .sec-head h2{font-size:clamp(2.6rem,3.4vw,3.4rem)}
-  section{padding-block:104px}
-  .servicios,.contacto{gap:32px}
+/* Pie */
+footer{position:relative;z-index:2;background:var(--v8);color:var(--arena);padding:clamp(80px,10vw,140px) 0 28px;overflow:hidden}
+.pie-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px}
+.pie-grid{margin-top:clamp(56px,7vw,100px);display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.pie-grid small{display:block;color:var(--v3);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.pie-grid a{display:block;padding:3px 0;color:var(--on-dark-2);transition:color .3s}
+.pie-grid a:hover{color:var(--beige)}
+.gigante{margin-top:clamp(56px,7vw,100px);font-weight:800;font-variation-settings:"wdth" 110;text-transform:uppercase;font-size:clamp(2.6rem,12.4vw,14rem);justify-content:space-between;letter-spacing:-.05em;line-height:.8;color:var(--beige);white-space:nowrap;display:flex}
+.gigante span{display:inline-block}
+.legal{margin-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:var(--on-dark-2)}
+
+/* WhatsApp */
+.wa{position:fixed;right:18px;bottom:18px;z-index:40;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#1f9d55;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .3s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(31,157,85,.6);animation:latido 2.4s infinite}
+@keyframes latido{70%{box-shadow:0 0 0 18px rgba(31,157,85,0)}100%{box-shadow:0 0 0 0 rgba(31,157,85,0)}}
+
+/* Estados iniciales para animar (solo con JS) */
+.js .hero-title .line>span{transform:translateY(110%)}
+.js .hero-foot,.js .hero-tags,.js .nav{opacity:0}
+.js [data-sube]{opacity:0;transform:translateY(40px)}
+
+/* Tablet */
+@media (max-width:1100px){
+  .nav-links{display:none}
+  .menu-btn{display:block}
+  .hero-title .line:nth-child(2)>span{padding-left:0}
+  .docs{grid-template-columns:1fr 1fr}
+  .proceso-pin{grid-template-columns:1fr}
+  .fotos-p{height:46vh;order:-1}
+  .paso{opacity:1}
+  .paso p{max-height:none;margin-top:8px}
+  .fotos-p>.ilus{clip-path:none}
+  .fotos-p>.ilus:not(:first-child){display:none}
 }
-
-/* WhatsApp flotante */
-.wa-flot{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25);text-decoration:none;transition:transform .2s ease}
-.wa-flot:hover{transform:scale(1.07)}
-.wa-flot::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:pulso 2.4s ease-out infinite}
-@keyframes pulso{from{transform:scale(1);opacity:.7}to{transform:scale(1.6);opacity:0}}
-.subir{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s ease}
-.subir.ver{opacity:1;pointer-events:auto}
+/* Teléfono */
+@media (max-width:820px){
+  .nav-links,.nav .btn{display:none}
+  .menu-btn{display:block}
+  .hero-tags{display:none}
+  .hero-title .line:nth-child(2)>span{padding-left:0}
+  .ctas{width:100%}
+  .hero-foot .btn{flex:1;justify-content:center;padding:0 1em}
+  .publico,.seg-top,.ficha,.diag-grid,.contacto-grid,.det-in{grid-template-columns:1fr}
+  .h-track{flex-direction:column;width:auto;padding:90px var(--m) 60px}
+  .h-panel,.h-intro{width:100%;height:auto;grid-template-columns:1fr}
+  .h-foto{aspect-ratio:4/3}
+  .p-tc{min-height:520px}
+  .p-tc .h-foto{aspect-ratio:auto}
+  .h-txt{overflow:visible}
+  .proceso-pin{padding-top:90px}
+  .paso p{max-height:none;margin-top:8px}
+  .paso{opacity:1}
+  .docs{grid-template-columns:1fr 1fr;gap:10px}
+  .doc{min-height:190px;padding:20px}
+  .doc h3{font-size:1.2rem}
+  .opciones{grid-template-columns:1fr}
+  .pie-grid{grid-template-columns:1fr 1fr}
+  .fila .esp{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .hero-title .line>span,.js [data-sube]{transform:none!important;opacity:1!important}
+  .js .hero-foot,.js .hero-tags,.js .nav{opacity:1!important}
+  .js .revela{clip-path:none!important}
+  .palabra{opacity:1!important}
+  .scroll-cue::after,.wa::after{animation:none}
+}
 </style>
 </head>
 <body>
 
+<div class="loader" aria-hidden="true">
+  <div class="loader-in"><span class="logo"></span><div class="loader-name">CASA BONITA OREGÓN</div></div>
+  <div class="loader-num"><span id="pct">0</span></div>
+  <div class="loader-bar"></div>
+</div>
+<div class="loader-capa" aria-hidden="true"></div>
+<div class="barrido" aria-hidden="true"><i></i><i></i><b id="barrido-txt"></b></div>
+<div class="cursor" aria-hidden="true"></div>
 
-<div class="progreso" id="progreso" aria-hidden="true"></div>
-<header class="top">
+<header class="nav" id="nav">
   <div class="wrap">
-    <div class="left">
-    <button class="menu-btn" type="button" id="abrir-menu" aria-label="Abrir menú" aria-controls="panel" aria-expanded="false"><span></span></button>
-    <a class="brand" href="#inicio" aria-label="Casa Bonita Oregón, inicio">
-      <span class="logo" aria-hidden="true"></span>
-      <span><b>CASA BONITA OREGÓN</b><small>S.A.C. · RUC 20614484153</small></span>
-    </a>
-    </div>
-    <nav aria-label="Secciones">
-      <a href="#servicios">Servicios</a>
-      <a href="#proceso">Cómo trabajamos</a>
-      <a href="#seguridad">Seguridad</a>
-      <a class="btn btn-verde" href="#contacto">Cotizar</a>
+    <a class="marca" href="#inicio" aria-label="Casa Bonita Oregón, inicio"><span class="logo" aria-hidden="true"></span><span>CASA BONITA<br>OREGÓN</span></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#recorrido">Tu casa</a><a href="#diagnostico">Fallas</a><a href="#preguntas">Preguntas</a>
     </nav>
+    <a class="btn btn-beige" href="#contacto" data-magnet>Cotizar <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="panel"><i></i><i></i></button>
   </div>
 </header>
+<div class="panel" id="panel">
+  <a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#recorrido">Tu casa</a><a href="#preguntas">Preguntas</a><a href="#contacto">Cotizar</a>
+  <p>WhatsApp 922 732 329 · Lunes a sábado</p>
+</div>
 
-<div class="velo" id="velo"></div>
-<aside class="panel" id="panel" aria-label="Menú" hidden>
-  <div class="panel-top">
-    <a class="brand" href="#inicio"><span class="logo" aria-hidden="true"></span><span><b>CASA BONITA OREGÓN</b><small>Gasfitería y electricidad</small></span></a>
-    <button class="cerrar" type="button" id="cerrar-menu" aria-label="Cerrar menú">×</button>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-media" data-ilu="red"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-content">
+    <h1 class="hero-title xl t-display"><span class="line"><span>Gasfitería</span></span><span class="line"><span>y electricidad</span></span><span class="line"><span>para tu obra.</span></span></h1>
+    <div class="hero-foot">
+      <p>Instalaciones sanitarias y eléctricas a todo costo en Lima y Huarochirí. Ponemos los materiales, probamos todo antes de entregar y nuestro personal trabaja asegurado.</p>
+      <div class="ctas">
+        <a class="btn btn-beige" href="#contacto" data-magnet>Pedir cotización <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn-borde" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
   </div>
-  <nav aria-label="Menú principal">
-    <a href="#inicio"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a>
-    <p class="panel-sub">Servicios</p>
-    <a href="#serv-gas" data-abre="serv-gas"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.6 6 10.6A6 6 0 0 1 6 13.6C6 10.6 8.5 7.2 12 3z"/></svg>Gasfitería</a>
-    <a href="#serv-ele" data-abre="serv-ele"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z"/></svg>Electricidad</a>
-    <p class="panel-sub">La empresa</p>
-    <a href="#para-quien"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20c-.5-2.6-2-4.3-4-5"/></svg>Para constructoras y hogares</a>
-    <a href="#proceso"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h4v-4h4v-4h4V6h4"/></svg>Cómo trabajamos</a>
-    <a href="#seguridad"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Seguridad y documentos</a>
-    <a href="#recorrido"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Recorre una casa</a>
-    <a href="#diagnostico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Diagnóstico rápido</a>
-    <a href="#zonas"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Zonas de atención</a>
-    <a href="#preguntas"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 0 1 5 .9c0 1.7-2.5 2.2-2.5 3.6"/><path d="M12 17.2v.1"/></svg>Preguntas frecuentes</a>
-    <a href="#contacto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>Contacto y cotización</a>
-  </nav>
-  <div class="panel-pie">
-    <a class="btn btn-wa" href="https://wa.me/51922732329?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-    <div class="tema" role="group" aria-label="Tema de la página">
-      <button type="button" data-tema="claro" id="t-claro">☀ Claro</button>
-      <button type="button" data-tema="oscuro" id="t-oscuro">☾ Oscuro</button>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<div class="cinta" aria-hidden="true"><div class="cinta-track" id="cinta">
+  <span>Gasfitería</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+  <span>Electricidad</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+  <span>Todo costo</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+  <span>Cisternas</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+  <span>Tableros</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+  <span>Pozo a tierra</span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+</div></div>
+
+<section class="capa claro pad manifiesto" id="nosotros">
+  <div class="wrap">
+    <h2 class="sr">Quiénes somos</h2>
+    <p class="grande" id="manifiesto">Hacemos las instalaciones de agua, desagüe y luz de tu obra. Dejamos las tuberías listas antes de cada vaciado, las probamos y respondemos por todo el trabajo.</p>
+    <div class="publico">
+      <article class="tarjeta-p">
+        <div class="ilus" data-ilu="losa"></div>
+        <div><h3 class="t-h3">Para constructoras</h3></div>
+        <ul class="lista-check">
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Gasfitería y electricidad en un solo contrato</b><span>Coordinamos ambas especialidades por piso y por fase, sin cruces entre contratas.</span></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Avance según tu cronograma</b><span>Coordinamos con el residente de obra cada vaciado, piso por piso.</span></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Factura electrónica y detracción</b><span>Trabajamos con la detracción del 4 % para construcción.</span></div></li>
+        </ul>
+      </article>
+      <article class="tarjeta-p">
+        <div class="ilus" data-ilu="muro"></div>
+        <div><h3 class="t-h3">Para hogares y negocios</h3></div>
+        <ul class="lista-check">
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Fugas, desatoros y averías</b><span>Ubicamos la falla, reparamos y dejamos la instalación probada.</span></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Baños, cocinas y nuevos ambientes</b><span>Nuevos puntos de agua, desagüe, tomacorrientes y circuitos.</span></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Termas, bombas y tableros</b><span>Instalación de termas, electrobombas, tanques y tableros con diferencial.</span></div></li>
+        </ul>
+      </article>
     </div>
-    <small class="legal">Casa Bonita Oregón S.A.C. · RUC 20614484153</small>
   </div>
-</aside>
+</section>
 
-<main id="inicio">
-  <div class="hero">
-    <div class="wrap">
-      <div>
-        <p class="eyebrow">Gasfitería · Electricidad · Lima</p>
-        <h1>Agua y luz bien instaladas, <em>de la zanja al acabado.</em></h1>
-        <p class="lead">Instalamos redes sanitarias y eléctricas para viviendas, edificios multifamiliares y obras de construcción. Trabajamos a todo costo, con materiales incluidos, pruebas documentadas y personal asegurado.</p>
-        <div class="ctas">
-          <a class="btn btn-claro" href="#contacto">Pedir una cotización</a>
-          <a class="btn btn-borde" href="#servicios">Ver servicios</a>
-        </div>
-      </div>
-      <div class="hero-logo" aria-hidden="true"><span class="logo"></span></div>
-    </div>
-    <div class="flujo" aria-hidden="true"></div>
-  </div>
-
-
-  <section id="para-quien" style="padding-bottom:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Para quién trabajamos</p>
-        <h2>Del edificio completo a la reparación de tu casa</h2>
-      </div>
-      <div class="tabs" role="tablist" aria-label="Tipo de cliente">
-        <button type="button" role="tab" id="tab-obra" aria-selected="true" aria-controls="pan-obra">Constructoras</button>
-        <button type="button" role="tab" id="tab-casa" aria-selected="false" aria-controls="pan-casa" tabindex="-1">Hogares y negocios</button>
-      </div>
-      <div class="tabpanel" role="tabpanel" id="pan-obra" aria-labelledby="tab-obra">
-        <article class="ventaja"><span class="num">Subcontrato</span><h3>Gasfitería y electricidad en un solo contrato</h3><p>Coordinamos ambas especialidades por piso y por fase, sin cruces entre contratas.</p></article>
-        <article class="ventaja"><span class="num">Ingreso a obra</span><h3>Documentos SST listos</h3><p>PETS, Plan de SST, Plan de Contingencia, ATS, PETAR y SCTR vigente para presentar al área SSOMA.</p></article>
-        <article class="ventaja"><span class="num">Facturación</span><h3>Factura electrónica y detracción</h3><p>Emitimos factura y trabajamos con la detracción del 4 % para construcción.</p></article>
-      </div>
-      <div class="tabpanel" role="tabpanel" id="pan-casa" aria-labelledby="tab-casa" hidden>
-        <article class="ventaja"><span class="num">Reparaciones</span><h3>Fugas, desatoros y averías</h3><p>Ubicamos la falla, reparamos y dejamos la instalación probada.</p></article>
-        <article class="ventaja"><span class="num">Ampliaciones</span><h3>Baños, cocinas y nuevos ambientes</h3><p>Nuevos puntos de agua, desagüe, tomacorrientes y circuitos con su tablero.</p></article>
-        <article class="ventaja"><span class="num">Equipos</span><h3>Termas, bombas y tableros</h3><p>Instalación de termas, electrobombas, tanques y tableros con diferencial.</p></article>
+<section class="capa oscuro servicios" id="servicios">
+  <div class="h-track" id="h-track">
+    <div class="h-panel h-intro">
+      <h2 class="xl" style="font-size:clamp(2.2rem,.6rem + 5vw,6.4rem)"><span class="line"><span>Lo que</span></span><span class="line"><span>hacemos</span></span></h2>
+      <div style="display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap">
+        <span class="xl num">14</span>
+        <p class="muted" style="max-width:30ch;padding-bottom:12px">servicios de gasfitería y electricidad para casas, edificios y constructoras. Sigue bajando para verlos.</p>
       </div>
     </div>
-  </section>
-  <section id="servicios">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Servicios</p>
-        <h2>Dos especialidades, un solo equipo en obra</h2>
-        <p>Coordinamos agua, desagüe y electricidad en las mismas fases de la obra, para que las tuberías y los ductos queden listos antes de cada vaciado. Toca una especialidad para ver todo lo que hacemos.</p>
-      </div>
-      <div class="servicios">
-        <article class="serv agua" id="serv-gas">
-          <button class="serv-btn" type="button" aria-expanded="false" aria-controls="lista-gas" id="btn-gas">
-            <span class="ico ico-gota" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 4.2 6 7.6 6 10.6A6 6 0 0 1 6 13.6C6 10.6 8.5 7.2 12 3z" fill="none"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.5"/></svg><i class="goteo"></i></span>
-            <span class="serv-tit"><h3>Gasfitería</h3><small>Instalaciones sanitarias de agua y desagüe</small><em class="pista">7 servicios · <span class="ver">Toca para ver todo</span><span class="ocultar">Toca para cerrar</span></em></span>
-            <span class="flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="serv-cuerpo" id="lista-gas"><div class="serv-int">
-          <ul>
-            <li><div><b>Redes de agua fría y caliente</b><span>Tubería PPR unida por termofusión, empotrada en losas y muros.</span></div></li>
-            <li><div><b>Desagüe y ventilación</b><span>Tubería PVC con pendiente de diseño, montantes, sumideros y registros.</span></div></li>
-            <li><div><b>Cisternas, tanques y bombeo</b><span>Ingreso, rebose, succión, electrobombas y tanque hidroneumático.</span></div></li>
-            <li><div><b>Redes exteriores</b><span>Trazo y excavación de zanjas para conexiones de agua y desagüe.</span></div></li>
-            <li><div><b>Pruebas hidráulicas</b><span>Presurización con manómetro y prueba de desagüe antes de cerrar.</span></div></li>
-            <li><div><b>Aparatos sanitarios y acabados</b><span>Inodoros, lavatorios, duchas, griferías y termas.</span></div></li>
-            <li><div><b>Mantenimiento</b><span>Reparación de fugas y desatoros.</span></div></li>
-          </ul>
-          <a class="btn btn-verde serv-cta" href="#contacto">Cotizar gasfitería</a>
-          </div></div>
-        </article>
-        <article class="serv luz" id="serv-ele">
-          <button class="serv-btn" type="button" aria-expanded="false" aria-controls="lista-ele" id="btn-ele">
-            <span class="ico ico-rayo" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12z"/></svg></span>
-            <span class="serv-tit"><h3>Electricidad</h3><small>Instalaciones eléctricas en baja tensión</small><em class="pista">7 servicios · <span class="ver">Toca para ver todo</span><span class="ocultar">Toca para cerrar</span></em></span>
-            <span class="flecha" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="serv-cuerpo" id="lista-ele"><div class="serv-int">
-          <ul>
-            <li><div><b>Canalización empotrada</b><span>Tuberías y cajas en losas y muros antes del vaciado o tarrajeo.</span></div></li>
-            <li><div><b>Cableado de circuitos</b><span>Alumbrado, tomacorrientes y fuerza, con colores y calibres de plano.</span></div></li>
-            <li><div><b>Tableros eléctricos</b><span>Interruptores termomagnéticos, diferenciales y circuitos rotulados.</span></div></li>
-            <li><div><b>Pozo a tierra</b><span>Excavación, varilla de cobre, tratamiento y medición.</span></div></li>
-            <li><div><b>Luminarias y equipos</b><span>Montaje de luminarias, termas, bombas y aparatos.</span></div></li>
-            <li><div><b>Corrientes débiles</b><span>Data, TV e intercomunicador en ductos independientes.</span></div></li>
-            <li><div><b>Pruebas y energización</b><span>Continuidad, aislamiento y puesta a tierra antes de entregar.</span></div></li>
-          </ul>
-          <a class="btn btn-verde serv-cta" href="#contacto">Cotizar electricidad</a>
-          </div></div>
-        </article>
-      </div>
-      <div class="todo-costo">
-        <p><b>Servicio a todo costo</b>Cotizamos materiales y mano de obra juntos. Compramos los materiales, los llevamos a obra y respondemos por la instalación completa.</p>
-        <a class="btn btn-claro" href="#contacto">Cotizar mi obra</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="proceso" id="proceso">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Cómo trabajamos</p>
-        <h2>Del primer metrado a la entrega</h2>
-        <p>Cada obra sigue las mismas etapas, en el orden en que avanza la construcción.</p>
-      </div>
-      <ol class="pasos">
-        <li class="paso"><h3>Visita y metrado</h3><p>Revisamos planos y el terreno, y medimos puntos de agua, desagüe y electricidad.</p></li>
-        <li class="paso"><h3>Cotización</h3><p>Presupuesto a todo costo, con materiales y plazos por fase.</p></li>
-        <li class="paso"><h3>Instalación empotrada</h3><p>Zanjas, cisterna y tuberías en losas y muros antes de cada vaciado.</p></li>
-        <li class="paso"><h3>Pruebas</h3><p>Prueba hidráulica, prueba de desagüe y mediciones eléctricas registradas.</p></li>
-        <li class="paso"><h3>Acabados y entrega</h3><p>Aparatos sanitarios, tableros, luminarias y entrega de la instalación funcionando.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="seguridad">
-    <div class="wrap seg">
-      <div>
-        <div class="sec-head" style="margin-bottom:0">
-          <p class="eyebrow">Seguridad y documentación</p>
-          <h2>Listos para ingresar a obra desde el primer día</h2>
-          <p>Las constructoras exigen documentos de seguridad a cada subcontratista. Los tenemos preparados por especialidad, para gasfitería y para electricidad.</p>
-        </div>
-        <div class="docs">
-          <div class="doc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>PETS</b><span>Procedimiento de trabajo seguro</span></div></div>
-          <div class="doc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Plan de SST</b><span>Política, IPERC y capacitaciones</span></div></div>
-          <div class="doc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Plan de contingencia</b><span>Respuesta ante emergencias</span></div></div>
-          <div class="doc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>ATS, PETAR y check-list</b><span>Registros diarios en obra</span></div></div>
-        </div>
-      </div>
-      <div class="ficha" aria-label="Ficha de la empresa">
-        <div class="fh"><span>Ficha de la empresa</span><span>RUC 20614484153</span></div>
-        <dl>
-          <dt>Razón social</dt><dd>Casa Bonita Oregón S.A.C.</dd>
-          <dt>Especialidades</dt><dd>Instalaciones sanitarias y eléctricas</dd>
-          <dt>Seguro SCTR</dt><dd>La Positiva Seguros, salud y pensión</dd>
-          <dt>Normativa</dt><dd>Ley 29783, D.S. 011-2019-TR y Norma G.050</dd>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="obra">
-        <div>
-          <p class="eyebrow">Obra reciente</p>
-          <h3>Vivienda Multifamiliar Barranco</h3>
-          <p>Instalaciones sanitarias de un edificio multifamiliar: redes de agua y desagüe por piso, salidas por ambiente, cisterna y aparatos sanitarios.</p>
-        </div>
+    <article class="h-panel p-gas" id="serv-gas">
+      <div class="h-foto ilus" data-ilu="gas"></div>
+      <div class="h-txt">
+        <h3 class="xl" style="font-size:clamp(2.2rem,1rem + 3vw,4.2rem)">Gasfitería</h3>
         <ul>
-          <li>Agua · PPR termofusión</li>
-          <li>Desagüe · PVC</li>
-          <li>Barranco, Lima</li>
+          <li><div><b>Redes de agua fría y caliente</b><span>PPR por termofusión, empotrada en losas y muros.</span></div></li>
+          <li><div><b>Desagüe y ventilación</b><span>PVC con pendiente de diseño, montantes y registros.</span></div></li>
+          <li><div><b>Cisternas, tanques y bombeo</b><span>Electrobombas y tanque hidroneumático.</span></div></li>
+          <li><div><b>Redes exteriores</b><span>Zanjas para conexiones de agua y desagüe.</span></div></li>
+          <li><div><b>Pruebas hidráulicas</b><span>Presurización con manómetro antes de cerrar.</span></div></li>
+          <li><div><b>Aparatos sanitarios y acabados</b><span>Inodoros, lavatorios, duchas, griferías y termas.</span></div></li>
+          <li><div><b>Mantenimiento</b><span>Reparación de fugas y desatoros.</span></div></li>
         </ul>
       </div>
-    </div>
-  </section>
+    </article>
+    <article class="h-panel p-ele" id="serv-ele">
+      <div class="h-foto ilus" data-ilu="ele"></div>
+      <div class="h-txt">
+        <h3 class="xl" style="font-size:clamp(2.2rem,1rem + 3vw,4.2rem)">Electricidad</h3>
+        <ul>
+          <li><div><b>Canalización empotrada</b><span>Tuberías y cajas antes del vaciado o tarrajeo.</span></div></li>
+          <li><div><b>Cableado de circuitos</b><span>Alumbrado, tomacorrientes y fuerza, según plano.</span></div></li>
+          <li><div><b>Tableros eléctricos</b><span>Termomagnéticos, diferenciales y circuitos rotulados.</span></div></li>
+          <li><div><b>Pozo a tierra</b><span>Varilla de cobre, tratamiento y medición.</span></div></li>
+          <li><div><b>Luminarias y equipos</b><span>Luminarias, termas, bombas y aparatos.</span></div></li>
+          <li><div><b>Corrientes débiles</b><span>Data, TV e intercomunicador en ductos propios.</span></div></li>
+          <li><div><b>Pruebas y energización</b><span>Continuidad, aislamiento y puesta a tierra.</span></div></li>
+        </ul>
+      </div>
+    </article>
+    <article class="h-panel p-tc">
+      <div class="h-foto ilus" data-ilu="red"></div>
+      <div class="h-txt">
+        <h3 class="xl" style="font-size:clamp(2.4rem,1rem + 4vw,5.6rem)">Todo costo</h3>
+        <p style="font-size:clamp(1.1rem,1rem + .5vw,1.4rem);max-width:40ch">Cotizamos materiales y mano de obra juntos. Compramos los materiales, los llevamos a obra y respondemos por la instalación completa.</p>
+        <div><a class="btn btn-beige" href="#contacto" data-magnet>Cotizar mi obra <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+      </div>
+    </article>
+  </div>
+</section>
 
+<section class="capa medio" id="proceso">
+  <div class="proceso-pin" id="proceso-pin">
+    <div>
+      <h2 class="xl t-h2"><span class="line"><span>Cómo</span></span><span class="line"><span>trabajamos</span></span></h2>
+      <ol class="pasos" id="pasos">
+        <li class="paso activo"><span class="n">01</span><div><h3>Visita y metrado</h3><p>Revisamos planos y el terreno, y medimos los puntos de agua, desagüe y electricidad.</p></div></li>
+        <li class="paso"><span class="n">02</span><div><h3>Cotización</h3><p>Presupuesto a todo costo, con materiales, plazos y pagos por fase.</p></div></li>
+        <li class="paso"><span class="n">03</span><div><h3>Instalación empotrada</h3><p>Zanjas, cisterna y tuberías en losas y muros antes de cada vaciado.</p></div></li>
+        <li class="paso"><span class="n">04</span><div><h3>Pruebas</h3><p>Prueba hidráulica, prueba de desagüe y mediciones eléctricas registradas.</p></div></li>
+        <li class="paso"><span class="n">05</span><div><h3>Acabados y entrega</h3><p>Aparatos sanitarios, tableros y luminarias: te entregamos todo funcionando.</p></div></li>
+      </ol>
+      <div class="barra-p"><i id="barra-p"></i></div>
+    </div>
+    <div class="fotos-p" id="fotos-p">
+      <div class="ilus on" data-ilu="metrado"></div>
+      <div class="ilus" data-ilu="cotizacion"></div>
+      <div class="ilus" data-ilu="losa"></div>
+      <div class="ilus" data-ilu="pruebas"></div>
+      <div class="ilus" data-ilu="entrega"></div>
+    </div>
+  </div>
+</section>
 
-  <section id="recorrido">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Recorre una casa</p>
-        <h2>Toca cada punto y mira qué instalamos ahí</h2>
-        <p>Así viaja el agua, el desagüe y la electricidad dentro de una vivienda. Cada punto es una parte que hacemos.</p>
-      </div>
-      <div class="casa">
-        <div class="casa-lienzo"><div class="plano">
-          <svg viewBox="0 0 600 440" role="img" aria-label="Corte de una casa de dos pisos con sus instalaciones de agua, desagüe y electricidad">
-            <rect class="s-tierra" x="0" y="340" width="600" height="100"/>
-            <rect class="s-suelo" x="0" y="330" width="600" height="12"/>
-            <polygon class="s-techo" points="80,110 300,40 520,110"/>
-            <rect class="s-muro" x="100" y="110" width="400" height="222"/>
-            <rect class="s-losa" x="100" y="216" width="400" height="8"/>
-            <rect class="s-tanque" x="380" y="66" width="62" height="40" rx="6"/>
-            <rect class="s-tanque" x="130" y="362" width="130" height="58" rx="6"/>
-            <text class="s-txt" x="142" y="412">Cisterna</text>
-            <text class="s-txt" x="383" y="60">Tanque</text>
-            <rect class="s-obj" x="150" y="160" width="34" height="48" rx="6"/>
-            <rect class="s-obj" x="206" y="176" width="40" height="32" rx="8"/>
-            <text class="s-txt" x="150" y="150">Baño</text>
-            <rect class="s-obj" x="330" y="280" width="110" height="44" rx="4"/>
-            <text class="s-txt" x="345" y="272">Cocina</text>
-            <rect class="s-obj" x="460" y="244" width="26" height="40" rx="3"/>
-            <text class="s-txt" x="440" y="236">Tablero</text>
-            <rect class="s-obj" x="540" y="352" width="22" height="70" rx="3"/>
-            <path class="s-agua" d="M195 362 V340 H410 V106"/>
-            <path class="s-agua" d="M410 130 V150 H245 V176"/>
-            <path class="s-agua" d="M410 230 V280"/>
-            <path class="s-desague" d="M225 208 V214 M167 208 V214 M167 214 H120 V420 M385 324 V332 H120"/>
-            <path class="s-luz" d="M473 284 V300 H560 V352 M473 244 V130 H300 M473 244 H520 V180 H300"/>
-            <text class="s-txt" x="520" y="436">Pozo a tierra</text>
-          </svg>
-          <button class="punto" type="button" style="left:37.5%;top:86.8%" data-punto="cisterna" aria-pressed="true" aria-label="Cisterna">1</button>
-          <button class="punto" type="button" style="left:68.5%;top:19.5%" data-punto="tanque" aria-pressed="false" aria-label="Tanque elevado">2</button>
-          <button class="punto" type="button" style="left:33.0%;top:41.8%" data-punto="bano" aria-pressed="false" aria-label="Baño">3</button>
-          <button class="punto" type="button" style="left:64.2%;top:68.6%" data-punto="cocina" aria-pressed="false" aria-label="Cocina">4</button>
-          <button class="punto" type="button" style="left:78.8%;top:60.0%" data-punto="tablero" aria-pressed="false" aria-label="Tablero eléctrico">5</button>
-          <button class="punto" type="button" style="left:91.8%;top:88.0%" data-punto="pozo" aria-pressed="false" aria-label="Pozo a tierra">6</button>
-          </div><div class="leyenda"><span><i style="background:#2f8fbf"></i>Agua</span><span><i style="background:#8a6f4d"></i>Desagüe</span><span><i style="background:#e0a82e"></i>Electricidad</span></div>
-        </div>
-        <div class="casa-info" id="casa-info" aria-live="polite"></div>
-      </div>
+<section class="capa oscuro pad" id="recorrido">
+  <div class="wrap">
+    <h2 class="xl t-h2"><span class="line"><span>Qué instalamos</span></span><span class="line"><span>en tu casa</span></span></h2>
+    <p class="muted" data-sube style="margin-top:24px;max-width:46ch">Toca cada parte para ver el detalle del trabajo.</p>
+    <div class="filas" id="filas">
+      <div class="fila"><button type="button" aria-expanded="false"><span class="nom">Baño</span><span class="esp">Gasfitería</span></button>
+        <div class="det"><div><div class="det-in"><div class="ilus" data-ilu="muro"></div><div><p>Puntos de agua fría, caliente y desagüe, dejados antes del vaciado de la losa.</p><ul><li>Agua en PPR por termofusión</li><li>Desagüe y ventilación en PVC</li><li>Inodoro, lavatorio, ducha y griferías</li></ul><a class="btn btn-beige" href="#contacto">Cotizar baño <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></div></div></div>
+      <div class="fila"><button type="button" aria-expanded="false"><span class="nom">Tanque elevado</span><span class="esp">Gasfitería</span></button>
+        <div class="det"><div><div class="det-in"><div class="ilus" data-ilu="tanque"></div><div><p>Da presión al agua para que llegue bien a todos los pisos.</p><ul><li>Montante de impulsión desde la cisterna</li><li>Flotador, electrobomba y válvulas</li><li>Opción de tanque hidroneumático</li></ul><a class="btn btn-beige" href="#contacto">Cotizar tanque <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></div></div></div>
+      <div class="fila"><button type="button" aria-expanded="false"><span class="nom">Desagüe</span><span class="esp">Gasfitería</span></button>
+        <div class="det"><div><div class="det-in"><div class="ilus" data-ilu="desague"></div><div><p>Lleva las aguas usadas a la red pública con la pendiente correcta y sin malos olores.</p><ul><li>Tubería PVC con pendiente de diseño</li><li>Trampas, registros y sumideros</li><li>Montantes y ventilación</li></ul><a class="btn btn-beige" href="#contacto">Cotizar desagüe <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></div></div></div>
+      <div class="fila"><button type="button" aria-expanded="false"><span class="nom">Tablero</span><span class="esp">Electricidad</span></button>
+        <div class="det"><div><div class="det-in"><div class="ilus" data-ilu="ele"></div><div><p>Reparte la energía en circuitos y protege a las personas.</p><ul><li>Interruptores termomagnéticos por circuito</li><li>Interruptor diferencial</li><li>Circuitos rotulados para cada ambiente</li></ul><a class="btn btn-beige" href="#contacto">Cotizar tablero <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></div></div></div>
+      <div class="fila"><button type="button" aria-expanded="false"><span class="nom">Pozo a tierra</span><span class="esp">Electricidad</span></button>
+        <div class="det"><div><div class="det-in"><div class="ilus" data-ilu="pozo"></div><div><p>Descarga a tierra las fugas de corriente para evitar choques eléctricos.</p><ul><li>Excavación y varilla de cobre</li><li>Tratamiento del terreno</li><li>Medición de la resistencia</li></ul><a class="btn btn-beige" href="#contacto">Cotizar pozo a tierra <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div></div></div></div>
     </div>
-  </section>
+  </div>
+  <div class="flota" id="flota" aria-hidden="true"></div>
+</section>
 
-  <section id="diagnostico" class="proceso">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Diagnóstico rápido</p>
-        <h2>¿Qué problema tienes en casa?</h2>
-        <p>Elige el síntoma y te contamos la causa más común y cómo lo resolvemos.</p>
+<section class="capa claro pad" id="diagnostico">
+  <div class="wrap">
+    <h2 class="xl t-h2"><span class="line"><span>¿Tienes una</span></span><span class="line"><span>falla en casa?</span></span></h2>
+    <p class="muted" data-sube style="margin-top:24px;max-width:46ch">Elige el síntoma y te contamos la causa más común y cómo lo resolvemos.</p>
+    <div class="diag-grid">
+      <div class="sintomas" role="group" aria-label="Problemas comunes" data-sube>
+        <button class="sintoma" type="button" data-p="fuga" aria-pressed="true">Mancha de humedad o fuga</button>
+        <button class="sintoma" type="button" data-p="presion" aria-pressed="false">Poca presión de agua</button>
+        <button class="sintoma" type="button" data-p="olor" aria-pressed="false">Mal olor o desagüe lento</button>
+        <button class="sintoma" type="button" data-p="terma" aria-pressed="false">La terma no calienta</button>
+        <button class="sintoma" type="button" data-p="salta" aria-pressed="false">Se baja la llave del tablero</button>
+        <button class="sintoma" type="button" data-p="corriente" aria-pressed="false">Siento corriente al tocar algo</button>
       </div>
-      <div class="diag">
-        <div class="problemas" role="group" aria-label="Problemas comunes">
-          <button class="problema" type="button" data-p="fuga" aria-pressed="true">Mancha de humedad o fuga<span class="tipo">Agua</span></button>
-          <button class="problema" type="button" data-p="presion" aria-pressed="false">Poca presión en el caño o la ducha<span class="tipo">Agua</span></button>
-          <button class="problema" type="button" data-p="olor" aria-pressed="false">Mal olor o desagüe lento<span class="tipo">Desagüe</span></button>
-          <button class="problema" type="button" data-p="terma" aria-pressed="false">La terma no calienta<span class="tipo">Agua / luz</span></button>
-          <button class="problema" type="button" data-p="salta" aria-pressed="false">Se baja la llave del tablero<span class="tipo">Luz</span></button>
-          <button class="problema" type="button" data-p="corriente" aria-pressed="false">Siento corriente al tocar algo<span class="tipo">Luz</span></button>
-        </div>
-        <div class="respuesta" id="respuesta" aria-live="polite"></div>
-      </div>
+      <div class="respuesta" id="respuesta" aria-live="polite"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="zonas" style="padding-top:0">
-    <div class="wrap zonas">
-      <div class="sec-head" style="margin-bottom:0">
-        <p class="eyebrow">Zonas de atención</p>
-        <h2>Trabajamos en Lima Metropolitana y Huarochirí</h2>
-        <p>Nuestra base está en San Antonio de Huarochirí, en Lima Este. Llegamos a obras en toda Lima; consúltanos por tu distrito.</p>
-      </div>
-      <div class="chips" aria-label="Algunos distritos">
-        <span class="base">San Antonio – Huarochirí</span><span>San Juan de Lurigancho</span><span>Ate</span><span>Santa Anita</span><span>La Molina</span><span>Chaclacayo</span><span>Lurigancho – Chosica</span><span>El Agustino</span><span>Barranco</span><span>Miraflores</span><span>Santiago de Surco</span><span>Cercado de Lima</span>
-      </div>
+<section class="capa oscuro pad" id="preguntas">
+  <div class="wrap">
+    <h2 class="xl t-h2"><span class="line"><span>Preguntas</span></span><span class="line"><span>frecuentes</span></span></h2>
+    <div class="faq" id="faq">
+      <div class="q abierta"><button type="button" aria-expanded="true">¿Qué incluye el servicio a todo costo?<span class="mas" aria-hidden="true"></span></button><div class="r"><div><p>Materiales, mano de obra, traslado a obra y pruebas. Te entregamos un presupuesto por fases para que sepas cuánto se paga en cada etapa.</p></div></div></div>
+      <div class="q"><button type="button" aria-expanded="false">¿Emiten factura?<span class="mas" aria-hidden="true"></span></button><div class="r"><div><p>Sí, emitimos factura electrónica. En obras de construcción aplicamos la detracción del 4 % según las normas de SUNAT.</p></div></div></div>
+      <div class="q"><button type="button" aria-expanded="false">¿Hacen pruebas antes de entregar?<span class="mas" aria-hidden="true"></span></button><div class="r"><div><p>Sí. Hacemos prueba hidráulica de las redes de agua, prueba de desagüe y pruebas eléctricas de continuidad, aislamiento y puesta a tierra.</p></div></div></div>
+      <div class="q"><button type="button" aria-expanded="false">¿Atienden reparaciones pequeñas en casas?<span class="mas" aria-hidden="true"></span></button><div class="r"><div><p>Sí. Atendemos fugas, desatoros, cambio de griferías, instalación de termas y problemas eléctricos. Escríbenos por WhatsApp con una foto del problema.</p></div></div></div>
+      <div class="q"><button type="button" aria-expanded="false">¿En qué distritos trabajan?<span class="mas" aria-hidden="true"></span></button><div class="r"><div><p>Nuestra base está en San Antonio de Huarochirí, en Lima Este. Llegamos a obras en toda Lima Metropolitana; consúltanos por tu distrito.</p><div class="chips"><span>San Antonio – Huarochirí</span><span>San Juan de Lurigancho</span><span>Ate</span><span>Santa Anita</span><span>La Molina</span><span>Chaclacayo</span><span>Lurigancho – Chosica</span><span>El Agustino</span><span>Barranco</span><span>Miraflores</span><span>Santiago de Surco</span><span>Cercado de Lima</span></div></div></div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="preguntas" class="proceso">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Preguntas frecuentes</p>
-        <h2>Lo que nos preguntan antes de cotizar</h2>
+<section class="capa claro pad" id="contacto">
+  <div class="wrap">
+    <h2 class="xl t-h2"><span class="line"><span>Pide tu</span></span><span class="line"><span>cotización</span></span></h2>
+    <div class="contacto-grid">
+      <div class="datos" data-sube>
+        <p class="muted" style="margin-bottom:10px">Escríbenos por WhatsApp o llámanos. Respondemos con una visita para el metrado.</p>
+        <div class="dato"><div><small>WhatsApp y llamadas</small><b>922 732 329</b></div><button class="copiar" type="button" data-copy="922732329">Copiar</button></div>
+        <div class="dato"><div><small>Atención</small><b>Lunes a sábado</b></div></div>
+        <div class="dato"><div><small>Dirección</small><b>Av. Prolongación Huiracocha Mz. PP9 Lt. 11A, San Antonio – Huarochirí</b></div><a class="copiar" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Prolongaci%C3%B3n+Huiracocha+San+Antonio+Huarochir%C3%AD+Lima" target="_blank" rel="noopener">Cómo llegar</a></div>
+        <div class="dato"><div><small>RUC</small><b>20614484153</b></div><button class="copiar" type="button" data-copy="20614484153">Copiar</button></div>
       </div>
-      <div class="faq">
-        <details><summary>¿Qué incluye el servicio a todo costo?</summary><p>Materiales, mano de obra, traslado a obra y pruebas. Te entregamos un presupuesto por fases para que sepas cuánto se paga en cada etapa.</p></details>
-        <details><summary>¿Emiten factura?</summary><p>Sí, emitimos factura electrónica. En obras de construcción aplicamos la detracción del 4 % según las normas de SUNAT.</p></details>
-        <details><summary>¿Hacen pruebas antes de entregar?</summary><p>Sí. Hacemos prueba hidráulica de las redes de agua, prueba de desagüe y pruebas eléctricas de continuidad, aislamiento y puesta a tierra.</p></details>
-        <details><summary>¿Atienden reparaciones pequeñas en casas?</summary><p>Sí. Atendemos fugas, desatoros, cambio de griferías, instalación de termas y problemas eléctricos. Escríbenos por WhatsApp con una foto del problema.</p></details>
-      </div>
-    </div>
-  </section>
-  <section id="contacto">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Contacto</p>
-        <h2>Cuéntanos de tu obra</h2>
-        <p>Escríbenos por WhatsApp o llámanos. Respondemos con una visita para el metrado.</p>
-      </div>
-      <div class="contacto">
-        <div class="datos">
-          <div class="dato"><div><small>Número de referencia · WhatsApp</small><b id="tel">922 732 329</b></div><button class="copiar" type="button" data-copy="922732329" id="copy-tel">Copiar</button></div>
-          <div class="dato"><div><small>Atención</small><b>Lunes a sábado · Cotizaciones por WhatsApp</b></div></div>
-          <div class="dato"><div><small>Dirección</small><b>Av. Prolongación Huiracocha Mz. PP9 Lt. 11A, San Antonio – Huarochirí</b></div><a class="copiar" href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Prolongaci%C3%B3n+Huiracocha+San+Antonio+Huarochir%C3%AD+Lima" target="_blank" rel="noopener" style="text-decoration:none">Cómo llegar ↗</a></div>
-          <div class="dato"><div><small>RUC</small><b id="ruc">20614484153</b></div><button class="copiar" type="button" data-copy="20614484153" id="copy-ruc">Copiar</button></div>
-        </div>
-        <div class="wiz" id="wiz">
-          <h3>Arma tu cotización</h3>
-          <div class="wiz-barra" aria-hidden="true"><i id="wiz-barra"></i></div>
-          <div id="wiz-cuerpo"></div>
-          <p class="ok" id="ok" role="status"></p>
-          <p class="nota">Al terminar se abre WhatsApp con tu pedido listo para enviar al 922 732 329. Respondemos para coordinar la visita.</p>
-        </div>
+      <div class="wiz" id="wiz" data-sube>
+        <h3>Arma tu cotización</h3>
+        <div class="avance" aria-hidden="true"><i id="wiz-barra"></i></div>
+        <div id="wiz-cuerpo"><p>Escríbenos por <a href="https://wa.me/51922732329?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" style="text-decoration:underline">WhatsApp al 922 732 329</a> con lo que necesitas.</p></div>
+        <p class="ok" id="ok" role="status"></p>
+        <p class="nota">Al terminar se abre WhatsApp con tu pedido listo para enviar al 922 732 329.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer>
-  <div class="wrap pie-grid">
-    <div class="pie-col">
-      <a class="brand" href="#inicio"><span class="logo" aria-hidden="true"></span><span><b>CASA BONITA OREGÓN S.A.C.</b><small>Gasfitería y electricidad</small></span></a>
-      <p>RUC 20614484153</p>
+  <div class="pie-foto" aria-hidden="true" data-ilu="red"></div>
+  <div class="wrap">
+    <div class="pie-cta">
+      <h2 class="xl t-h2" style="max-width:14ch">Escríbenos hoy</h2>
+      <a class="btn btn-beige" href="https://wa.me/51922732329?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" data-magnet>Escribir por WhatsApp <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
-    <div class="pie-col">
-      <small>Zona de atención</small>
-      <p>Lima Metropolitana y Huarochirí</p>
+    <div class="pie-grid">
+      <div><small>Servicios</small><a href="#serv-gas">Gasfitería</a><a href="#serv-ele">Electricidad</a><a href="#servicios">Todo costo</a></div>
+      <div><small>Empresa</small><a href="#proceso">Cómo trabajamos</a><a href="#recorrido">Qué instalamos</a><a href="#preguntas">Preguntas</a></div>
+      <div><small>Contacto</small><a href="https://wa.me/51922732329" target="_blank" rel="noopener">922 732 329</a><a href="#contacto">Cotizar</a></div>
+      <div><small>Dirección</small><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Prolongaci%C3%B3n+Huiracocha+San+Antonio+Huarochir%C3%AD+Lima" target="_blank" rel="noopener">Av. Prolongación Huiracocha Mz. PP9 Lt. 11A, San Antonio – Huarochirí</a></div>
     </div>
-    <div class="pie-col">
-      <small>Seguro del personal</small>
-      <p>SCTR salud y pensión · La Positiva</p>
-    </div>
-    <div class="pie-col">
-      <small>Número de referencia</small>
-      <p class="tel">922 732 329</p>
-    </div>
+    <div class="gigante" id="gigante" aria-hidden="true">Casa Bonita</div>
+    <div class="legal"><span>© <span id="anio">2026</span> Casa Bonita Oregón S.A.C. · RUC 20614484153</span><span>Lima · Huarochirí · Perú</span></div>
   </div>
 </footer>
 
-<a class="wa-flot" href="https://wa.me/51922732329?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al 922 732 329">
+<a class="wa" href="https://wa.me/51922732329?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al 922 732 329">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
-<button class="subir" type="button" id="subir" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></button>
 
+<!-- Ilustraciones de obra (se clonan con JS en los [data-ilu]) -->
+<template id="ilu-red"><svg viewBox="0 0 800 600" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+  <path class="e t1" d="M0 470H800M0 492H800M120 0V600M690 0V600"/>
+  <path class="d t2 dib" d="M240 560H610Q640 560 640 530V380"/><path class="d t2 dib" d="M430 560V470"/><rect class="d t3 dib" x="215" y="540" width="40" height="40" rx="4"/>
+  <path class="a t dib" d="M800 110H580Q550 110 550 140V300Q550 330 520 330H330"/><path class="a t dib" d="M550 210H650Q680 210 680 240V400"/>
+  <path class="a t3 dib" d="M600 92L630 128M600 128L630 92M615 92V78M603 78H627"/><circle class="a t3 dib" cx="330" cy="330" r="10"/><circle class="a t3 dib" cx="680" cy="410" r="10"/>
+  <rect class="l t3 dib" x="720" y="150" width="60" height="96" rx="6"/><path class="l t1 dib" d="M732 172H768M732 188H768M732 204H768M732 220H768"/>
+  <path class="l t3 dib" d="M720 178H430Q400 178 400 208V246"/><path class="l t3 dib" d="M392 246H408L416 254V270L408 278H392L384 270V254Z"/>
+  <path class="l t3 dib" d="M600 178V60Q600 40 580 40H302"/><circle class="l t3 dib" cx="290" cy="40" r="11"/><path class="l t1 dib" d="M283 33L297 47M297 33L283 47"/>
+  <path class="a t3 flujo" d="M800 110H580Q550 110 550 140V300Q550 330 520 330H330"/><path class="a t3 flujo" d="M550 210H650Q680 210 680 240V400"/>
+  <path class="d t3 flujo" d="M640 380V530Q640 560 610 560H240"/><path class="l t1 flujo" d="M720 178H430Q400 178 400 208V246"/>
+</svg></template>
+
+<template id="ilu-losa"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <defs><pattern id="pl" width="44" height="28" patternUnits="userSpaceOnUse"><rect x="5" y="4" width="34" height="20" rx="2" fill="rgba(233,220,195,.07)" stroke="rgba(233,220,195,.24)" stroke-width="1.5"/></pattern></defs>
+  <rect x="16" y="16" width="368" height="268" rx="6" fill="url(#pl)" stroke="rgba(244,237,224,.3)" stroke-width="2"/>
+  <path class="d t2 dib" d="M40 250H190Q215 250 215 225V162"/><circle class="d t dib" cx="215" cy="148" r="13"/>
+  <path class="l t3 dib" d="M30 60H134"/><path class="l t3 dib" d="M142 44H158L166 52V68L158 76H142L134 68V52Z"/>
+  <path class="l t3 dib" d="M166 60H290Q310 60 310 80V186"/><path class="l t3 dib" d="M302 186H318L326 194V210L318 218H302L294 210V194Z"/>
+  <path class="a t dib" d="M384 118H270Q248 118 248 140V250"/><circle class="a t3 dib" cx="248" cy="259" r="8"/>
+  <path class="a t3 flujo" d="M384 118H270Q248 118 248 140V250"/><path class="d t3 flujo" d="M215 162V225Q215 250 190 250H40"/>
+</svg></template>
+
+<template id="ilu-muro"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <defs><pattern id="pm" width="48" height="24" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="46" height="10" rx="1" fill="rgba(233,220,195,.06)" stroke="rgba(233,220,195,.2)" stroke-width="1.2"/><rect x="-23" y="13" width="46" height="10" rx="1" fill="rgba(233,220,195,.06)" stroke="rgba(233,220,195,.2)" stroke-width="1.2"/><rect x="25" y="13" width="46" height="10" rx="1" fill="rgba(233,220,195,.06)" stroke="rgba(233,220,195,.2)" stroke-width="1.2"/></pattern></defs>
+  <rect x="16" y="12" width="368" height="258" fill="url(#pm)"/><path class="e t3" d="M8 272H392"/>
+  <path class="a t dib" d="M30 40H110Q130 40 130 60V170"/><circle class="a t3 dib" cx="130" cy="179" r="8"/>
+  <path class="a t dib" d="M130 100H262Q282 100 282 120V140"/><circle class="a t3 dib" cx="282" cy="149" r="8"/>
+  <path class="c t dib" d="M30 66H86Q106 66 106 86V170"/><circle class="c t3 dib" cx="106" cy="179" r="8"/>
+  <path class="d t2 dib" d="M118 222V288H350"/><path class="d t2 dib" d="M222 250V288"/>
+  <path class="l t3 dib" d="M340 12V150"/><rect class="l t3 dib" x="326" y="150" width="28" height="36" rx="4"/><path class="l t1 dib" d="M336 162V174M344 162V174"/>
+  <path class="a t3 flujo" d="M30 40H110Q130 40 130 60V170"/><path class="c t3 flujo" d="M30 66H86Q106 66 106 86V170"/>
+</svg></template>
+
+<template id="ilu-gas"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <rect class="a t3 dib" x="40" y="24" width="96" height="62" rx="10"/><path class="a t1 dib" d="M52 42H124"/>
+  <path class="a t dib" d="M88 86V150Q88 170 108 170H330Q350 170 350 190V236"/><circle class="a t3 dib" cx="350" cy="245" r="9"/>
+  <path class="a t dib" d="M250 170V104"/><path class="a t3 dib" d="M250 104H272Q284 104 284 116"/>
+  <path class="a t3 dib" d="M156 154L184 186M156 186L184 154M170 154V140M160 140H180"/>
+  <path class="d t2 dib" d="M30 278H336"/><path class="d t2 dib" d="M300 252V278"/><rect class="d t3 dib" x="338" y="258" width="40" height="40" rx="4"/>
+  <path class="a t3 flujo" d="M88 86V150Q88 170 108 170H330Q350 170 350 190V236"/><path class="d t3 flujo" d="M30 278H336"/>
+</svg></template>
+
+<template id="ilu-ele"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <rect class="l t3 dib" x="36" y="36" width="116" height="190" rx="8"/>
+  <path class="l t3 dib" d="M52 60h16v34h-16zM74 60h16v34h-16zM96 60h16v34h-16zM118 60h16v34h-16zM52 118h16v34h-16zM74 118h16v34h-16zM96 118h16v34h-16zM118 118h16v34h-16z"/>
+  <path class="l t1 dib" d="M60 68v12M82 68v12M104 68v12M126 68v12M60 126v12M82 126v12M104 126v12M126 126v12"/><rect class="l t3 dib" x="52" y="178" width="58" height="28" rx="3"/>
+  <path class="l t3 dib" d="M152 74H262Q282 74 282 94V112"/><circle class="l t3 dib" cx="282" cy="125" r="13"/><path class="l t1 dib" d="M273 116L291 134M291 116L273 134"/>
+  <path class="l t3 dib" d="M152 130H322Q342 130 342 150V176"/><rect class="l t3 dib" x="328" y="176" width="28" height="36" rx="4"/><path class="l t1 dib" d="M338 188V200M346 188V200"/>
+  <path class="l t3 dib" d="M152 192H206Q226 192 226 212V246"/><path class="l t3 dib" d="M204 248H248M212 260H240M220 272H232"/>
+  <path class="l t1 flujo" d="M152 74H262Q282 74 282 94V112"/><path class="l t1 flujo" d="M152 130H322Q342 130 342 150V176"/>
+</svg></template>
+
+<template id="ilu-tanque"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <path class="e t3" d="M20 220H380M60 220V292M340 220V292"/>
+  <rect class="a t3 dib" x="230" y="64" width="92" height="136" rx="18"/><path class="a t3 dib" d="M250 64V52H302V64"/><path class="a t1 dib" d="M242 108H310"/>
+  <path class="a t dib" d="M150 262V140Q150 118 172 118H230"/><circle class="a t3 dib" cx="150" cy="276" r="14"/>
+  <path class="a t dib" d="M276 200V244Q276 262 258 262H96"/>
+  <path class="a t3 flujo" d="M150 262V140Q150 118 172 118H230"/><path class="a t3 flujo" d="M276 200V244Q276 262 258 262H96"/>
+</svg></template>
+
+<template id="ilu-desague"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <path class="e t3" d="M10 92H390"/><path class="e t1" d="M10 130H300M10 250H390"/>
+  <path class="d t dib" d="M50 40V96Q50 124 78 124Q106 124 106 96V86"/>
+  <path class="d t2 dib" d="M78 124V150L300 196"/><rect class="d t3 dib" x="300" y="104" width="70" height="140" rx="6"/><path class="d t1 dib" d="M300 210H370"/>
+  <path class="d t3 flujo" d="M78 150L300 196"/>
+</svg></template>
+
+<template id="ilu-pozo"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <path class="e t3" d="M10 110H300M300 110V20H390"/><path class="e t1" d="M10 160H390M10 210H390M10 255H390"/>
+  <rect class="e t3" x="160" y="110" width="80" height="172" rx="4" stroke-dasharray="6 9"/>
+  <path class="l t dib" d="M200 84V266"/><path class="l t3 dib" d="M192 258L200 282L208 258"/>
+  <path class="l t3 dib" d="M200 84H300Q320 84 320 64V34"/><path class="l t3 dib" d="M54 60H122M68 76H108M82 92H94"/>
+  <path class="l t1 flujo" d="M320 34V64Q320 84 300 84H200V266"/>
+</svg></template>
+
+<template id="ilu-metrado"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <path class="e t3 dib" d="M40 44H360V264H40ZM200 44V160M40 160H360M280 160V264"/><path class="e t1 dib" d="M200 120A40 40 0 0 1 240 160"/>
+  <path class="l t1 dib" d="M40 26H360M40 20V32M360 20V32"/><text class="lbl" x="178" y="20">8.40 m</text>
+  <circle class="a t3 dib" cx="120" cy="104" r="8"/><circle class="a t3 dib" cx="300" cy="104" r="8"/><circle class="a t3 dib" cx="330" cy="220" r="8"/>
+  <rect class="l t3 dib" x="72" y="196" width="16" height="16" rx="2"/><rect class="l t3 dib" x="232" y="196" width="16" height="16" rx="2"/><rect class="d t3 dib" x="150" y="226" width="18" height="18" rx="2"/>
+</svg></template>
+
+<template id="ilu-cotizacion"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <rect class="e t3 dib" x="104" y="22" width="180" height="256" rx="12"/><path class="e t1 dib" d="M134 70H254M134 100H254M134 130H224M134 160H244"/>
+  <text class="big" x="132" y="242">S/</text>
+  <circle class="a t3 dib" cx="290" cy="228" r="36"/><path class="a t dib" d="M272 228L286 242L310 214"/>
+</svg></template>
+
+<template id="ilu-pruebas"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <circle class="e t3 dib" cx="200" cy="150" r="108"/>
+  <path class="e t3" d="M120 222L132 212M100 150H116M120 78L132 88M200 50V66M280 78L268 88M300 150H284M280 222L268 212"/>
+  <g class="aguja"><path class="a t dib" d="M200 150L200 72"/></g><circle class="a t3" cx="200" cy="150" r="10"/>
+  <text class="lbl" x="172" y="212">kg/cm²</text><path class="a t dib" d="M200 258V286M30 286H370"/>
+</svg></template>
+
+<template id="ilu-entrega"><svg viewBox="0 0 400 300" aria-hidden="true">
+  <path class="e t3" d="M56 30V150"/><path class="a t dib" d="M56 84H156Q186 84 186 114V132"/><path class="a t3 dib" d="M110 84V60M94 60H126"/>
+  <path class="a t3 gota" d="M186 152Q177 166 186 176Q195 166 186 152Z"/>
+  <circle class="l t3 dib" cx="290" cy="200" r="62"/><path class="l t dib" d="M260 200L284 224L324 180"/>
+</svg></template>
+
+<script>document.documentElement.classList.add("js")</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
-document.querySelectorAll(".copiar").forEach(b=>b.addEventListener("click",()=>{
-  const v=b.dataset.copy,orig=b.textContent;
-  const done=()=>{b.textContent="Copiado";setTimeout(()=>b.textContent=orig,1600)};
-  const fallback=()=>{const el=b.parentElement.querySelector("b");const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Seleccionado";setTimeout(()=>b.textContent=orig,1600)};
-  try{navigator.clipboard.writeText(v).then(done,fallback)}catch(e){fallback()}
-}));
-/* Menú lateral */
-const panel=document.getElementById("panel"),velo=document.getElementById("velo"),abrir=document.getElementById("abrir-menu");
-function menu(on){
-  if(on){panel.hidden=false;requestAnimationFrame(()=>{panel.classList.add("abierto");velo.classList.add("abierto")});abrir.setAttribute("aria-expanded","true");setTimeout(()=>panel.querySelector("nav a").focus(),60)}
-  else{panel.classList.remove("abierto");velo.classList.remove("abierto");abrir.setAttribute("aria-expanded","false");setTimeout(()=>{if(!panel.classList.contains("abierto"))panel.hidden=true},320);abrir.focus()}
-}
-abrir.addEventListener("click",()=>menu(true));
-document.getElementById("cerrar-menu").addEventListener("click",()=>menu(false));
-velo.addEventListener("click",()=>menu(false));
-panel.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>menu(false)));
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&panel.classList.contains("abierto"))menu(false)});
+(()=>{
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const fino=matchMedia("(hover:hover) and (pointer:fine)").matches;
+$("#anio").textContent=new Date().getFullYear();
+const sinGsap=!window.gsap||!window.ScrollTrigger;
 
-/* Tema claro / oscuro */
-const root=document.documentElement;
-function tema(t){
-  if(t==="claro")root.setAttribute("data-theme","light");else if(t==="oscuro")root.setAttribute("data-theme","dark");else root.removeAttribute("data-theme");
-  document.querySelectorAll(".tema button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.tema===t)));
-  try{localStorage.setItem("cbo-tema",t)}catch(e){}
-}
-let guardado="claro";try{guardado=localStorage.getItem("cbo-tema")||"claro"}catch(e){}
-tema(guardado);
-document.querySelectorAll(".tema button").forEach(b=>b.addEventListener("click",()=>tema(b.dataset.tema)));
+/* Si no hay animaciones, mostrar todo */
+function mostrarTodo(){document.documentElement.classList.remove("js");$$(".palabra").forEach(p=>p.style.opacity=1)}
 
-/* Pestañas */
-const tabs=[...document.querySelectorAll('[role="tab"]')];
-function activar(t){tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",String(on));x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on})}
-tabs.forEach((t,i)=>{t.addEventListener("click",()=>activar(t));t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=tabs[(i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length];activar(n);n.focus()}})});
+/* Ilustraciones: clonar plantillas */
+$$("[data-ilu]").forEach(el=>{const t=document.getElementById("ilu-"+el.dataset.ilu);if(t)el.appendChild(t.content.cloneNode(true))});
 
-/* Volver arriba */
-const subir=document.getElementById("subir");
-addEventListener("scroll",()=>subir.classList.toggle("ver",scrollY>700),{passive:true});
-subir.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
-/* Servicios desplegables */
-document.querySelectorAll(".serv-btn").forEach(b=>b.addEventListener("click",e=>{
-  const card=b.closest(".serv"),on=!card.classList.contains("abierto");
-  if(on&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
-    const r=card.getBoundingClientRect(),o=document.createElement("span");o.className="onda";
-    o.style.left=((e.clientX||r.left+60)-r.left)+"px";o.style.top=((e.clientY||r.top+60)-r.top)+"px";
-    card.appendChild(o);setTimeout(()=>o.remove(),950);
-  }
-  card.classList.toggle("cerrando",!on);
-  card.classList.toggle("abierto",on);b.setAttribute("aria-expanded",String(on));
-  if(on&&innerWidth<860)setTimeout(()=>card.scrollIntoView({behavior:"smooth",block:"start"}),120);
-}));
-/* Los enlaces del menú a Gasfitería / Electricidad abren su tarjeta */
-document.querySelectorAll('[data-abre]').forEach(a=>a.addEventListener("click",()=>{const c=document.getElementById(a.dataset.abre);if(c&&!c.classList.contains("abierto"))c.querySelector(".serv-btn").click()}));
-/* Barra de progreso */
-const prog=document.getElementById("progreso");
-addEventListener("scroll",()=>{const h=document.documentElement;prog.style.transform=`scaleX(${Math.min(1,scrollY/((h.scrollHeight-innerHeight)||1))})`},{passive:true});
+/* Manifiesto: dividir en palabras */
+const man=$("#manifiesto");
+man.innerHTML=man.textContent.trim().split(/\s+/).map(w=>`<span class="palabra">${w}</span>`).join(" ");
 
-/* Casa interactiva */
-const PUNTOS={
- cisterna:{esp:"Gasfitería",t:"Cisterna",d:"Guarda el agua que llega de la red pública y abastece a toda la casa.",l:["Tubería de ingreso, rebose, succión y limpieza","Electrobomba con su tablero de control","Ingreso seguro como espacio confinado"]},
- tanque:{esp:"Gasfitería",t:"Tanque elevado o hidroneumático",d:"Da presión al agua para que llegue bien a todos los pisos.",l:["Montante de impulsión desde la cisterna","Flotador y válvulas de control","Opción de tanque hidroneumático"]},
- bano:{esp:"Gasfitería",t:"Baño",d:"Puntos de agua fría, caliente y desagüe, dejados antes del vaciado de la losa.",l:["Agua en PPR por termofusión","Desagüe y ventilación en PVC","Inodoro, lavatorio, ducha y griferías"]},
- cocina:{esp:"Gasfitería y electricidad",t:"Cocina",d:"Agua para el lavadero, desagüe y tomacorrientes para los equipos.",l:["Salidas de agua y desagüe del lavadero","Tomacorrientes para refrigeradora y equipos","Circuito independiente para la cocina"]},
- tablero:{esp:"Electricidad",t:"Tablero eléctrico",d:"Reparte la energía en circuitos y protege a las personas.",l:["Interruptores termomagnéticos por circuito","Interruptor diferencial","Circuitos rotulados para cada ambiente"]},
- pozo:{esp:"Electricidad",t:"Pozo a tierra",d:"Descarga a tierra las fugas de corriente para evitar choques eléctricos.",l:["Excavación y varilla de cobre","Tratamiento del terreno","Medición de la resistencia"]}
-};
-const info=document.getElementById("casa-info");
-function verPunto(k,btn){
-  const p=PUNTOS[k];
-  document.querySelectorAll(".punto").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
-  info.innerHTML=`<span class="esp">${p.esp}</span><h3>${p.t}</h3><p>${p.d}</p><ul>${p.l.map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn btn-claro" href="#contacto" style="justify-self:start;margin-top:6px">Cotizar ${p.t.toLowerCase()}</a>`;
-  info.classList.remove("cambia");void info.offsetWidth;info.classList.add("cambia");
-}
-document.querySelectorAll(".punto").forEach(b=>b.addEventListener("click",()=>verPunto(b.dataset.punto,b)));
-verPunto("cisterna",document.querySelector('.punto[data-punto="cisterna"]'));
+/* ---------- Interacciones (funcionan siempre) ---------- */
+/* Menú móvil */
+const menuBtn=$("#menu-btn");
+function menu(on){document.body.classList.toggle("menu-abierto",on);menuBtn.setAttribute("aria-expanded",String(on))}
+menuBtn.addEventListener("click",()=>menu(!document.body.classList.contains("menu-abierto")));
+$$("#panel a").forEach(a=>a.addEventListener("click",()=>menu(false)));
+
+/* Copiar */
+$$("button.copiar").forEach(b=>b.addEventListener("click",()=>{const o=b.textContent,f=t=>{b.textContent=t;setTimeout(()=>b.textContent=o,1600)};try{navigator.clipboard.writeText(b.dataset.copy).then(()=>f("Copiado"),()=>f(b.dataset.copy))}catch(e){f(b.dataset.copy)}}));
+
+/* Preguntas */
+$$(".q").forEach(q=>q.querySelector("button").addEventListener("click",()=>{const on=!q.classList.contains("abierta");$$(".q").forEach(x=>{x.classList.toggle("abierta",x===q&&on);x.querySelector("button").setAttribute("aria-expanded",String(x===q&&on))});setTimeout(()=>window.ScrollTrigger&&ScrollTrigger.refresh(),600)}));
+
+/* Recorrido: filas */
+$$(".fila").forEach(f=>f.querySelector("button").addEventListener("click",()=>{const on=!f.classList.contains("abierta");$$(".fila").forEach(x=>{x.classList.toggle("abierta",x===f&&on);x.querySelector("button").setAttribute("aria-expanded",String(x===f&&on))});setTimeout(()=>window.ScrollTrigger&&ScrollTrigger.refresh(),650)}));
 
 /* Diagnóstico */
 const DIAG={
  fuga:{t:"Mancha de humedad o fuga",c:"Una unión de tubería empotrada que pierde agua, o una llave o grifería gastada.",h:"Ubicamos el punto con el medidor cerrado, abrimos lo mínimo, cambiamos el tramo o accesorio y hacemos prueba hidráulica antes de resanar.",a:"Mientras tanto, cierra la llave general si la mancha crece."},
- presion:{t:"Poca presión en el caño o la ducha",c:"Aireadores sucios, tubería obstruida, válvula a medio abrir o falta de presión en el tanque o la bomba.",h:"Revisamos desde el tanque o la bomba hasta el punto, limpiamos y, si hace falta, instalamos un sistema de presión.",a:"Prueba limpiar el aireador del caño: a veces el sarro es la causa."},
+ presion:{t:"Poca presión de agua",c:"Aireadores sucios, tubería obstruida, válvula a medio abrir o falta de presión en el tanque o la bomba.",h:"Revisamos desde el tanque o la bomba hasta el punto, limpiamos y, si hace falta, instalamos un sistema de presión.",a:"Prueba limpiar el aireador del caño: a veces el sarro es la causa."},
  olor:{t:"Mal olor o desagüe lento",c:"Trampa (sifón) seca o dañada, falta de ventilación o atoro en la tubería.",h:"Desatoramos, revisamos trampas y registros y corregimos la ventilación del desagüe.",a:"Si un sumidero no se usa, echa agua cada semana para que su trampa no se seque."},
  terma:{t:"La terma no calienta",c:"Resistencia o termostato dañado, llave del circuito baja o conexión floja.",h:"Revisamos la parte eléctrica y la de agua de la terma, cambiamos la pieza dañada o instalamos una nueva.",a:"Desconecta la terma antes de revisarla y no la enciendas sin agua."},
  salta:{t:"Se baja la llave del tablero",c:"Sobrecarga del circuito, un cortocircuito o un equipo con fuga de corriente.",h:"Medimos cada circuito, ubicamos el equipo o el tramo con falla y reorganizamos los circuitos si están sobrecargados.",a:"No la subas a la fuerza ni la amarres: te está protegiendo."},
  corriente:{t:"Siento corriente al tocar algo",c:"Fuga de corriente a una parte metálica y falta de puesta a tierra o de interruptor diferencial.",h:"Ubicamos la fuga, instalamos o revisamos el pozo a tierra y colocamos un interruptor diferencial.",a:"Es peligroso: baja la llave de ese circuito y no toques el equipo hasta que se revise."}
 };
-const resp=document.getElementById("respuesta");
-function verDiag(k,btn){
-  const d=DIAG[k];
-  document.querySelectorAll(".problema").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
-  resp.innerHTML=`<h3>${d.t}</h3><div class="bloque"><small>Causa más común</small><p>${d.c}</p></div><div class="bloque"><small>Cómo lo resolvemos</small><p>${d.h}</p></div><p class="aviso">${d.a}</p><a class="btn btn-verde" style="justify-self:start" href="https://wa.me/51922732329?text=${encodeURIComponent("Hola, tengo este problema: "+d.t+". ¿Pueden revisarlo?")}" target="_blank" rel="noopener">Consultar por WhatsApp</a>`;
-  resp.classList.remove("cambia");void resp.offsetWidth;resp.classList.add("cambia");
-}
-document.querySelectorAll(".problema").forEach(b=>b.addEventListener("click",()=>verDiag(b.dataset.p,b)));
-verDiag("fuga",document.querySelector('.problema[data-p="fuga"]'));
+const resp=$("#respuesta");
+function verDiag(k,anim){const d=DIAG[k];$$(".sintoma").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.p===k)));
+  resp.innerHTML=`<h3>${d.t}</h3><div><small>Causa más común</small><p>${d.c}</p></div><div><small>Cómo lo resolvemos</small><p>${d.h}</p></div><p class="aviso">${d.a}</p><div><a class="btn btn-beige" href="https://wa.me/51922732329?text=${encodeURIComponent("Hola, tengo este problema: "+d.t+". ¿Pueden revisarlo?")}" target="_blank" rel="noopener">Consultar por WhatsApp <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>`;
+  if(anim&&!reduce&&window.gsap)gsap.from(resp.children,{y:24,opacity:0,duration:.6,stagger:.06,ease:"power3.out"});}
+$$(".sintoma").forEach(b=>b.addEventListener("click",()=>verDiag(b.dataset.p,true)));
+verDiag("fuga",false);
 
-/* Cotizador por pasos */
+/* Cotizador */
 const W={paso:0,servicio:"",inmueble:"",tamano:"",cuando:""};
 const PASOS=[
- {k:"servicio",q:"1. ¿Qué necesitas?",o:[["Gasfitería","Agua, desagüe, cisterna"],["Electricidad","Circuitos, tableros, pozo a tierra"],["Gasfitería y electricidad","Instalación completa"],["Reparación","Fugas, atoros, fallas eléctricas"]]},
- {k:"inmueble",q:"2. ¿Dónde es el trabajo?",o:[["Casa","Vivienda unifamiliar"],["Edificio multifamiliar","Varios departamentos"],["Local o negocio","Tienda, oficina, restaurante"],["Obra de una constructora","Subcontrato en obra"]],k2:"tamano",q2:"¿De qué tamaño?",o2:[["1 a 2 pisos",""],["3 a 5 pisos",""],["6 pisos o más",""],["Solo un ambiente",""]]},
- {k:"cuando",q:"3. ¿Para cuándo lo necesitas?",o:[["Urgente","Esta semana"],["Este mes",""],["En 1 a 3 meses","Estoy planificando"],["Solo quiero el precio",""]],final:true}
+ {k:"servicio",q:"¿Qué necesitas?",o:[["Gasfitería","Agua, desagüe, cisterna"],["Electricidad","Circuitos, tableros, pozo a tierra"],["Gasfitería y electricidad","Instalación completa"],["Reparación","Fugas, atoros, fallas eléctricas"]]},
+ {k:"inmueble",q:"¿Dónde es el trabajo?",o:[["Casa","Vivienda unifamiliar"],["Edificio multifamiliar","Varios departamentos"],["Local o negocio","Tienda, oficina, restaurante"],["Obra de una constructora","Subcontrato en obra"]],k2:"tamano",q2:"¿De qué tamaño?",o2:[["1 a 2 pisos",""],["3 a 5 pisos",""],["6 pisos o más",""],["Solo un ambiente",""]]},
+ {k:"cuando",q:"¿Para cuándo lo necesitas?",o:[["Urgente","Esta semana"],["Este mes",""],["En 1 a 3 meses","Estoy planificando"],["Solo quiero el precio",""]],final:true}
 ];
-const cuerpo=document.getElementById("wiz-cuerpo"),barra=document.getElementById("wiz-barra"),okW=document.getElementById("ok");
-function ops(key,lista){return `<div class="opciones" role="group">${lista.map(([t,d])=>`<button type="button" class="opcion" data-k="${key}" data-v="${t}" aria-pressed="${W[key]===t}"><b>${t}</b>${d?`<span>${d}</span>`:""}</button>`).join("")}</div>`}
+const cuerpo=$("#wiz-cuerpo"),barra=$("#wiz-barra"),okW=$("#ok");
+const ops=(key,l)=>`<div class="opciones" role="group">${l.map(([t,d])=>`<button type="button" class="opcion" data-k="${key}" data-v="${t}" aria-pressed="${W[key]===t}"><b>${t}</b>${d?`<span>${d}</span>`:""}</button>`).join("")}</div>`;
 function pinta(){
   const P=PASOS[W.paso];barra.style.width=((W.paso+1)/PASOS.length*100)+"%";
   let h=`<div class="wiz-paso"><p>${P.q}</p>${ops(P.k,P.o)}`;
   if(P.k2)h+=`<p>${P.q2}</p>${ops(P.k2,P.o2)}`;
-  if(P.final)h+=`<label for="w-nombre">Tu nombre o empresa<input id="w-nombre" autocomplete="name" placeholder="Ej. Constructora Los Álamos"></label><label for="w-distrito">Distrito<input id="w-distrito" placeholder="Ej. San Juan de Lurigancho"></label><div class="resumen">${[W.servicio,W.inmueble,W.tamano].filter(Boolean).join(" · ")}</div>`;
-  h+=`<div class="wiz-nav">${W.paso?`<button type="button" class="btn btn-sec" id="w-atras">Atrás</button>`:"<span></span>"}<button type="button" class="btn btn-verde" id="w-sig">${P.final?"Enviar por WhatsApp":"Siguiente"}</button></div></div>`;
+  if(P.final)h+=`<label for="w-nombre">Tu nombre o empresa<input id="w-nombre" autocomplete="name" placeholder="Ej. Constructora Los Álamos"></label><label for="w-distrito">Distrito<input id="w-distrito" placeholder="Ej. San Juan de Lurigancho"></label>`;
+  h+=`<div class="wiz-nav">${W.paso?`<button type="button" class="btn btn-borde" id="w-atras">Atrás</button>`:"<span></span>"}<button type="button" class="btn btn-beige" id="w-sig">${P.final?"Enviar por WhatsApp":"Siguiente"} <span class="flecha" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button></div></div>`;
   cuerpo.innerHTML=h;okW.textContent="";
-  cuerpo.querySelectorAll(".opcion").forEach(b=>b.addEventListener("click",()=>{W[b.dataset.k]=b.dataset.v;cuerpo.querySelectorAll(`.opcion[data-k="${b.dataset.k}"]`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));okW.textContent=""}));
-  const at=document.getElementById("w-atras");if(at)at.addEventListener("click",()=>{W.paso--;pinta()});
-  document.getElementById("w-sig").addEventListener("click",()=>{
+  if(window.gsap&&!reduce)gsap.from(cuerpo.firstChild.children,{x:30,opacity:0,duration:.5,stagger:.05,ease:"power3.out"});
+  $$(".opcion",cuerpo).forEach(b=>b.addEventListener("click",()=>{W[b.dataset.k]=b.dataset.v;$$(`.opcion[data-k="${b.dataset.k}"]`,cuerpo).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));okW.textContent=""}));
+  const at=$("#w-atras");if(at)at.addEventListener("click",()=>{W.paso--;pinta()});
+  $("#w-sig").addEventListener("click",()=>{
     if(!W[P.k]){okW.textContent="Elige una opción para continuar.";return}
     if(P.k2&&!W[P.k2]){okW.textContent="Elige también el tamaño.";return}
     if(!P.final){W.paso++;pinta();return}
-    const n=document.getElementById("w-nombre").value.trim(),d=document.getElementById("w-distrito").value.trim();
-    if(!n){okW.textContent="Escribe tu nombre o el de tu empresa.";document.getElementById("w-nombre").focus();return}
+    const n=$("#w-nombre").value.trim(),d=$("#w-distrito").value.trim();
+    if(!n){okW.textContent="Escribe tu nombre o el de tu empresa.";$("#w-nombre").focus();return}
     const txt=`Hola, soy ${n}. Quiero una cotización de ${W.servicio.toLowerCase()} para ${W.inmueble.toLowerCase()} (${W.tamano.toLowerCase()})${d?` en ${d}`:""}. Plazo: ${W.cuando.toLowerCase()}.`;
-    const a=document.createElement("a");a.href="https://wa.me/51922732329?text="+encodeURIComponent(txt);a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();
+    window.open("https://wa.me/51922732329?text="+encodeURIComponent(txt),"_blank","noopener");
     okW.textContent="Pedido preparado. Revisa la pestaña de WhatsApp para enviarlo.";
   });
 }
 pinta();
-</script>
 
+if(sinGsap||reduce){mostrarTodo();$(".loader")&&$(".loader").remove();$(".loader-capa")&&$(".loader-capa").remove();return}
+
+/* ---------- Movimiento ---------- */
+gsap.registerPlugin(ScrollTrigger);
+/* Tuberías que se dibujan */
+function preparar(el){$$(".dib",el).forEach(p=>{const L=p.getTotalLength?Math.ceil(p.getTotalLength())+2:400;p.style.strokeDasharray=L;p.style.strokeDashoffset=L});$$(".flujo,.gota",el).forEach(f=>f.style.opacity=0)}
+function dibujar(el){if(!el||el._d)return;el._d=1;const ps=$$(".dib",el);gsap.to(ps,{strokeDashoffset:0,duration:1.6,stagger:.07,ease:"power2.inOut",onComplete:()=>ps.forEach(p=>{p.style.strokeDasharray="";p.style.strokeDashoffset=""})});gsap.to($$(".flujo,.gota",el),{opacity:1,duration:.8,delay:1.3})}
+$$("[data-ilu]").forEach(preparar);
+$$("[data-ilu]").forEach(el=>{if(el.closest("#h-track")||el.closest("#fotos-p")||el.closest(".det")||el.closest(".hero"))return;ScrollTrigger.create({trigger:el,start:"top 88%",once:true,onEnter:()=>dibujar(el)})});
+ScrollTrigger.create({trigger:"#fotos-p",start:"top 80%",once:true,onEnter:()=>dibujar($("#fotos-p .ilus"))});
+matchMedia("(max-width: 820px)").matches&&$$("#h-track .ilus").forEach(el=>ScrollTrigger.create({trigger:el,start:"top 88%",once:true,onEnter:()=>dibujar(el)}));
+let lenis=null;
+if(window.Lenis){
+  lenis=new Lenis({lerp:.09,smoothWheel:true});
+  lenis.on("scroll",ScrollTrigger.update);
+  gsap.ticker.add(t=>lenis.raf(t*1000));
+  gsap.ticker.lagSmoothing(0);
+  lenis.stop();
+}
+/* Enlaces internos con scroll suave */
+const NOMBRES={"#inicio":"Inicio","#servicios":"Servicios","#serv-gas":"Gasfitería","#serv-ele":"Electricidad","#proceso":"Proceso","#recorrido":"Tu casa","#diagnostico":"Diagnóstico","#preguntas":"Preguntas","#contacto":"Cotizar"};
+let barriendo=false;
+function barrer(t,id){
+  if(barriendo)return;barriendo=true;
+  const txt=$("#barrido-txt");txt.textContent=NOMBRES[id]||"";
+  gsap.timeline({onComplete:()=>{barriendo=false}})
+    .set(".barrido",{display:"block"})
+    .fromTo(".barrido i",{xPercent:-101},{xPercent:0,duration:.6,stagger:.08,ease:"expo.in"})
+    .fromTo(txt,{opacity:0,x:-40},{opacity:1,x:0,duration:.35,ease:"power3.out"},"-=.15")
+    .add(()=>{const destino=t.closest(".pin-spacer")||t;if(lenis){lenis.stop();lenis.start();lenis.scrollTo(destino,{immediate:true,force:true,offset:0})}else destino.scrollIntoView();ScrollTrigger.update()})
+    .to(txt,{opacity:0,x:40,duration:.3,ease:"power2.in"},"+=.15")
+    .to(".barrido i",{xPercent:101,duration:.85,stagger:-.08,ease:"expo.out"},"-=.05")
+    .set(".barrido i",{xPercent:-101}).set(".barrido",{display:"none"});
+}
+$$('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const id=a.getAttribute("href");if(id.length<2)return;const t=$(id);if(!t)return;e.preventDefault();
+  const lejos=Math.abs(t.getBoundingClientRect().top)>innerHeight*1.2;
+  if(lejos)barrer(t,id);else if(lenis)lenis.scrollTo(t,{duration:1.2});else t.scrollIntoView({behavior:"smooth"})}));
+
+/* Cargador → portada */
+const pct={v:0},num=$("#pct");
+const intro=gsap.timeline({delay:.15});
+intro.to(pct,{v:100,duration:1.5,ease:"power2.inOut",onUpdate:()=>num.textContent=Math.round(pct.v)})
+     .to(".loader-bar",{scaleX:1,duration:1.5,ease:"power2.inOut"},0)
+     .to(".loader-in,.loader-num",{y:-40,opacity:0,duration:.5,ease:"power2.in"},">-.05")
+     .to(".loader",{yPercent:-100,borderBottomLeftRadius:"50% 18vh",borderBottomRightRadius:"50% 18vh",duration:1.1,ease:"expo.inOut"},">-.1")
+     .to(".loader-capa",{yPercent:-100,borderBottomLeftRadius:"50% 18vh",borderBottomRightRadius:"50% 18vh",duration:1.1,ease:"expo.inOut"},"<.14")
+     .from(".hero-media",{scale:1.35,duration:2,ease:"expo.out"},"<.15")
+     .to(".hero-title .line>span",{y:0,duration:1.3,stagger:.12,ease:"expo.out"},"<.35")
+     .to(".hero-foot,.hero-tags,.nav",{opacity:1,duration:1,stagger:.1,ease:"power2.out"},"<.6")
+     .add(()=>dibujar($(".hero-media")),"<-.4")
+     .add(()=>{$(".loader").remove();$(".loader-capa").remove();lenis&&lenis.start()});
+
+/* Portada: parallax al bajar */
+gsap.to(".hero-media",{yPercent:18,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
+gsap.to(".hero-content",{yPercent:-22,opacity:.15,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
+
+/* Navegación: se oculta al bajar, aparece al subir */
+let ultimo=0;
+ScrollTrigger.create({start:0,end:"max",onUpdate:s=>{const y=s.scroll(),nav=$("#nav");nav.classList.toggle("solida",y>80);nav.classList.toggle("oculta",y>ultimo&&y>400&&!document.body.classList.contains("menu-abierto"));ultimo=y}});
+
+/* Cinta infinita que acelera con el scroll */
+const cinta=$("#cinta");cinta.innerHTML+=cinta.innerHTML;
+const loop=gsap.to(cinta,{xPercent:-50,duration:22,ease:"none",repeat:-1});
+ScrollTrigger.create({start:0,end:"max",onUpdate:s=>{const v=s.getVelocity()/300;gsap.to(loop,{timeScale:Math.max(1,Math.min(6,1+Math.abs(v))),duration:.2,overwrite:true});gsap.to(loop,{timeScale:1,duration:1.2,delay:.25,overwrite:false})}});
+
+/* Títulos: líneas que suben al entrar */
+$$("section h2.xl,footer h2.xl").forEach(h=>{
+  if(h.closest(".hero"))return;
+  $$(".line>span",h).forEach(sp=>{sp.innerHTML=sp.textContent.split(" ").map(w=>`<span class="w">${[...w].map(c=>`<span class="ch">${c}</span>`).join("")}</span>`).join(" ")});
+  if(!h.querySelector(".line")){h.innerHTML=h.textContent.split(" ").map(w=>`<span class="w">${[...w].map(c=>`<span class="ch">${c}</span>`).join("")}</span>`).join(" ")}
+  gsap.from($$(".ch",h),{yPercent:115,rotate:8,opacity:0,duration:1,stagger:.022,ease:"expo.out",scrollTrigger:{trigger:h,start:"top 86%"}});
+});
+/* Bloques que suben */
+$$("[data-sube]").forEach((el,i)=>gsap.fromTo(el,{x:i%2?50:-50},{opacity:1,y:0,x:0,duration:1.1,ease:"expo.out",scrollTrigger:{trigger:el,start:"top 90%"}}));
+ScrollTrigger.batch("#docs .doc",{start:"top 90%",onEnter:b=>gsap.to(b,{opacity:1,y:0,duration:1,stagger:.1,ease:"power3.out",overwrite:true})});
+
+/* Manifiesto: palabras que se encienden */
+gsap.to("#manifiesto .palabra",{opacity:1,stagger:.05,ease:"none",scrollTrigger:{trigger:"#manifiesto",start:"top 80%",end:"bottom 45%",scrub:true}});
+
+/* Fotos que se abren */
+$$(".revela").forEach(r=>{
+  const tl=gsap.timeline({scrollTrigger:{trigger:r,start:"top 85%",end:"top 25%",scrub:1}});
+  tl.to(r,{clipPath:"inset(0% 0% 0% 0% round 0px)",ease:"none"}).to(r.querySelector("img"),{scale:1,ease:"none"},0);
+});
+
+
+const mm=gsap.matchMedia();
+mm.add("(min-width: 821px)",()=>{
+  /* Servicios en horizontal */
+  const track=$("#h-track");
+  const dist=()=>track.scrollWidth-innerWidth;
+  const h=gsap.to(track,{x:()=>-dist(),ease:"none",scrollTrigger:{trigger:"#servicios",start:"top top",end:()=>"+="+dist(),pin:true,scrub:1.4,invalidateOnRefresh:true,anticipatePin:1}});
+  $$(".h-foto img",track).forEach(img=>gsap.to(img,{scale:1,xPercent:-6,ease:"none",scrollTrigger:{trigger:img.closest(".h-panel"),containerAnimation:h,start:"left right",end:"right left",scrub:true}}));
+  $$(".h-panel .ilus",track).forEach(il=>ScrollTrigger.create({trigger:il.closest(".h-panel"),containerAnimation:h,start:"left 75%",once:true,onEnter:()=>dibujar(il)}));
+  $$(".h-panel:not(.h-intro)",track).forEach(pn=>gsap.fromTo(pn,{scale:.82,rotate:2.5,borderRadius:"80px"},{scale:1,rotate:0,borderRadius:"44px",ease:"none",scrollTrigger:{trigger:pn,containerAnimation:h,start:"left right",end:"left 35%",scrub:true}}));
+  $$(".h-txt li",track).forEach(li=>gsap.from(li,{opacity:0,x:40,duration:.6,ease:"power3.out",scrollTrigger:{trigger:li.closest(".h-panel"),containerAnimation:h,start:"left 70%"}}));
+
+});
+mm.add("(min-width: 1101px)",()=>{
+  /* Proceso fijado paso a paso */
+  const pasos=$$("#pasos .paso"),fotos=$$("#fotos-p .ilus"),barraP=$("#barra-p");
+  let actual=0;
+  ScrollTrigger.create({trigger:"#proceso-pin",start:"top top",end:"+="+innerHeight*3,pin:true,scrub:true,anticipatePin:1,onUpdate:s=>{
+    gsap.set(barraP,{scaleX:.2+s.progress*.8});
+    const i=Math.min(pasos.length-1,Math.floor(s.progress*pasos.length));
+    if(i!==actual){actual=i;dibujar(fotos[i]);pasos.forEach((p,k)=>p.classList.toggle("activo",k===i));fotos.forEach((f,k)=>{f.classList.toggle("on",k===i);f.classList.toggle("ya",k<i)})}
+  }});
+});
+mm.add("(min-width: 821px)",()=>{
+  /* (sin fotos flotantes) */
+  if(false){
+    const flota=$("#flota");
+    $$(".fila").forEach(f=>{const im=new Image();im.src=f.dataset.img;im.alt="";flota.appendChild(im);f._im=im});
+    const xTo=gsap.quickTo(flota,"x",{duration:.5,ease:"power3"}),yTo=gsap.quickTo(flota,"y",{duration:.5,ease:"power3"});
+    $("#filas").addEventListener("mousemove",e=>{xTo(e.clientX);yTo(e.clientY)});
+    $$(".fila").forEach(f=>{
+      f.addEventListener("mouseenter",()=>{if(f.classList.contains("abierta"))return;$$("img",flota).forEach(i=>i.classList.toggle("on",i===f._im));gsap.to(flota,{opacity:1,scale:1,duration:.4,ease:"power3.out"})});
+      f.addEventListener("mouseleave",()=>gsap.to(flota,{opacity:0,scale:.6,duration:.3}));
+      f.querySelector("button").addEventListener("click",()=>gsap.to(flota,{opacity:0,scale:.6,duration:.2}));
+    });
+  }
+});
+
+/* Secciones que se apilan: la anterior se encoge un poco (se crea después de los pines) */
+$$(".capa").forEach(c=>{let prev=c.previousElementSibling;if(prev&&prev.classList.contains("pin-spacer"))prev=prev.firstElementChild;if(!prev||!prev.classList.contains("capa")||prev.id==="servicios"||prev.id==="proceso")return;
+  gsap.to(prev,{scale:.95,ease:"none",transformOrigin:"center top",scrollTrigger:{trigger:c,start:"top bottom",end:"top top",scrub:true,refreshPriority:-1}})});
+
+gsap.fromTo(".pie-foto svg",{yPercent:-12},{yPercent:0,ease:"none",scrollTrigger:{trigger:"footer",start:"top bottom",end:"bottom bottom",scrub:true}});
+/* Imágenes de las filas: aparecen con máscara al abrirse */
+$$(".fila").forEach(f=>f.querySelector("button").addEventListener("click",()=>{if(f.classList.contains("abierta"))setTimeout(()=>dibujar(f.querySelector(".det-in .ilus")),250)}));
+/* Cada sección entra como una tarjeta que se abre hacia los lados */
+$$(".capa").forEach(c=>gsap.fromTo(c,{clipPath:"inset(0% 6% 0% 6% round 56px 56px 0px 0px)"},{clipPath:"inset(0% 0% 0% 0% round 44px 44px 0px 0px)",ease:"none",scrollTrigger:{trigger:c,start:"top bottom",end:"top 15%",scrub:true,refreshPriority:-1}}));
+/* Pie: letras gigantes que suben */
+const gig=$("#gigante");gig.innerHTML=gig.textContent.split("").map(c=>`<span>${c===" "?"&nbsp;":c}</span>`).join("");
+gsap.from("#gigante span",{yPercent:100,opacity:0,stagger:.04,duration:1.2,ease:"expo.out",scrollTrigger:{trigger:"#gigante",start:"top 95%"}});
+
+/* Cursor y botones magnéticos */
+if(fino){
+  const cur=$(".cursor"),cx=gsap.quickTo(cur,"x",{duration:.25,ease:"power3"}),cy=gsap.quickTo(cur,"y",{duration:.25,ease:"power3"});
+  addEventListener("mousemove",e=>{cx(e.clientX);cy(e.clientY)});
+  $$("a,button").forEach(el=>{el.addEventListener("mouseenter",()=>cur.classList.add("grande"));el.addEventListener("mouseleave",()=>cur.classList.remove("grande"))});
+  $$("[data-magnet]").forEach(b=>{
+    b.addEventListener("mousemove",e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.25,y:(e.clientY-r.top-r.height/2)*.35,duration:.4,ease:"power3.out"})});
+    b.addEventListener("mouseleave",()=>gsap.to(b,{x:0,y:0,duration:.7,ease:"elastic.out(1,.4)"}));
+  });
+}
+addEventListener("load",()=>ScrollTrigger.refresh());
+})();
+</script>
 </body>
 </html>
